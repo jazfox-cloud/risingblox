@@ -1,26 +1,47 @@
 {
   "grow-a-garden-2": {
-    "robloxUniverseId": null,
-    "robloxPlaceId": null,
+    "robloxUniverseId": 10200395747,
+    "robloxPlaceId": 97598239454123,
     "sourceLabel": "Roblox public game data",
-    "sourceUrl": null,
+    "sourceUrl": "https://www.roblox.com/games/97598239454123",
     "lastChecked": "2026-06-17",
-    "status": "needs_source"
+    "status": "verified",
+    "onlinePlayers": 425737,
+    "visits": 259028076,
+    "upVotes": 368430,
+    "downVotes": 29783,
+    "updatedAt": "2026-06-17T22:04:05.1087145Z",
+    "fetchedAt": "2026-06-17T23:50:36.704Z",
+    "error": null
   },
   "mini-war": {
-    "robloxUniverseId": null,
-    "robloxPlaceId": null,
+    "robloxUniverseId": 9837612476,
+    "robloxPlaceId": 131346454575416,
     "sourceLabel": "Roblox public game data",
-    "sourceUrl": null,
+    "sourceUrl": "https://www.roblox.com/games/131346454575416",
     "lastChecked": "2026-06-17",
-    "status": "needs_source"
+    "status": "verified",
+    "onlinePlayers": 43589,
+    "visits": 152223389,
+    "upVotes": 448203,
+    "downVotes": 11781,
+    "updatedAt": "2026-06-16T17:05:21.376971Z",
+    "fetchedAt": "2026-06-17T23:50:36.704Z",
+    "error": null
   },
   "noob-incremental": {
-    "robloxUniverseId": null,
-    "robloxPlaceId": null,
+    "robloxUniverseId": 9965411707,
+    "robloxPlaceId": 76911729991355,
     "sourceLabel": "Roblox public game data",
-    "sourceUrl": null,
+    "sourceUrl": "https://www.roblox.com/games/76911729991355",
     "lastChecked": "2026-06-17",
-    "status": "needs_source"
+    "status": "verified",
+    "onlinePlayers": 11033,
+    "visits": 6140796,
+    "upVotes": 29661,
+    "downVotes": 1267,
+    "updatedAt": "2026-06-16T17:30:21.704556Z",
+    "fetchedAt": "2026-06-17T23:50:36.704Z",
+    "error": null
   }
 }

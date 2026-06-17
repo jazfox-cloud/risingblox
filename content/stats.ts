@@ -14,7 +14,7 @@ type RawStats = {
   visits?: number;
   updatedAt?: string;
   fetchedAt?: string;
-  error?: string;
+  error?: string | null;
 };
 
 export type DisplayStats = {

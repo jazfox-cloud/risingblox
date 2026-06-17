@@ -1,9 +1,11 @@
 import Link from "next/link";
 import { GameCard } from "@/components/GameCard";
 import { games } from "@/content/games";
+import { getDisplayStats } from "@/content/stats";
 
 export default function Home() {
   const featured = games[0];
+  const featuredStats = getDisplayStats(featured);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
@@ -35,15 +37,15 @@ export default function Home() {
           <dl className="mt-6 grid grid-cols-3 gap-3 text-sm">
             <div>
               <dt className="text-gray-500">Status</dt>
-              <dd className="text-xl font-black">{featured.opportunityStatus}</dd>
+              <dd className="text-xl font-black">{featuredStats.opportunity}</dd>
             </div>
             <div>
               <dt className="text-gray-500">Likes</dt>
-              <dd className="text-xl font-black">{featured.likeRateStatus}</dd>
+              <dd className="text-xl font-black">{featuredStats.likeRate}</dd>
             </div>
             <div>
               <dt className="text-gray-500">Online</dt>
-              <dd className="text-xl font-black">{featured.onlinePlayersStatus}</dd>
+              <dd className="text-xl font-black">{featuredStats.onlinePlayers}</dd>
             </div>
           </dl>
           <p className="mt-5 text-xs leading-5 text-gray-500">

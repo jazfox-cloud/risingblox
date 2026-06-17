@@ -3,10 +3,6 @@ export type Game = {
   name: string;
   genre: string;
   summary: string;
-  launchWindow: string;
-  onlinePlayersStatus: string;
-  likeRateStatus: string;
-  opportunityStatus: string;
   lastUpdated: string;
   tags: string[];
   beginnerTips: string[];
@@ -24,10 +20,6 @@ export const games: Game[] = [
     genre: "Simulator / Farming",
     summary:
       "A cozy Roblox farming experience built around planting, upgrading, and compounding harvest gains over repeated sessions.",
-    launchWindow: "Unverified",
-    onlinePlayersStatus: "Checking",
-    likeRateStatus: "Checking",
-    opportunityStatus: "Watchlist",
     lastUpdated: "2026-06-17",
     tags: ["farming", "simulator", "casual"],
     beginnerTips: [
@@ -68,10 +60,6 @@ export const games: Game[] = [
     genre: "Strategy / Battle",
     summary:
       "A fast round-based Roblox strategy game where small squads, upgrades, and timing decide each match.",
-    launchWindow: "Unverified",
-    onlinePlayersStatus: "Checking",
-    likeRateStatus: "Checking",
-    opportunityStatus: "Watchlist",
     lastUpdated: "2026-06-13",
     tags: ["strategy", "combat", "rounds"],
     beginnerTips: [
@@ -91,10 +79,6 @@ export const games: Game[] = [
     genre: "Incremental / Idle",
     summary:
       "An incremental Roblox game focused on layered upgrades, rebirth paths, and steady account progression.",
-    launchWindow: "Unverified",
-    onlinePlayersStatus: "Checking",
-    likeRateStatus: "Checking",
-    opportunityStatus: "Watchlist",
     lastUpdated: "2026-06-13",
     tags: ["incremental", "idle", "rebirth"],
     beginnerTips: [

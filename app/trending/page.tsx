@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/content/games";
+import { getDisplayStats } from "@/content/stats";
 
 export const metadata: Metadata = {
   title: "Trending Roblox Games",
@@ -38,21 +39,25 @@ export default function TrendingPage() {
             </tr>
           </thead>
           <tbody className="divide-y divide-black/10">
-            {games.map((game) => (
-              <tr key={game.slug}>
-                <td className="px-4 py-4">
-                  <Link className="font-black hover:text-coral" href={`/games/${game.slug}`}>
-                    {game.name}
-                  </Link>
-                  <p className="text-gray-500">{game.genre}</p>
-                </td>
-                <td className="px-4 py-4">{game.onlinePlayersStatus}</td>
-                <td className="px-4 py-4">{game.likeRateStatus}</td>
-                <td className="px-4 py-4">{game.launchWindow}</td>
-                <td className="px-4 py-4 font-black">{game.opportunityStatus}</td>
-                <td className="px-4 py-4">{game.lastUpdated}</td>
-              </tr>
-            ))}
+            {games.map((game) => {
+              const stats = getDisplayStats(game);
+
+              return (
+                <tr key={game.slug}>
+                  <td className="px-4 py-4">
+                    <Link className="font-black hover:text-coral" href={`/games/${game.slug}`}>
+                      {game.name}
+                    </Link>
+                    <p className="text-gray-500">{game.genre}</p>
+                  </td>
+                  <td className="px-4 py-4">{stats.onlinePlayers}</td>
+                  <td className="px-4 py-4">{stats.likeRate}</td>
+                  <td className="px-4 py-4">{stats.launchWindow}</td>
+                  <td className="px-4 py-4 font-black">{stats.opportunity}</td>
+                  <td className="px-4 py-4">{stats.lastChecked}</td>
+                </tr>
+              );
+            })}
           </tbody>
         </table>
       </div>

@@ -4,9 +4,9 @@ export type Game = {
   genre: string;
   summary: string;
   launchWindow: string;
-  onlinePlayers: number;
-  likeRate: number;
-  opportunityScore: number;
+  onlinePlayersStatus: string;
+  likeRateStatus: string;
+  opportunityStatus: string;
   lastUpdated: string;
   tags: string[];
   beginnerTips: string[];
@@ -24,10 +24,10 @@ export const games: Game[] = [
     genre: "Simulator / Farming",
     summary:
       "A cozy Roblox farming experience built around planting, upgrading, and compounding harvest gains over repeated sessions.",
-    launchWindow: "2026",
-    onlinePlayers: 18400,
-    likeRate: 91,
-    opportunityScore: 86,
+    launchWindow: "Unverified",
+    onlinePlayersStatus: "Checking",
+    likeRateStatus: "Checking",
+    opportunityStatus: "Watchlist",
     lastUpdated: "2026-06-17",
     tags: ["farming", "simulator", "casual"],
     beginnerTips: [
@@ -68,10 +68,10 @@ export const games: Game[] = [
     genre: "Strategy / Battle",
     summary:
       "A fast round-based Roblox strategy game where small squads, upgrades, and timing decide each match.",
-    launchWindow: "2026",
-    onlinePlayers: 9200,
-    likeRate: 88,
-    opportunityScore: 78,
+    launchWindow: "Unverified",
+    onlinePlayersStatus: "Checking",
+    likeRateStatus: "Checking",
+    opportunityStatus: "Watchlist",
     lastUpdated: "2026-06-13",
     tags: ["strategy", "combat", "rounds"],
     beginnerTips: [
@@ -91,10 +91,10 @@ export const games: Game[] = [
     genre: "Incremental / Idle",
     summary:
       "An incremental Roblox game focused on layered upgrades, rebirth paths, and steady account progression.",
-    launchWindow: "2026",
-    onlinePlayers: 6100,
-    likeRate: 93,
-    opportunityScore: 82,
+    launchWindow: "Unverified",
+    onlinePlayersStatus: "Checking",
+    likeRateStatus: "Checking",
+    opportunityStatus: "Watchlist",
     lastUpdated: "2026-06-13",
     tags: ["incremental", "idle", "rebirth"],
     beginnerTips: [

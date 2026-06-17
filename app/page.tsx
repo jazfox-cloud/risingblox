@@ -17,7 +17,7 @@ export default function Home() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-8 text-gray-700">
             RisingBlox tracks emerging Roblox titles, beginner-friendly guides,
-            active codes, and simple opportunity scores for creators and players.
+            active codes, and manually reviewed watchlist signals for creators and players.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
             <Link className="rounded-md bg-ink px-5 py-3 font-bold text-white" href="/trending">
@@ -34,20 +34,23 @@ export default function Home() {
           <p className="mt-3 text-gray-600">{featured.summary}</p>
           <dl className="mt-6 grid grid-cols-3 gap-3 text-sm">
             <div>
-              <dt className="text-gray-500">Score</dt>
-              <dd className="text-xl font-black">{featured.opportunityScore}</dd>
+              <dt className="text-gray-500">Status</dt>
+              <dd className="text-xl font-black">{featured.opportunityStatus}</dd>
             </div>
             <div>
               <dt className="text-gray-500">Likes</dt>
-              <dd className="text-xl font-black">{featured.likeRate}%</dd>
+              <dd className="text-xl font-black">{featured.likeRateStatus}</dd>
             </div>
             <div>
               <dt className="text-gray-500">Online</dt>
-              <dd className="text-xl font-black">
-                {Math.round(featured.onlinePlayers / 1000)}k
-              </dd>
+              <dd className="text-xl font-black">{featured.onlinePlayersStatus}</dd>
             </div>
           </dl>
+          <p className="mt-5 text-xs leading-5 text-gray-500">
+            Stats are shown only after manual verification against public Roblox
+            signals. Early watchlist entries use status labels instead of
+            placeholder numbers.
+          </p>
         </aside>
       </section>
 

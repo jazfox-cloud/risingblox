@@ -10,17 +10,17 @@ export function GameCard({ game }: { game: Game }) {
           <h3 className="mt-2 text-xl font-black">{game.name}</h3>
         </div>
         <span className="rounded-full bg-limepop/30 px-3 py-1 text-sm font-black">
-          {game.opportunityScore}
+          {game.opportunityStatus}
         </span>
       </div>
       <p className="mt-3 text-sm leading-6 text-gray-600">{game.summary}</p>
       <div className="mt-5 grid grid-cols-2 gap-3 text-sm">
         <div>
-          <p className="font-black">{game.onlinePlayers.toLocaleString()}</p>
+          <p className="font-black">{game.onlinePlayersStatus}</p>
           <p className="text-gray-500">Online players</p>
         </div>
         <div>
-          <p className="font-black">{game.likeRate}%</p>
+          <p className="font-black">{game.likeRateStatus}</p>
           <p className="text-gray-500">Like rate</p>
         </div>
       </div>

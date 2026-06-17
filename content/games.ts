@@ -12,6 +12,9 @@ export type Game = {
   beginnerTips: string[];
   activeCodes: { code: string; reward: string }[];
   expiredCodes: string[];
+  codesSummary?: string;
+  codeCheckMethod?: string[];
+  codeFaq?: { question: string; answer: string }[];
 };
 
 export const games: Game[] = [
@@ -25,18 +28,39 @@ export const games: Game[] = [
     onlinePlayers: 18400,
     likeRate: 91,
     opportunityScore: 86,
-    lastUpdated: "2026-06-13",
+    lastUpdated: "2026-06-17",
     tags: ["farming", "simulator", "casual"],
     beginnerTips: [
       "Prioritize seed upgrades before cosmetic purchases.",
       "Reinvest early harvest rewards to unlock faster growth loops.",
       "Check code pages before long sessions to avoid missing boosts."
     ],
-    activeCodes: [
-      { code: "GARDENRISE", reward: "Starter coins and seed boost" },
-      { code: "BLOOMSOON", reward: "Short growth speed boost" }
+    activeCodes: [],
+    expiredCodes: [],
+    codesSummary:
+      "No verified active Grow a Garden 2 codes are available right now. We only list a code as active after it can be checked against reliable public sources or an in-game redemption flow.",
+    codeCheckMethod: [
+      "Check the Roblox game page and developer-linked channels for official code announcements.",
+      "Compare new code claims against multiple recent sources before adding them.",
+      "Move any unconfirmed or expired claim out of the active codes list."
     ],
-    expiredCodes: ["FIRSTPLANT"]
+    codeFaq: [
+      {
+        question: "Are there any active Grow a Garden 2 codes right now?",
+        answer:
+          "We do not have any verified active Grow a Garden 2 codes listed at this time."
+      },
+      {
+        question: "Why are there no codes listed?",
+        answer:
+          "RisingBlox avoids publishing placeholder or unverified Roblox codes. A code is added only when it can be checked with enough confidence."
+      },
+      {
+        question: "How often is this page checked?",
+        answer:
+          "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
+      }
+    ]
   },
   {
     slug: "mini-war",

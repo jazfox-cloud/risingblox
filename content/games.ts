@@ -137,24 +137,24 @@ export const games: Game[] = [
   {
     slug: "anime-squadron",
     name: "Anime Squadron",
-    genre: "Anime / Fighting",
+    genre: "Strategy / Tower Defense",
     summary:
-      "A RisingBlox watchlist page for Anime Squadron on Roblox, focused on code status, beginner questions, and early player search intent.",
+      "A verified Roblox anime lane battler from Komplex Studio built around summoning units, upgrading a squad, and defending against boss waves.",
     lastUpdated: "2026-06-18",
-    tags: ["anime", "fighting", "squad", "roblox-codes"],
+    tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [
-      "Check the official Roblox game page before trusting code claims from reposted lists.",
-      "Focus early upgrades on the unit, fighter, or squad path that improves clear speed first.",
-      "Save limited boosts until you understand the main grind loop and reward timing."
+      "Start by learning how lanes, enemy waves, and boss timing work before chasing rare units.",
+      "Upgrade a small core squad first so your early clears stay consistent.",
+      "Check the official Roblox page and developer-linked channels before trusting copied code claims."
     ],
     activeCodes: [],
     expiredCodes: [],
     codesSummary:
-      "No verified active Anime Squadron codes are available right now. This page is positioned for Anime Squadron codes searches, but RisingBlox only lists codes after they can be checked against a credible Roblox or developer source.",
+      "No verified active Anime Squadron codes are available right now. RisingBlox checks the official Roblox game page, developer-linked sources, and credible recent code reports before listing a code as active.",
     codeCheckMethod: [
-      "Search for official Anime Squadron Roblox pages and developer-linked social channels.",
-      "Check whether code claims are repeated by reliable recent sources or confirmed in-game.",
-      "Avoid adding copied Anime Squadron code lists until a code can be verified or marked expired."
+      "Check the official Anime Squadron Roblox page from Komplex Studio.",
+      "Look for developer-linked social channels, update posts, or in-game redemption prompts.",
+      "Avoid adding copied Anime Squadron code lists until a claim can be verified or marked expired."
     ],
     codeFaq: [
       {

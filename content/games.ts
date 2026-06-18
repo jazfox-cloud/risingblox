@@ -133,6 +133,51 @@ export const games: Game[] = [
           "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
       }
     ]
+  },
+  {
+    slug: "anime-squadron",
+    name: "Anime Squadron",
+    genre: "Anime / Fighting",
+    summary:
+      "A RisingBlox watchlist page for Anime Squadron on Roblox, focused on code status, beginner questions, and early player search intent.",
+    lastUpdated: "2026-06-18",
+    tags: ["anime", "fighting", "squad", "roblox-codes"],
+    beginnerTips: [
+      "Check the official Roblox game page before trusting code claims from reposted lists.",
+      "Focus early upgrades on the unit, fighter, or squad path that improves clear speed first.",
+      "Save limited boosts until you understand the main grind loop and reward timing."
+    ],
+    activeCodes: [],
+    expiredCodes: [],
+    codesSummary:
+      "No verified active Anime Squadron codes are available right now. This page is positioned for Anime Squadron codes searches, but RisingBlox only lists codes after they can be checked against a credible Roblox or developer source.",
+    codeCheckMethod: [
+      "Search for official Anime Squadron Roblox pages and developer-linked social channels.",
+      "Check whether code claims are repeated by reliable recent sources or confirmed in-game.",
+      "Avoid adding copied Anime Squadron code lists until a code can be verified or marked expired."
+    ],
+    codeFaq: [
+      {
+        question: "Are there any active Anime Squadron codes right now?",
+        answer:
+          "We do not have any verified active Anime Squadron codes listed at this time."
+      },
+      {
+        question: "Why does this Anime Squadron codes page say no verified codes?",
+        answer:
+          "RisingBlox avoids publishing unverified Roblox codes. A code is added only after it can be checked against a credible source or an in-game redemption flow."
+      },
+      {
+        question: "What keywords does this Anime Squadron page track?",
+        answer:
+          "This page tracks Anime Squadron codes, Anime Squadron Roblox, Anime Squadron guide, and related beginner search questions."
+      },
+      {
+        question: "How often should Anime Squadron codes be checked?",
+        answer:
+          "Roblox code pages should be checked around updates, like milestones, and developer announcements, then updated with the latest checked date."
+      }
+    ]
   }
 ];
 

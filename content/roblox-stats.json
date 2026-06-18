@@ -43,5 +43,14 @@
     "updatedAt": "2026-06-16T17:30:21.704556Z",
     "fetchedAt": "2026-06-17T23:50:36.704Z",
     "error": null
+  },
+  "anime-squadron": {
+    "robloxUniverseId": null,
+    "robloxPlaceId": null,
+    "sourceLabel": "Pending verified Roblox source",
+    "sourceUrl": null,
+    "lastChecked": "2026-06-18",
+    "status": "needs_source",
+    "error": null
   }
 }

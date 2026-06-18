@@ -12,7 +12,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!game) return {};
 
   return {
-    title: `${game.name} Profile`,
+    title: `${game.name} Roblox Profile`,
     description: `${game.name} Roblox profile with gameplay summary, review status, tags, and update date.`
   };
 }

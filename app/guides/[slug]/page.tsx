@@ -11,7 +11,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!game) return {};
 
   return {
-    title: `${game.name} Beginner Guide`,
+    title: `${game.name} Roblox Beginner Guide`,
     description: `Beginner guide, starter strategy, tips, and FAQ for ${game.name} on Roblox.`
   };
 }

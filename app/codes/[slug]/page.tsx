@@ -11,7 +11,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!game) return {};
 
   return {
-    title: `${game.name} Codes`,
+    title: `${game.name} Roblox Codes`,
     description: `Checked ${game.name} Roblox codes, active code status, expired codes, and basic redemption steps.`
   };
 }

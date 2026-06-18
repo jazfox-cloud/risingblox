@@ -60,18 +60,39 @@ export const games: Game[] = [
     genre: "Strategy / Battle",
     summary:
       "A fast round-based Roblox strategy game where small squads, upgrades, and timing decide each match.",
-    lastUpdated: "2026-06-13",
+    lastUpdated: "2026-06-18",
     tags: ["strategy", "combat", "rounds"],
     beginnerTips: [
       "Learn one unit path before spreading currency across every upgrade.",
       "Watch enemy timing and save burst abilities for crowded pushes.",
       "Join low-pressure rooms first to understand map pacing."
     ],
-    activeCodes: [
-      { code: "MINIRISE", reward: "Coins" },
-      { code: "TACTICS", reward: "Starter boost" }
+    activeCodes: [],
+    expiredCodes: [],
+    codesSummary:
+      "No verified active Mini War codes are available right now. RisingBlox only lists a code after it can be checked against official Roblox game information, developer-linked channels, or a reliable in-game redemption flow.",
+    codeCheckMethod: [
+      "Check the official Mini War Roblox page and developer-linked community channels.",
+      "Look for code announcements tied to updates, milestones, or events.",
+      "Do not list copied code claims unless they can be verified from a credible source."
     ],
-    expiredCodes: ["LAUNCHMINI"]
+    codeFaq: [
+      {
+        question: "Are there any active Mini War codes right now?",
+        answer:
+          "We do not have any verified active Mini War codes listed at this time."
+      },
+      {
+        question: "Why is a Mini War code not listed here?",
+        answer:
+          "RisingBlox avoids publishing unverified Roblox codes. If a code cannot be checked with enough confidence, it is not added to the active list."
+      },
+      {
+        question: "When are new Mini War codes usually released?",
+        answer:
+          "Roblox games often release codes around updates, like milestones, events, or community announcements. We review those sources before listing a code."
+      }
+    ]
   },
   {
     slug: "noob-incremental",
@@ -79,18 +100,39 @@ export const games: Game[] = [
     genre: "Incremental / Idle",
     summary:
       "An incremental Roblox game focused on layered upgrades, rebirth paths, and steady account progression.",
-    lastUpdated: "2026-06-13",
+    lastUpdated: "2026-06-18",
     tags: ["incremental", "idle", "rebirth"],
     beginnerTips: [
       "Buy income upgrades first, then chase multipliers.",
       "Rebirth when the next run will clearly outpace the current one.",
       "Use boosts during active play instead of leaving them idle."
     ],
-    activeCodes: [
-      { code: "NOOBSTART", reward: "Early coins" },
-      { code: "INCREMENT", reward: "Temporary multiplier" }
+    activeCodes: [],
+    expiredCodes: [],
+    codesSummary:
+      "No verified active Noob Incremental codes are available right now. We keep this page conservative until a code can be confirmed through a credible Roblox or developer source.",
+    codeCheckMethod: [
+      "Check the official Noob Incremental Roblox page and developer-linked community channels.",
+      "Review recent update notes and community announcements for code claims.",
+      "Move codes into active or expired lists only after the claim can be checked."
     ],
-    expiredCodes: ["BETAUP"]
+    codeFaq: [
+      {
+        question: "Are there any active Noob Incremental codes right now?",
+        answer:
+          "We do not have any verified active Noob Incremental codes listed at this time."
+      },
+      {
+        question: "Why are there no Noob Incremental codes listed?",
+        answer:
+          "RisingBlox does not publish placeholder codes. A code is added only when it can be checked against a credible source or redemption flow."
+      },
+      {
+        question: "How often is this Noob Incremental codes page checked?",
+        answer:
+          "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
+      }
+    ]
   }
 ];
 

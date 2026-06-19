@@ -8,3 +8,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+gsc-service-account.json
+*service-account*.json
+forcodex-*.json

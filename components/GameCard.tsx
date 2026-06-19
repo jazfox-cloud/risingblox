@@ -31,6 +31,16 @@ export function GameCard({ game }: { game: Game }) {
         <Link className="rounded-md bg-ink px-3 py-2 text-white" href={`/games/${game.slug}`}>
           Profile
         </Link>
+        {stats.sourceUrl ? (
+          <a
+            className="rounded-md bg-coral px-3 py-2 text-white"
+            href={stats.sourceUrl}
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            Play
+          </a>
+        ) : null}
         <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}`}>
           Codes
         </Link>

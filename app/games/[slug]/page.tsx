@@ -27,6 +27,28 @@ export default function GamePage({ params }: { params: { slug: string } }) {
       <p className="text-sm font-black uppercase text-coral">{game.genre}</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">{game.name}</h1>
       <p className="mt-4 text-lg leading-8 text-gray-700">{game.summary}</p>
+      {stats.sourceUrl ? (
+        <div className="mt-6 flex flex-wrap gap-3">
+          <a
+            className="rounded-md bg-ink px-5 py-3 font-bold text-white"
+            href={stats.sourceUrl}
+            rel="nofollow noopener noreferrer"
+            target="_blank"
+          >
+            Play on Roblox
+          </a>
+          <a
+            className="rounded-md bg-white px-5 py-3 font-bold shadow-sm"
+            href={`/codes/${game.slug}`}
+          >
+            Check Codes
+          </a>
+        </div>
+      ) : (
+        <div className="mt-6 rounded-md border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600">
+          Roblox play link is pending source verification.
+        </div>
+      )}
 
       <dl className="mt-8 grid gap-4 rounded-lg border border-black/10 bg-white p-6 shadow-sm sm:grid-cols-4">
         <div>

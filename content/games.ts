@@ -11,9 +11,57 @@ export type Game = {
   codesSummary?: string;
   codeCheckMethod?: string[];
   codeFaq?: { question: string; answer: string }[];
+  externalGuide?: {
+    label: string;
+    url: string;
+  };
 };
 
 export const games: Game[] = [
+  {
+    slug: "iron-soul-dungeon",
+    name: "Iron Soul: Dungeon",
+    genre: "RPG / Action RPG",
+    summary:
+      "A fast-rising Roblox dungeon RPG from the verified Iron Soul group, built around ore farming, ancient forges, weapon crafting, skill-tree paths, and dungeon clearing.",
+    lastUpdated: "2026-06-19",
+    tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
+    beginnerTips: [
+      "Treat the forge as the main progression loop: farm materials first, then choose upgrades around your next dungeon goal.",
+      "Plan your skill-tree path before spending rerolls or chasing every weapon claim you see in videos.",
+      "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, and code checks."
+    ],
+    activeCodes: [],
+    expiredCodes: [],
+    codesSummary:
+      "No verified active Iron Soul: Dungeon codes are listed on RisingBlox right now. For the daily check log and deeper source notes, use the dedicated BloxDungeon codes page.",
+    codeCheckMethod: [
+      "Check the official Iron Soul: Dungeon Roblox page from the verified Iron Soul group.",
+      "Review BloxDungeon's source-first codes log before adding any active or expired code.",
+      "Do not list copied code claims unless the exact code and reward can be traced to a credible source or in-game redemption evidence."
+    ],
+    codeFaq: [
+      {
+        question: "Are there any active Iron Soul: Dungeon codes right now?",
+        answer:
+          "RisingBlox does not have any verified active Iron Soul: Dungeon codes listed at this time."
+      },
+      {
+        question: "Where should I check deeper Iron Soul data?",
+        answer:
+          "Use BloxDungeon for the dedicated Iron Soul: Dungeon guide, code checks, forge notes, runes, weapons, and race tier-list research."
+      },
+      {
+        question: "Why is Iron Soul listed on RisingBlox and BloxDungeon?",
+        answer:
+          "RisingBlox keeps the broader Roblox trend profile, while BloxDungeon handles the dedicated deep-dive database."
+      }
+    ],
+    externalGuide: {
+      label: "Iron Soul Database",
+      url: "https://bloxdungeon.com/"
+    }
+  },
   {
     slug: "grow-a-garden-2",
     name: "Grow a Garden 2",

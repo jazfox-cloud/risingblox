@@ -29,6 +29,15 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       <p className="mt-4 text-lg leading-8 text-gray-700">
         Start with the highest-impact basics before spending currency or boosts.
       </p>
+      {game.externalGuide ? (
+        <p className="mt-5 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
+          For the dedicated Iron Soul guide stack, use{" "}
+          <a className="font-black text-coral" href={game.externalGuide.url}>
+            {game.externalGuide.label}
+          </a>
+          .
+        </p>
+      ) : null}
 
       <section className="content-prose mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
         <h2>Best Early Strategy</h2>

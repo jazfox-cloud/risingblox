@@ -51,6 +51,15 @@ export default function CodesPage({ params }: { params: { slug: string } }) {
       <p className="text-sm font-black uppercase text-coral">Roblox Codes</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">{game.name} Codes</h1>
       <p className="mt-4 text-gray-600">Last checked: {game.lastUpdated}</p>
+      {game.externalGuide ? (
+        <p className="mt-4 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
+          Need deeper data? Visit{" "}
+          <a className="font-black text-coral" href={`${game.externalGuide.url}codes/`}>
+            {game.externalGuide.label} codes log
+          </a>{" "}
+          for Iron Soul-specific source notes and update checks.
+        </p>
+      ) : null}
 
       <section className="mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
         <h2 className="text-2xl font-black">Active Codes</h2>

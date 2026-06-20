@@ -1,4 +1,19 @@
 {
+  "iron-soul-dungeon": {
+    "robloxUniverseId": 9910245722,
+    "robloxPlaceId": 117533937949084,
+    "sourceLabel": "Roblox public game data",
+    "sourceUrl": "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon",
+    "lastChecked": "2026-06-19",
+    "status": "verified",
+    "onlinePlayers": 10457,
+    "visits": 79484706,
+    "upVotes": 177132,
+    "downVotes": 2996,
+    "updatedAt": "2026-06-19T13:04:05.9062111Z",
+    "fetchedAt": "2026-06-19T17:20:00.000Z",
+    "error": null
+  },
   "grow-a-garden-2": {
     "robloxUniverseId": 10200395747,
     "robloxPlaceId": 97598239454123,

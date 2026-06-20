@@ -43,6 +43,16 @@ export default function GamePage({ params }: { params: { slug: string } }) {
           >
             Check Codes
           </a>
+          {game.externalGuide ? (
+            <a
+              className="rounded-md bg-coral px-5 py-3 font-bold text-white shadow-sm"
+              href={game.externalGuide.url}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              {game.externalGuide.label}
+            </a>
+          ) : null}
         </div>
       ) : (
         <div className="mt-6 rounded-md border border-dashed border-gray-300 bg-gray-50 p-4 text-sm text-gray-600">
@@ -90,6 +100,17 @@ export default function GamePage({ params }: { params: { slug: string } }) {
             stats.sourceLabel
           )}.
         </p>
+        {game.externalGuide ? (
+          <>
+            <h2>Dedicated Deep-Dive</h2>
+            <p>
+              RisingBlox keeps this as a compact trend profile. For source-first
+              Iron Soul forge notes, rune research, race tier-list checks, weapon
+              planning, and code logs, visit{" "}
+              <a href={game.externalGuide.url}>{game.externalGuide.label}</a>.
+            </p>
+          </>
+        ) : null}
         <h2>Tags</h2>
         <ul>
           {game.tags.map((tag) => (

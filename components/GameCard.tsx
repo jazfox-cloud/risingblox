@@ -47,6 +47,16 @@ export function GameCard({ game }: { game: Game }) {
         <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}`}>
           Guide
         </Link>
+        {game.externalGuide ? (
+          <a
+            className="rounded-md bg-limepop px-3 py-2 text-ink"
+            href={game.externalGuide.url}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {game.externalGuide.label}
+          </a>
+        ) : null}
       </div>
     </article>
   );

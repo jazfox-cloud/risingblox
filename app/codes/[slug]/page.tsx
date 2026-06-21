@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame } from "@/content/games";
 
@@ -51,6 +52,14 @@ export default function CodesPage({ params }: { params: { slug: string } }) {
       <p className="text-sm font-black uppercase text-coral">Roblox Codes</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">{game.name} Codes</h1>
       <p className="mt-4 text-gray-600">Last checked: {game.lastUpdated}</p>
+      <div className="mt-5 flex flex-wrap gap-3 text-sm font-black">
+        <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}`}>
+          Game profile
+        </Link>
+        <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/guides/${game.slug}`}>
+          Beginner guide
+        </Link>
+      </div>
       {game.externalGuide ? (
         <p className="mt-4 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
           Need deeper data? Visit{" "}

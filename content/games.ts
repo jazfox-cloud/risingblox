@@ -108,7 +108,7 @@ export const games: Game[] = [
     genre: "Strategy / Battle",
     summary:
       "A fast round-based Roblox strategy game where small squads, upgrades, and timing decide each match.",
-    lastUpdated: "2026-06-18",
+    lastUpdated: "2026-06-21",
     tags: ["strategy", "combat", "rounds"],
     beginnerTips: [
       "Learn one unit path before spreading currency across every upgrade.",
@@ -118,11 +118,12 @@ export const games: Game[] = [
     activeCodes: [],
     expiredCodes: [],
     codesSummary:
-      "No verified active Mini War codes are available right now. RisingBlox only lists a code after it can be checked against official Roblox game information, developer-linked channels, or a reliable in-game redemption flow.",
+      "Mini War added a New CODE System in the official Roblox update log dated 2026-06-20, but RisingBlox has not verified any active Mini War codes yet. We will keep the active list empty until a specific code can be checked against an official source or reliable in-game redemption evidence.",
     codeCheckMethod: [
-      "Check the official Mini War Roblox page and developer-linked community channels.",
+      "Check the official Mini War Roblox page from the verified M&M Community group.",
+      "Track the 2026-06-20 official update log, which mentions a New CODE System but does not list a specific public code.",
       "Look for code announcements tied to updates, milestones, or events.",
-      "Do not list copied code claims unless they can be verified from a credible source."
+      "Do not list copied code claims unless they can be verified from a credible source or in-game redemption evidence."
     ],
     codeFaq: [
       {
@@ -134,6 +135,11 @@ export const games: Game[] = [
         question: "Why is a Mini War code not listed here?",
         answer:
           "RisingBlox avoids publishing unverified Roblox codes. If a code cannot be checked with enough confidence, it is not added to the active list."
+      },
+      {
+        question: "Does Mini War have a code system?",
+        answer:
+          "Yes. The official Roblox game description mentions a New CODE System in the 2026-06-20 update log, but that does not confirm any specific active code by itself."
       },
       {
         question: "When are new Mini War codes usually released?",

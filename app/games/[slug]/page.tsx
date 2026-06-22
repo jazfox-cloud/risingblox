@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { games, getGame } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 
+const baseUrl = "https://risingblox.com";
+
 export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
@@ -10,10 +12,22 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const game = getGame(params.slug);
   if (!game) return {};
+  const description =
+    game.slug === "anime-squadron"
+      ? "Anime Squadron Roblox profile with gameplay overview, official play link, beginner guidance, and verified codes status."
+      : `${game.name} Roblox profile with gameplay overview, official play link, beginner guidance, and verified codes status.`;
 
   return {
-    title: `${game.name} Roblox Profile`,
-    description: `${game.name} Roblox profile with gameplay summary, review status, tags, and update date.`
+    title: `${game.name} Roblox Game Profile`,
+    description,
+    alternates: {
+      canonical: `${baseUrl}/games/${game.slug}/`
+    },
+    openGraph: {
+      title: `${game.name} Roblox Game Profile`,
+      description,
+      url: `${baseUrl}/games/${game.slug}/`
+    }
   };
 }
 

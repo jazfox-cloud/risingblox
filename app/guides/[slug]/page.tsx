@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame } from "@/content/games";
 
+const baseUrl = "https://risingblox.com";
+
 export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
@@ -10,10 +12,21 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const game = getGame(params.slug);
   if (!game) return {};
+  const description = game.guideIntro
+    ? `${game.guideIntro} Verified beginner steps, FAQ, and codes status links for ${game.name}.`
+    : `Beginner guide, early strategy, FAQ, and verified codes status for ${game.name} on Roblox.`;
 
   return {
     title: `${game.name} Roblox Beginner Guide`,
-    description: `Beginner guide, starter strategy, tips, and FAQ for ${game.name} on Roblox.`
+    description,
+    alternates: {
+      canonical: `${baseUrl}/guides/${game.slug}/`
+    },
+    openGraph: {
+      title: `${game.name} Roblox Beginner Guide`,
+      description,
+      url: `${baseUrl}/guides/${game.slug}/`
+    }
   };
 }
 

@@ -3,6 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame } from "@/content/games";
 
+const baseUrl = "https://risingblox.com";
+
 export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
@@ -10,10 +12,21 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const game = getGame(params.slug);
   if (!game) return {};
+  const description = game.codesSummary
+    ? `${game.codesSummary} Includes redemption steps, FAQ, and the latest checked status.`
+    : `Checked ${game.name} Roblox codes, active code status, expired codes, and redemption steps.`;
 
   return {
     title: `${game.name} Roblox Codes`,
-    description: `Checked ${game.name} Roblox codes, active code status, expired codes, and basic redemption steps.`
+    description,
+    alternates: {
+      canonical: `${baseUrl}/codes/${game.slug}/`
+    },
+    openGraph: {
+      title: `${game.name} Roblox Codes`,
+      description,
+      url: `${baseUrl}/codes/${game.slug}/`
+    }
   };
 }
 

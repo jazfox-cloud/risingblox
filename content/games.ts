@@ -11,6 +11,9 @@ export type Game = {
   codesSummary?: string;
   codeCheckMethod?: string[];
   codeFaq?: { question: string; answer: string }[];
+  guideIntro?: string;
+  guideSections?: { title: string; body: string; bullets: string[] }[];
+  guideFaq?: { question: string; answer: string }[];
   externalGuide?: {
     label: string;
     url: string;
@@ -154,7 +157,7 @@ export const games: Game[] = [
     genre: "Incremental / Idle",
     summary:
       "An incremental Roblox game focused on layered upgrades, rebirth paths, and steady account progression.",
-    lastUpdated: "2026-06-18",
+    lastUpdated: "2026-06-22",
     tags: ["incremental", "idle", "rebirth"],
     beginnerTips: [
       "Buy income upgrades first, then chase multipliers.",
@@ -185,6 +188,82 @@ export const games: Game[] = [
         question: "How often is this Noob Incremental codes page checked?",
         answer:
           "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
+      }
+    ],
+    guideIntro:
+      "Noob Incremental is an incremental simulator from the verified Ghoulax Games group. The official Roblox page describes hundreds of upgrades, dozens of stats, multiple prestige layers, runes, and the core loop of buying Noobs to make Oof.",
+    guideSections: [
+      {
+        title: "What Is Noob Incremental?",
+        body:
+          "The early game is about turning basic Oof income into stronger upgrades, then using prestige layers and runes to unlock better long-term scaling. Treat each run as a way to improve your next reset instead of trying to hold one slow run forever.",
+        bullets: [
+          "Buy Noobs to start producing Oof.",
+          "Spend early currency on upgrades that make the next income step faster.",
+          "Watch for unlocks that introduce new stats, runes, or prestige choices."
+        ]
+      },
+      {
+        title: "Early Upgrade Priority",
+        body:
+          "For beginners, the safest path is to buy income upgrades first, then add multipliers once the next upgrade tier starts to slow down. This keeps your account moving without wasting early currency on small side gains.",
+        bullets: [
+          "Prioritize upgrades that increase Oof gain or make Noobs more efficient.",
+          "Do not spread currency evenly across every visible option if one path clearly speeds up income.",
+          "Use short active sessions to test whether a new upgrade meaningfully changes your next minute of progress."
+        ]
+      },
+      {
+        title: "Runes Explained",
+        body:
+          "The official Roblox description says players can roll runes and level them up. That makes runes a likely mid-game scaling system, so beginners should avoid treating the first roll as permanent or perfect.",
+        bullets: [
+          "Roll runes after your basic income loop feels stable.",
+          "Level runes that support your current progression goal instead of chasing every possible stat.",
+          "If a rune improves income speed or reset value, test it before investing in narrower bonuses."
+        ]
+      },
+      {
+        title: "When to Prestige",
+        body:
+          "Prestige is listed as a way to unlock new content. In incremental games, the best reset timing is usually when the next run will clearly become faster than the current one.",
+        bullets: [
+          "Prestige when progress slows and the reset reward changes your next run noticeably.",
+          "Avoid resetting only because the button is available.",
+          "After each prestige, rebuild your income loop first before experimenting with runes or side stats."
+        ]
+      },
+      {
+        title: "Common Beginner Mistakes",
+        body:
+          "Most early mistakes come from spending too widely, resetting too early, or ignoring the systems that compound across runs.",
+        bullets: [
+          "Do not ignore core income upgrades while chasing advanced-looking systems.",
+          "Do not prestige before the reward is large enough to make the next run faster.",
+          "Do not assume copied code claims are real; check the codes page before planning around rewards."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "What should I do first in Noob Incremental?",
+        answer:
+          "Start by buying Noobs to make Oof, then use that income on upgrades that make your next income step faster."
+      },
+      {
+        question: "When should I use runes in Noob Incremental?",
+        answer:
+          "Use runes after your basic income loop is stable. The official page says runes can be rolled and leveled, so treat them as a scaling system rather than a one-time choice."
+      },
+      {
+        question: "When should I prestige in Noob Incremental?",
+        answer:
+          "Prestige when the reward will make your next run clearly faster or unlock useful content. Avoid resetting just because the option appears."
+      },
+      {
+        question: "Are there Noob Incremental codes?",
+        answer:
+          "RisingBlox does not have verified active Noob Incremental codes listed right now. Check the dedicated codes page for the latest verified status."
       }
     ]
   },

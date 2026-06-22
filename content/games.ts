@@ -3,6 +3,7 @@ export type Game = {
   name: string;
   genre: string;
   summary: string;
+  profileIntro?: string;
   lastUpdated: string;
   tags: string[];
   beginnerTips: string[];
@@ -272,7 +273,9 @@ export const games: Game[] = [
     name: "Anime Squadron",
     genre: "Strategy / Tower Defense",
     summary:
-      "A verified Roblox anime lane battler from Komplex Studio built around summoning units, upgrading a squad, and defending against boss waves.",
+      "Play Anime Squadron on Roblox for anime lane-defense battles, squad upgrades, boss waves, and early unit progression from Komplex Studio.",
+    profileIntro:
+      "Anime Squadron is a Roblox anime strategy game where the early win condition is simple: place a small core squad well, cover each lane cleanly, and upgrade around boss-wave timing instead of chasing rare units too early.",
     lastUpdated: "2026-06-18",
     tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [

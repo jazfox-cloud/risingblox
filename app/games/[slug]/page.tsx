@@ -96,9 +96,8 @@ export default function GamePage({ params }: { params: { slug: string } }) {
       <section className="content-prose mt-10">
         <h2>Gameplay</h2>
         <p>
-          {game.name} is tracked as a {game.genre.toLowerCase()} game with early
-          watchlist signals. The first RisingBlox version keeps this profile concise
-          so updates can happen quickly when public data can be checked.
+          {game.profileIntro ??
+            `${game.name} is tracked as a ${game.genre.toLowerCase()} game with early watchlist signals. The first RisingBlox version keeps this profile concise so updates can happen quickly when public data can be checked.`}
         </p>
         <h2>Data Notes</h2>
         <p>

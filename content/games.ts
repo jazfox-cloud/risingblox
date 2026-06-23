@@ -4,6 +4,7 @@ export type Game = {
   genre: string;
   summary: string;
   profileIntro?: string;
+  profileSections?: { title: string; body: string; bullets: string[] }[];
   lastUpdated: string;
   tags: string[];
   beginnerTips: string[];
@@ -71,9 +72,63 @@ export const games: Game[] = [
     name: "Grow a Garden 2",
     genre: "Simulator / Farming",
     summary:
-      "A cozy Roblox farming experience built around planting, upgrading, and compounding harvest gains over repeated sessions.",
-    lastUpdated: "2026-06-17",
-    tags: ["farming", "simulator", "casual"],
+      "Grow a Garden 2 is a Roblox farming tycoon about buying restocked seeds, growing crops, selling harvests, joining guild reward races, and protecting progress when night stealing begins.",
+    profileIntro:
+      "Grow a Garden 2 is built around a simple farming loop from the official Roblox page: buy seeds when the shop restocks, plant them, harvest crops for sheckles, and use guild rewards plus offline growth to keep progress moving between sessions.",
+    profileSections: [
+      {
+        title: "Official Gameplay Loop",
+        body:
+          "The verified Roblox description frames Grow a Garden 2 as a farm progression game. Your first goal is to turn seed purchases into harvest income, then use that income to keep the garden compounding.",
+        bullets: [
+          "Buy seeds from the shop when they restock.",
+          "Plant seeds in your farm and wait for crops to grow.",
+          "Harvest crops and sell them for sheckles."
+        ]
+      },
+      {
+        title: "Seed Restock Priority",
+        body:
+          "Because the shop restocks, early progress depends on checking seed availability before spending on lower-impact upgrades or cosmetics.",
+        bullets: [
+          "Check the shop before long farming sessions.",
+          "Prioritize seeds that keep your next harvest cycle moving.",
+          "Avoid spending all currency before a useful restock appears."
+        ]
+      },
+      {
+        title: "Guild Weekly Rewards",
+        body:
+          "The official page mentions guilds that compete for exclusive weekly rewards. That makes guild participation a real progression angle, not just a social extra.",
+        bullets: [
+          "Join or create a guild once your basic farm loop is stable.",
+          "Use weekly reward timing as a reason to check back before resets.",
+          "Treat guild rewards as a bonus layer on top of normal crop income."
+        ]
+      },
+      {
+        title: "Night Stealing Warning",
+        body:
+          "The official description warns that stealing starts at night, so beginners should not assume farming is purely passive.",
+        bullets: [
+          "Plan important harvests before night if the session allows it.",
+          "Do not leave valuable progress exposed without understanding the night cycle.",
+          "Use the first few nights to learn how stealing affects your farm."
+        ]
+      },
+      {
+        title: "Offline Growth",
+        body:
+          "Grow a Garden 2 says your garden grows while you are offline, which makes it useful for short check-ins rather than only long active sessions.",
+        bullets: [
+          "Plant before logging off so offline time contributes to progress.",
+          "Return after breaks to harvest and reinvest.",
+          "Use offline growth with seed restocks to keep the farm loop efficient."
+        ]
+      }
+    ],
+    lastUpdated: "2026-06-23",
+    tags: ["farming", "simulator", "tycoon", "seed-restock", "guilds"],
     beginnerTips: [
       "Prioritize seed upgrades before cosmetic purchases.",
       "Reinvest early harvest rewards to unlock faster growth loops.",

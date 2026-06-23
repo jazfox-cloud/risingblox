@@ -99,6 +99,28 @@ export default function GamePage({ params }: { params: { slug: string } }) {
           {game.profileIntro ??
             `${game.name} is tracked as a ${game.genre.toLowerCase()} game with early watchlist signals. The first RisingBlox version keeps this profile concise so updates can happen quickly when public data can be checked.`}
         </p>
+        {game.profileSections?.map((section) => (
+          <div key={section.title}>
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+            <ul>
+              {section.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+        {!game.externalGuide ? (
+          <>
+            <h2>Next Steps</h2>
+            <p>
+              For practical starter tips, read the{" "}
+              <a href={`/guides/${game.slug}`}>{game.name} beginner guide</a>.
+              For rewards research, check the{" "}
+              <a href={`/codes/${game.slug}`}>{game.name} codes status</a>.
+            </p>
+          </>
+        ) : null}
         <h2>Data Notes</h2>
         <p>
           RisingBlox does not treat placeholder numbers as verified stats. Online

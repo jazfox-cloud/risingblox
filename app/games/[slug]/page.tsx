@@ -140,8 +140,8 @@ export default function GamePage({ params }: { params: { slug: string } }) {
             <h2>Dedicated Deep-Dive</h2>
             <p>
               RisingBlox keeps this as a compact trend profile. For source-first
-              Iron Soul forge notes, rune research, race tier-list checks, weapon
-              planning, and code logs, visit{" "}
+              Iron Soul guide pages, codes, forge notes, rune research,
+              race-tier-list checks, weapon planning, and source logs, visit{" "}
               <a href={game.externalGuide.url}>{game.externalGuide.label}</a>.
             </p>
           </>

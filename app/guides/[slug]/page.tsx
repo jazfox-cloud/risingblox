@@ -79,7 +79,8 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       </div>
       {game.externalGuide ? (
         <p className="mt-5 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
-          For the dedicated Iron Soul guide stack, use{" "}
+          For the dedicated Iron Soul guide stack, including codes, forge,
+          runes, race tier-list, weapons, and source notes, use{" "}
           <a className="font-black text-coral" href={game.externalGuide.url}>
             {game.externalGuide.label}
           </a>

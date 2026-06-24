@@ -16,10 +16,22 @@ const universeIds = entries.map(([, entry]) => entry.robloxUniverseId).join(",")
 const gameUrl = `https://games.roblox.com/v1/games?universeIds=${universeIds}`;
 const voteUrl = `https://games.roblox.com/v1/games/votes?universeIds=${universeIds}`;
 
-const [gameResponse, voteResponse] = await Promise.all([
-  fetch(gameUrl),
-  fetch(voteUrl)
-]);
+let gameResponse;
+let voteResponse;
+
+try {
+  [gameResponse, voteResponse] = await Promise.all([
+    fetch(gameUrl),
+    fetch(voteUrl)
+  ]);
+} catch (error) {
+  const message = error instanceof Error ? error.message : String(error);
+  if (message.includes("getaddrinfo ENOTFOUND") || message.includes("fetch failed")) {
+    console.error("Roblox API is unreachable right now. Check network access to games.roblox.com and rerun the refresh.");
+    process.exit(1);
+  }
+  throw error;
+}
 
 if (!gameResponse.ok) {
   throw new Error(`Roblox game API failed: ${gameResponse.status} ${gameResponse.statusText}`);

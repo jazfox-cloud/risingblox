@@ -166,9 +166,63 @@ export const games: Game[] = [
     name: "Mini War",
     genre: "Strategy / Battle",
     summary:
-      "A fast round-based Roblox strategy game where small squads, upgrades, and timing decide each match.",
-    lastUpdated: "2026-06-21",
-    tags: ["strategy", "combat", "rounds"],
+      "Mini War is a Roblox tycoon strategy game about building a country, growing the economy, training an army, unlocking advanced units, and capturing other players' lands.",
+    profileIntro:
+      "Mini War's official Roblox page frames the core loop around building a country, growing economic power, training soldiers, and choosing whether to play as a rich city builder, a military empire, or a balanced takeover strategy.",
+    profileSections: [
+      {
+        title: "Official Gameplay Loop",
+        body:
+          "The verified Roblox description gives Mini War a clear tycoon-to-war loop: start with city growth, move into factories and industry, then use the economy to support army expansion.",
+        bullets: [
+          "Build your city and grow the economy.",
+          "Upgrade into advanced factories and industry.",
+          "Train soldiers and expand the army before attacking."
+        ]
+      },
+      {
+        title: "Economy vs Army Paths",
+        body:
+          "Mini War explicitly supports different playstyles. Beginners should pick one main direction first instead of splitting every resource evenly from the start.",
+        bullets: [
+          "Economy-first players should focus on a rich and powerful city.",
+          "Army-first players should scale military production earlier.",
+          "Balanced players need enough income to replace losses after attacks."
+        ]
+      },
+      {
+        title: "Advanced Units",
+        body:
+          "The official page lists stronger units such as tanks, planes, and helicopters. These should be treated as later pressure tools rather than the first thing a beginner chases.",
+        bullets: [
+          "Unlock stronger units after the city can fund them consistently.",
+          "Use tanks, planes, and helicopters to pressure harder targets.",
+          "Do not ignore basic soldier production while saving for advanced units."
+        ]
+      },
+      {
+        title: "Attack and Capture Lands",
+        body:
+          "Capturing other players' lands is part of the public gameplay description. That makes map control and timing central to the profile, not just side combat.",
+        bullets: [
+          "Scout nearby targets before committing your army.",
+          "Attack when your economy can recover from losses.",
+          "Use captured land to compound the next build-and-army cycle."
+        ]
+      },
+      {
+        title: "Update Notes: Super Workers and Codes",
+        body:
+          "The 2026-06-20 official update log mentions Super Workers, bigger plots, city saving, and a New CODE System. RisingBlox tracks the code system conservatively and only lists specific codes after verification.",
+        bullets: [
+          "Super Workers and bigger plots suggest the economy loop is still expanding.",
+          "City saving matters for repeat sessions and longer-term progress.",
+          "The New CODE System does not confirm any specific active code by itself."
+        ]
+      }
+    ],
+    lastUpdated: "2026-06-24",
+    tags: ["strategy", "tycoon", "economy", "army", "roblox-codes"],
     beginnerTips: [
       "Learn one unit path before spreading currency across every upgrade.",
       "Watch enemy timing and save burst abilities for crowded pushes.",

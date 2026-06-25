@@ -385,12 +385,88 @@ export const games: Game[] = [
       "Play Anime Squadron on Roblox for anime lane-defense battles, squad upgrades, boss waves, and early unit progression from Komplex Studio.",
     profileIntro:
       "Anime Squadron is a Roblox anime strategy game where the early win condition is simple: place a small core squad well, cover each lane cleanly, and upgrade around boss-wave timing instead of chasing rare units too early.",
-    lastUpdated: "2026-06-18",
+    lastUpdated: "2026-06-25",
     tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [
       "Start by learning how lanes, enemy waves, and boss timing work before chasing rare units.",
       "Upgrade a small core squad first so your early clears stay consistent.",
       "Check the official Roblox page and developer-linked channels before trusting copied code claims."
+    ],
+    guideIntro:
+      "Anime Squadron is a Roblox anime lane battler from Komplex Studio. The official page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
+    guideSections: [
+      {
+        title: "What Is Anime Squadron?",
+        body:
+          "Anime Squadron is built around defending lanes with a squad of anime-style units. The beginner goal is to understand enemy pathing, keep lanes covered, and upgrade a small team before chasing every rare unit.",
+        bullets: [
+          "Treat it as a lane battler first, not only a unit collector.",
+          "Learn how enemy waves move before spending heavily on upgrades.",
+          "Use early runs to identify which lanes or boss waves cause failures."
+        ]
+      },
+      {
+        title: "Lane Basics",
+        body:
+          "The official description points to nonstop enemy waves and massive bosses, so lane coverage matters more than random placement. Beginners should focus on keeping each active lane stable.",
+        bullets: [
+          "Place units where they can cover the longest useful path.",
+          "Do not over-stack one lane while another lane leaks enemies.",
+          "Adjust placement after seeing where boss waves break through."
+        ]
+      },
+      {
+        title: "Unit Upgrade Priority",
+        body:
+          "Anime Squadron highlights summoning, upgrading, leveling, and evolving units. Early progress is usually more consistent when a small core squad gets upgraded before resources are spread too widely.",
+        bullets: [
+          "Upgrade a small core squad before chasing every new summon.",
+          "Level units that help clear waves consistently.",
+          "Save evolve decisions for units you actually use in repeated clears."
+        ]
+      },
+      {
+        title: "Boss Wave Timing",
+        body:
+          "Boss waves are called out directly in the official page, so beginners should plan upgrades around boss pressure rather than only normal waves.",
+        bullets: [
+          "Watch which wave introduces the first major boss threat.",
+          "Upgrade damage before the boss wave instead of after it arrives.",
+          "If a boss survives too long, review placement before blaming unit rarity."
+        ]
+      },
+      {
+        title: "Common Beginner Mistakes",
+        body:
+          "Most early mistakes come from chasing rare units too quickly, ignoring lane coverage, or upgrading after the dangerous wave has already started.",
+        bullets: [
+          "Do not spend everything on summons before your current squad can clear basic waves.",
+          "Do not leave weak lanes open while over-upgrading one side.",
+          "Do not trust copied code claims unless the codes page marks them verified."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "What should beginners focus on in Anime Squadron?",
+        answer:
+          "Beginners should learn lane coverage, upgrade a small core squad, and prepare before boss waves instead of chasing rare units immediately."
+      },
+      {
+        question: "Are units important in Anime Squadron?",
+        answer:
+          "Yes. The official Roblox page highlights summoning, upgrading, leveling, and evolving units, so unit progression is central to the game."
+      },
+      {
+        question: "How should I handle boss waves in Anime Squadron?",
+        answer:
+          "Watch when boss waves appear, upgrade damage before they arrive, and adjust placement if bosses survive too long."
+      },
+      {
+        question: "Are there Anime Squadron codes?",
+        answer:
+          "RisingBlox does not have verified active Anime Squadron codes listed right now. Check the dedicated codes page for the current verified status."
+      }
     ],
     activeCodes: [],
     expiredCodes: [],

@@ -29,12 +29,88 @@ export const games: Game[] = [
     genre: "RPG / Action RPG",
     summary:
       "A fast-rising Roblox dungeon RPG from the verified Iron Soul group, built around ore farming, ancient forges, weapon crafting, skill-tree paths, and dungeon clearing.",
-    lastUpdated: "2026-06-19",
+    lastUpdated: "2026-06-26",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
       "Treat the forge as the main progression loop: farm materials first, then choose upgrades around your next dungeon goal.",
       "Plan your skill-tree path before spending rerolls or chasing every weapon claim you see in videos.",
       "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, and code checks."
+    ],
+    guideIntro:
+      "Iron Soul: Dungeon is a Roblox action RPG from the verified Iron Soul group. The official page centers the early loop on slaying monsters, collecting crystalized ore, using ancient forges, crafting weapons, choosing a skill-tree path, and clearing dungeons for better rewards.",
+    guideSections: [
+      {
+        title: "What Is Iron Soul: Dungeon?",
+        body:
+          "Iron Soul: Dungeon is built around a forge-driven RPG loop. You fight creatures, collect rare materials, turn crystalized ore into stronger weapons, and use each dungeon clear to push the next upgrade cycle.",
+        bullets: [
+          "Fight monsters to collect crystalized ore and rare materials.",
+          "Use ancient forges to craft and upgrade weapons.",
+          "Clear harder dungeon areas once your weapon and skill setup can support it."
+        ]
+      },
+      {
+        title: "Ore and Forge Loop",
+        body:
+          "The official description makes the forge the center of progression. Beginners should treat ore farming as the resource base for stronger weapons instead of rushing into every dungeon immediately.",
+        bullets: [
+          "Farm enough ore before chasing a new dungeon goal.",
+          "Bring materials back to the forge before progress slows too much.",
+          "Use each new weapon as a test of whether your next dungeon route is ready."
+        ]
+      },
+      {
+        title: "Skill Tree Paths",
+        body:
+          "Iron Soul: Dungeon says players can choose abilities for different playstyles, including relentless attacker, forge master, or survivor. Pick a direction before spreading upgrades too widely.",
+        bullets: [
+          "Attacker paths should support faster monster clears.",
+          "Forge-focused paths should support crafting and weapon progression.",
+          "Survivor paths make sense when dungeon pressure is ending runs too early."
+        ]
+      },
+      {
+        title: "Weapon Crafting Priority",
+        body:
+          "The official page says every new weapon changes how you fight. That means beginners should evaluate weapons by how they affect clears, not only by rarity or appearance.",
+        bullets: [
+          "Craft weapons that help with the content you are currently failing.",
+          "Do not spend every material on side upgrades before testing a weapon change.",
+          "Use BloxDungeon for deeper weapon, forge, rune, and race tier-list notes."
+        ]
+      },
+      {
+        title: "Dungeon Progression",
+        body:
+          "Dungeons are described as lost lands with greater rewards, so the best timing is after your weapon, skill tree, and survival setup can handle the next difficulty step.",
+        bullets: [
+          "Enter new dungeons after a forge upgrade or meaningful skill-tree improvement.",
+          "Track which enemy type or room ends your run.",
+          "Return to farming when dungeon clears become too slow or inconsistent."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "What should beginners do first in Iron Soul: Dungeon?",
+        answer:
+          "Beginners should farm monsters for crystalized ore, use the forge to craft stronger weapons, and choose a clear skill-tree direction before pushing harder dungeons."
+      },
+      {
+        question: "How important is the forge in Iron Soul: Dungeon?",
+        answer:
+          "The forge is central. The official Roblox page describes gathering ore, bringing it to ancient forges, and crafting weapons as the main progression loop."
+      },
+      {
+        question: "Which skill tree path should I choose?",
+        answer:
+          "Choose based on your problem: attacker for faster clears, forge-focused for crafting progression, or survivor when dungeon pressure is ending runs too early."
+      },
+      {
+        question: "Where can I find deeper Iron Soul data?",
+        answer:
+          "Use BloxDungeon for dedicated Iron Soul forge notes, runes, weapons, race tier-list research, codes, and source logs."
+      }
     ],
     activeCodes: [],
     expiredCodes: [],

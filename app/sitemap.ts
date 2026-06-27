@@ -16,5 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   );
 
-  return [...staticRoutes, ...gameRoutes];
+  const standaloneGuideRoutes = [
+    {
+      url: `${baseUrl}/guides/animal-hospital-anomaly`,
+      lastModified: new Date("2026-06-27")
+    }
+  ];
+
+  return [...staticRoutes, ...gameRoutes, ...standaloneGuideRoutes];
 }

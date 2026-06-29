@@ -99,6 +99,12 @@ export default function AnimalHospitalAnomalyGuide() {
         <a className="rounded-md bg-mint px-4 py-3 text-ink" href="#checklist">
           Open Checklist
         </a>
+        <a
+          className="rounded-md bg-coral px-4 py-3 text-white"
+          href="/codes/animal-hospital-anomaly/"
+        >
+          Codes status
+        </a>
       </div>
 
       <section className="content-prose mt-10 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
@@ -159,7 +165,9 @@ export default function AnimalHospitalAnomalyGuide() {
         <h2>Codes Status</h2>
         <p>
           No verified active Animal Hospital (Anomaly) codes are listed on
-          RisingBlox right now.
+          RisingBlox right now. See the{" "}
+          <a href="/codes/animal-hospital-anomaly/">codes status page</a> for
+          the latest source notes.
         </p>
 
         <h2>Source Notes</h2>

@@ -18,6 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const standaloneGuideRoutes = [
     {
+      url: `${baseUrl}/games/animal-hospital-anomaly`,
+      lastModified: new Date("2026-06-30")
+    },
+    {
       url: `${baseUrl}/guides/animal-hospital-anomaly`,
       lastModified: new Date("2026-06-27")
     }

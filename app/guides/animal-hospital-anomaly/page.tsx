@@ -105,6 +105,12 @@ export default function AnimalHospitalAnomalyGuide() {
         >
           Codes status
         </a>
+        <a
+          className="rounded-md bg-white px-4 py-3 text-ink shadow-sm"
+          href="/games/animal-hospital-anomaly/"
+        >
+          Game profile
+        </a>
       </div>
 
       <section className="content-prose mt-10 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
@@ -172,6 +178,12 @@ export default function AnimalHospitalAnomalyGuide() {
 
         <h2>Source Notes</h2>
         <ul>
+          <li>
+            RisingBlox game profile:{" "}
+            <a href="/games/animal-hospital-anomaly/">
+              Animal Hospital (Anomaly) profile
+            </a>
+          </li>
           <li>
             Official Roblox game page:{" "}
             <a href="https://www.roblox.com/games/78515283254292/Animal-Hospital">

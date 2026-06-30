@@ -98,6 +98,12 @@ export default function AnimalHospitalAnomalyCodesPage() {
         >
           Beginner guide
         </Link>
+        <Link
+          className="rounded-md bg-white px-4 py-3 text-ink shadow-sm"
+          href="/games/animal-hospital-anomaly/"
+        >
+          Game profile
+        </Link>
       </div>
 
       <section className="mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
@@ -148,6 +154,12 @@ export default function AnimalHospitalAnomalyCodesPage() {
 
         <h2>Source Notes</h2>
         <ul>
+          <li>
+            RisingBlox game profile:{" "}
+            <Link href="/games/animal-hospital-anomaly/">
+              Animal Hospital (Anomaly) profile
+            </Link>
+          </li>
           <li>
             Official Roblox game page:{" "}
             <a href={officialRobloxUrl}>Animal Hospital (Anomaly)</a>

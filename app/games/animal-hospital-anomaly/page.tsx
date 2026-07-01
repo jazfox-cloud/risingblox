@@ -2,16 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const baseUrl = "https://risingblox.com";
-const checkedDate = "2026-06-30";
+const checkedDate = "2026-07-01";
 const officialRobloxUrl = "https://www.roblox.com/games/78515283254292/Animal-Hospital";
 const robloxSnapshot = {
   universeId: "10148749921",
   placeId: "78515283254292",
   creator: "Animal Anomaly",
   genre: "Survival",
-  playing: "409,836",
-  visits: "211,964,642",
-  updated: "2026-06-28T14:53:41Z"
+  playing: "411,974",
+  visits: "248,761,501",
+  updated: "2026-07-01T00:31:09Z"
 };
 
 export const metadata: Metadata = {

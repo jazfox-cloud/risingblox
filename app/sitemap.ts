@@ -4,9 +4,14 @@ import { games } from "@/content/games";
 const baseUrl = "https://risingblox.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/trending", "/about", "/privacy"].map((path) => ({
-    url: `${baseUrl}${path}`,
-    lastModified: new Date("2026-06-13")
+  const staticRoutes = [
+    { path: "", lastModified: "2026-06-13" },
+    { path: "/trending", lastModified: "2026-07-04" },
+    { path: "/about", lastModified: "2026-06-13" },
+    { path: "/privacy", lastModified: "2026-06-13" }
+  ].map((route) => ({
+    url: `${baseUrl}${route.path}`,
+    lastModified: new Date(route.lastModified)
   }));
 
   const gameRoutes = games.flatMap((game) =>

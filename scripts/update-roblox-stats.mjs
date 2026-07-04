@@ -16,33 +16,31 @@ const universeIds = entries.map(([, entry]) => entry.robloxUniverseId).join(",")
 const gameUrl = `https://games.roblox.com/v1/games?universeIds=${universeIds}`;
 const voteUrl = `https://games.roblox.com/v1/games/votes?universeIds=${universeIds}`;
 
-let gameResponse;
-let voteResponse;
-
-try {
-  [gameResponse, voteResponse] = await Promise.all([
-    fetch(gameUrl),
-    fetch(voteUrl)
-  ]);
-} catch (error) {
-  const message = error instanceof Error ? error.message : String(error);
-  if (message.includes("getaddrinfo ENOTFOUND") || message.includes("fetch failed")) {
-    console.error("Roblox API is unreachable right now. Check network access to games.roblox.com and rerun the refresh.");
-    process.exit(1);
+async function fetchJson(url, label) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`${label} API failed: ${response.status} ${response.statusText}`);
+    }
+    return response;
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    const detail = message.includes("getaddrinfo ENOTFOUND") || message.includes("fetch failed")
+      ? `${label} request failed for ${url}: ${message}`
+      : `${label} request failed for ${url}: ${message}`;
+    throw new Error(detail);
   }
-  throw error;
 }
 
-if (!gameResponse.ok) {
-  throw new Error(`Roblox game API failed: ${gameResponse.status} ${gameResponse.statusText}`);
-}
+const [gameResponse, voteResponse] = await Promise.all([
+  fetchJson(gameUrl, "Roblox game"),
+  fetchJson(voteUrl, "Roblox vote")
+]);
 
-if (!voteResponse.ok) {
-  throw new Error(`Roblox vote API failed: ${voteResponse.status} ${voteResponse.statusText}`);
-}
-
-const gameData = await gameResponse.json();
-const voteData = await voteResponse.json();
+const [gameData, voteData] = await Promise.all([
+  gameResponse.json(),
+  voteResponse.json()
+]);
 const gamesByUniverseId = new Map(
   (gameData.data ?? []).map((item) => [item.id, item])
 );

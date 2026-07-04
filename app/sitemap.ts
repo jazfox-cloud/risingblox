@@ -5,7 +5,7 @@ const baseUrl = "https://risingblox.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
-    { path: "/", lastModified: "2026-06-13" },
+    { path: "/", lastModified: "2026-07-04" },
     { path: "/trending/", lastModified: "2026-07-04" },
     { path: "/about/", lastModified: "2026-06-13" },
     { path: "/privacy/", lastModified: "2026-06-13" }

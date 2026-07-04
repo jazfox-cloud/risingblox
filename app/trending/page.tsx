@@ -13,6 +13,18 @@ export const metadata: Metadata = {
 };
 
 export default function TrendingPage() {
+  const standaloneWatchlist = [
+    {
+      name: "Animal Hospital (Anomaly)",
+      genre: "Survival / Anomaly",
+      status: "Verified Roblox source",
+      updated: "2026-07-03",
+      href: "/games/animal-hospital-anomaly/",
+      guideHref: "/guides/animal-hospital-anomaly/",
+      codesHref: "/codes/animal-hospital-anomaly/"
+    }
+  ];
+
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
       <h1 className="text-4xl font-black tracking-tight">Trending Roblox Games</h1>
@@ -64,6 +76,38 @@ export default function TrendingPage() {
           </tbody>
         </table>
       </div>
+
+      <section className="mt-10 rounded-lg border border-black/10 bg-white p-5 shadow-sm">
+        <h2 className="text-xl font-black">Standalone Trend Checks</h2>
+        <div className="mt-5 grid gap-4">
+          {standaloneWatchlist.map((item) => (
+            <article
+              className="flex flex-col gap-3 border-t border-black/10 pt-4 first:border-t-0 first:pt-0 sm:flex-row sm:items-center sm:justify-between"
+              key={item.name}
+            >
+              <div>
+                <Link className="font-black hover:text-coral" href={item.href}>
+                  {item.name}
+                </Link>
+                <p className="mt-1 text-sm text-gray-500">
+                  {item.genre} - {item.status} - Updated {item.updated}
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-2 text-sm font-bold">
+                <Link className="rounded-md bg-ink px-3 py-2 text-white" href={item.href}>
+                  Profile
+                </Link>
+                <Link className="rounded-md bg-gray-100 px-3 py-2" href={item.guideHref}>
+                  Guide
+                </Link>
+                <Link className="rounded-md bg-gray-100 px-3 py-2" href={item.codesHref}>
+                  Codes
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

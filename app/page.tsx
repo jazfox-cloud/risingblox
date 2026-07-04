@@ -13,6 +13,18 @@ export const metadata: Metadata = {
 export default function Home() {
   const featured = games[0];
   const featuredStats = getDisplayStats(featured);
+  const standalonePages = [
+    {
+      title: "Animal Hospital (Anomaly)",
+      summary:
+        "A verified Roblox survival trend with a dedicated profile, beginner guide, and codes status page.",
+      links: [
+        { href: "/games/animal-hospital-anomaly/", label: "Profile" },
+        { href: "/guides/animal-hospital-anomaly/", label: "Guide" },
+        { href: "/codes/animal-hospital-anomaly/", label: "Codes" }
+      ]
+    }
+  ];
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
@@ -67,7 +79,9 @@ export default function Home() {
         <div className="flex items-end justify-between gap-4">
           <div>
             <h2 className="text-2xl font-black">Latest Game Profiles</h2>
-            <p className="mt-2 text-gray-600">Three seed games for the SEO MVP.</p>
+            <p className="mt-2 text-gray-600">
+              Verified Roblox game pages with profiles, guides, and code checks.
+            </p>
           </div>
           <Link className="text-sm font-black text-coral" href="/trending">
             Full list
@@ -76,6 +90,37 @@ export default function Home() {
         <div className="mt-6 grid gap-5 md:grid-cols-3">
           {games.map((game) => (
             <GameCard key={game.slug} game={game} />
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-14">
+        <h2 className="text-2xl font-black">Recently Verified Standalone Pages</h2>
+        <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {standalonePages.map((item) => (
+            <article
+              className="rounded-lg border border-black/10 bg-white p-5 shadow-sm"
+              key={item.title}
+            >
+              <p className="text-xs font-bold uppercase text-coral">
+                Roblox trend watch
+              </p>
+              <h3 className="mt-2 text-xl font-black">{item.title}</h3>
+              <p className="mt-3 text-sm leading-6 text-gray-600">
+                {item.summary}
+              </p>
+              <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
+                {item.links.map((link) => (
+                  <Link
+                    className="rounded-md bg-gray-100 px-3 py-2 first:bg-ink first:text-white"
+                    href={link.href}
+                    key={link.href}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
       </section>

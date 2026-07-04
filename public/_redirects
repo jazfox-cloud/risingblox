@@ -1,1 +1,4 @@
-https://www.risingblox.com/* https://risingblox.com/:splat 301!
+https://www.risingblox.com/* https://risingblox.com/:splat 301
+https://risingblox.pages.dev/* https://risingblox.com/:splat 301
+/index.html / 301
+/:path/index.html /:path/ 301

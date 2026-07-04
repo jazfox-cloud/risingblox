@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About RisingBlox and its independent Roblox trends coverage."
+  description: "About RisingBlox and its independent Roblox trends coverage.",
+  alternates: {
+    canonical: "https://risingblox.com/about/"
+  }
 };
 
 export default function AboutPage() {

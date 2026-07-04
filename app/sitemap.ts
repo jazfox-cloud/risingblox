@@ -5,36 +5,36 @@ const baseUrl = "https://risingblox.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
-    { path: "", lastModified: "2026-06-13" },
-    { path: "/trending", lastModified: "2026-07-04" },
-    { path: "/about", lastModified: "2026-06-13" },
-    { path: "/privacy", lastModified: "2026-06-13" }
+    { path: "/", lastModified: "2026-06-13" },
+    { path: "/trending/", lastModified: "2026-07-04" },
+    { path: "/about/", lastModified: "2026-06-13" },
+    { path: "/privacy/", lastModified: "2026-06-13" }
   ].map((route) => ({
-    url: `${baseUrl}${route.path}`,
+    url: `${baseUrl}${route.path === "/" ? "/" : route.path}`,
     lastModified: new Date(route.lastModified)
   }));
 
   const gameRoutes = games.flatMap((game) =>
     ["/games", "/codes", "/guides"].map((prefix) => ({
-      url: `${baseUrl}${prefix}/${game.slug}`,
+      url: `${baseUrl}${prefix}/${game.slug}/`,
       lastModified: new Date(game.lastUpdated)
     }))
   );
 
   const standaloneGuideRoutes = [
     {
-      url: `${baseUrl}/games/animal-hospital-anomaly`,
+      url: `${baseUrl}/games/animal-hospital-anomaly/`,
       lastModified: new Date("2026-07-03")
     },
     {
-      url: `${baseUrl}/guides/animal-hospital-anomaly`,
+      url: `${baseUrl}/guides/animal-hospital-anomaly/`,
       lastModified: new Date("2026-06-27")
     }
   ];
 
   const standaloneCodeRoutes = [
     {
-      url: `${baseUrl}/codes/animal-hospital-anomaly`,
+      url: `${baseUrl}/codes/animal-hospital-anomaly/`,
       lastModified: new Date("2026-06-29")
     }
   ];

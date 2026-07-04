@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { GameCard } from "@/components/GameCard";
 import { games } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "https://risingblox.com/"
+  }
+};
 
 export default function Home() {
   const featured = games[0];

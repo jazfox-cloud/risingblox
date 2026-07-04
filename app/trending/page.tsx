@@ -6,7 +6,10 @@ import { getDisplayStats } from "@/content/stats";
 export const metadata: Metadata = {
   title: "Trending Roblox Games",
   description:
-    "A manually maintained watchlist of rising Roblox games with verification status, review notes, and update dates."
+    "A manually maintained watchlist of rising Roblox games with verification status, review notes, and update dates.",
+  alternates: {
+    canonical: "https://risingblox.com/trending/"
+  }
 };
 
 export default function TrendingPage() {

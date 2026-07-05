@@ -25,17 +25,24 @@ async function fetchJson(url, label) {
     return response;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
-    const detail = message.includes("getaddrinfo ENOTFOUND") || message.includes("fetch failed")
-      ? `${label} request failed for ${url}: ${message}`
-      : `${label} request failed for ${url}: ${message}`;
+    const detail = `${label} request failed for ${url}: ${message}`;
     throw new Error(detail);
   }
 }
 
-const [gameResponse, voteResponse] = await Promise.all([
-  fetchJson(gameUrl, "Roblox game"),
-  fetchJson(voteUrl, "Roblox vote")
-]);
+let gameResponse;
+let voteResponse;
+
+try {
+  [gameResponse, voteResponse] = await Promise.all([
+    fetchJson(gameUrl, "Roblox game"),
+    fetchJson(voteUrl, "Roblox vote")
+  ]);
+} catch (error) {
+  const message = error instanceof Error ? error.message : String(error);
+  console.warn(`Skipping Roblox stats refresh: ${message}`);
+  process.exit(0);
+}
 
 const [gameData, voteData] = await Promise.all([
   gameResponse.json(),

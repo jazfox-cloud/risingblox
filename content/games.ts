@@ -244,7 +244,7 @@ export const games: Game[] = [
     summary:
       "Mini War is a Roblox tycoon strategy game about building a country, growing the economy, training an army, unlocking advanced units, and capturing other players' lands.",
     profileIntro:
-      "Mini War's official Roblox page frames the core loop around building a country, growing economic power, training soldiers, and choosing whether to play as a rich city builder, a military empire, or a balanced takeover strategy.",
+      "Mini War's official Roblox page frames the core loop around building a country, growing economic power, training soldiers, and choosing whether to play as a rich city builder, a military empire, or a balanced takeover strategy. The 2026-07-04 update adds Special Invasion Weather, five new research buildings, advanced army and builder controls, and an auto-buy option.",
     profileSections: [
       {
         title: "Official Gameplay Loop",
@@ -287,30 +287,51 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Update Notes: Super Workers and Codes",
+        title: "Update Notes: Special Invasion Weather",
         body:
-          "The 2026-06-20 official update log mentions Super Workers, bigger plots, city saving, and a New CODE System. RisingBlox tracks the code system conservatively and only lists specific codes after verification.",
+          "The official 2026-07-04 update log lists a new Special Invasion Weather system. Beginners should treat weather as a timing signal: do not push every attack automatically, and keep enough economy to recover if an invasion shift changes the map pressure.",
         bullets: [
-          "Super Workers and bigger plots suggest the economy loop is still expanding.",
-          "City saving matters for repeat sessions and longer-term progress.",
-          "The New CODE System does not confirm any specific active code by itself."
+          "Watch for weather changes before sending a large army forward.",
+          "Keep reserve income so a bad invasion window does not stall the city.",
+          "Use safer attacks first while learning how the new weather affects pressure."
+        ]
+      },
+      {
+        title: "Research Buildings and Advanced Controls",
+        body:
+          "The same official update mentions five new buildings through research, advanced army controls, advanced builder controls, and an auto-buy option. These features make research timing more important than rushing combat alone.",
+        bullets: [
+          "Use research buildings to unlock better control options before overextending.",
+          "Advanced army controls should help with cleaner attacks and fewer wasted units.",
+          "Advanced builder controls and auto buy are best used after the economy loop is stable."
+        ]
+      },
+      {
+        title: "Code System Status",
+        body:
+          "Mini War previously added a code system, but RisingBlox still has no verified active Mini War code to list. The presence of a code system is not enough to publish a code without a source or in-game redemption check.",
+        bullets: [
+          "Check the codes page before long sessions, but expect an empty active list until verification improves.",
+          "Do not trust copied code lists unless they show a credible source or redemption evidence.",
+          "RisingBlox will keep active codes empty until a specific Mini War code can be verified."
         ]
       }
     ],
-    lastUpdated: "2026-06-24",
+    lastUpdated: "2026-07-05",
     tags: ["strategy", "tycoon", "economy", "army", "roblox-codes"],
     beginnerTips: [
-      "Learn one unit path before spreading currency across every upgrade.",
-      "Watch enemy timing and save burst abilities for crowded pushes.",
-      "Join low-pressure rooms first to understand map pacing."
+      "Stabilize the economy before relying on auto buy or advanced controls.",
+      "Watch Special Invasion Weather before sending a full army push.",
+      "Use research buildings to unlock better control options before chasing every combat upgrade."
     ],
     activeCodes: [],
     expiredCodes: [],
     codesSummary:
-      "Mini War added a New CODE System in the official Roblox update log dated 2026-06-20, but RisingBlox has not verified any active Mini War codes yet. We will keep the active list empty until a specific code can be checked against an official source or reliable in-game redemption evidence.",
+      "Mini War has a code system, and the official Roblox page is actively updating, but RisingBlox has not verified any active Mini War codes yet. We will keep the active list empty until a specific code can be checked against an official source or reliable in-game redemption evidence.",
     codeCheckMethod: [
       "Check the official Mini War Roblox page from the verified M&M Community group.",
-      "Track the 2026-06-20 official update log, which mentions a New CODE System but does not list a specific public code.",
+      "Track the 2026-07-04 official update log, which adds Special Invasion Weather, new research buildings, advanced controls, and auto buy but does not list a specific public code.",
+      "Track the earlier official update log that introduced the code system without confirming a specific active code.",
       "Look for code announcements tied to updates, milestones, or events.",
       "Do not list copied code claims unless they can be verified from a credible source or in-game redemption evidence."
     ],
@@ -328,7 +349,7 @@ export const games: Game[] = [
       {
         question: "Does Mini War have a code system?",
         answer:
-          "Yes. The official Roblox game description mentions a New CODE System in the 2026-06-20 update log, but that does not confirm any specific active code by itself."
+          "Yes. The official Roblox game description has mentioned a code system, but that does not confirm any specific active code by itself."
       },
       {
         question: "When are new Mini War codes usually released?",

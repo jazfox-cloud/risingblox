@@ -12,11 +12,11 @@ The update script is:
 npm run update:stats
 ```
 
-It validates the saved snapshot locally:
+It refreshes from Roblox game-page HTML:
 
-- checks that each tracked game still has `robloxUniverseId`, `robloxPlaceId`, and `sourceUrl`
-- normalizes the canonical `sourceUrl` from `robloxPlaceId`
-- keeps the recorded stats in `content/roblox-stats.json` as the source of truth
+- fetches `https://www.roblox.com/games/<placeId>` for each tracked game
+- extracts embedded JSON or page data from the HTML
+- updates the recorded stats in `content/roblox-stats.json`
 
 ## Required Per Game
 

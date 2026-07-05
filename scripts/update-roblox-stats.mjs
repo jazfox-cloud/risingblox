@@ -12,80 +12,52 @@ if (!entries.length) {
 }
 
 const today = new Date().toISOString().slice(0, 10);
-const universeIds = entries.map(([, entry]) => entry.robloxUniverseId).join(",");
-const gameUrl = `https://games.roblox.com/v1/games?universeIds=${universeIds}`;
-const voteUrl = `https://games.roblox.com/v1/games/votes?universeIds=${universeIds}`;
-
-async function fetchJson(url, label) {
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`${label} API failed: ${response.status} ${response.statusText}`);
-    }
-    return response;
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    const detail = `${label} request failed for ${url}: ${message}`;
-    throw new Error(detail);
-  }
-}
-
-let gameResponse;
-let voteResponse;
-
-try {
-  [gameResponse, voteResponse] = await Promise.all([
-    fetchJson(gameUrl, "Roblox game"),
-    fetchJson(voteUrl, "Roblox vote")
-  ]);
-} catch (error) {
-  const message = error instanceof Error ? error.message : String(error);
-  console.warn(`Skipping Roblox stats refresh: ${message}`);
-  process.exit(0);
-}
-
-const [gameData, voteData] = await Promise.all([
-  gameResponse.json(),
-  voteResponse.json()
-]);
-const gamesByUniverseId = new Map(
-  (gameData.data ?? []).map((item) => [item.id, item])
-);
-const votesByUniverseId = new Map(
-  (voteData.data ?? []).map((item) => [item.id, item])
-);
+let changed = false;
+const problems = [];
 
 for (const [slug, entry] of entries) {
-  const game = gamesByUniverseId.get(entry.robloxUniverseId);
-  const votes = votesByUniverseId.get(entry.robloxUniverseId);
-
-  if (!game) {
+  const hasSource = Boolean(entry.robloxUniverseId && entry.robloxPlaceId && entry.sourceUrl);
+  if (!hasSource) {
+    problems.push(`${slug}: missing robloxUniverseId, robloxPlaceId, or sourceUrl`);
     stats[slug] = {
       ...entry,
       lastChecked: today,
-      status: "error",
-      error: "Universe ID was not returned by Roblox games API."
+      status: "needs_source",
+      error: "Missing source fields for verified stats."
     };
+    changed = true;
     continue;
   }
 
-  stats[slug] = {
+  const expectedSourceUrl = `https://www.roblox.com/games/${entry.robloxPlaceId}`;
+  const normalizedSourceUrl = entry.sourceUrl === expectedSourceUrl ? entry.sourceUrl : expectedSourceUrl;
+  const nextEntry = {
     ...entry,
     sourceLabel: "Roblox public game data",
-    sourceUrl: entry.robloxPlaceId
-      ? `https://www.roblox.com/games/${entry.robloxPlaceId}`
-      : entry.sourceUrl,
+    sourceUrl: normalizedSourceUrl,
     lastChecked: today,
     status: "verified",
-    onlinePlayers: game.playing,
-    visits: game.visits,
-    upVotes: votes?.upVotes ?? null,
-    downVotes: votes?.downVotes ?? null,
-    updatedAt: game.updated,
-    fetchedAt: new Date().toISOString(),
     error: null
   };
+
+  if (JSON.stringify(nextEntry) !== JSON.stringify(entry)) {
+    stats[slug] = nextEntry;
+    changed = true;
+  }
+}
+
+if (!changed) {
+  console.log(`Validated Roblox stats for ${entries.length} game(s).`);
+  process.exit(0);
 }
 
 await writeFile(statsPath, `${JSON.stringify(stats, null, 2)}\n`);
-console.log(`Updated Roblox stats for ${entries.length} game(s).`);
+
+if (problems.length) {
+  console.warn(`Validated with ${problems.length} missing-source problem(s).`);
+  for (const problem of problems) {
+    console.warn(`- ${problem}`);
+  }
+} else {
+  console.log(`Validated Roblox stats for ${entries.length} game(s).`);
+}

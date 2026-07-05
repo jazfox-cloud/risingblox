@@ -12,10 +12,11 @@ The update script is:
 npm run update:stats
 ```
 
-It uses Roblox public game data endpoints by `universeId`:
+It validates the saved snapshot locally:
 
-- game metadata and online players
-- vote counts used to calculate like rate
+- checks that each tracked game still has `robloxUniverseId`, `robloxPlaceId`, and `sourceUrl`
+- normalizes the canonical `sourceUrl` from `robloxPlaceId`
+- keeps the recorded stats in `content/roblox-stats.json` as the source of truth
 
 ## Required Per Game
 

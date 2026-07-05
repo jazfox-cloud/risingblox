@@ -324,6 +324,77 @@ export const games: Game[] = [
       "Watch Special Invasion Weather before sending a full army push.",
       "Use research buildings to unlock better control options before chasing every combat upgrade."
     ],
+    guideIntro:
+      "Mini War is a Roblox tycoon strategy game where beginners need to build a stable economy, research stronger tools, train an army, and time attacks around map pressure. The 2026-07-04 update adds Special Invasion Weather, five research buildings, advanced controls, and auto buy, so new players should learn the economy loop before rushing every combat option.",
+    guideSections: [
+      {
+        title: "Start With a Stable Economy",
+        body:
+          "Mini War rewards players who can keep production running while preparing attacks. Before chasing advanced units, make sure the city can replace soldiers and keep building after a bad fight.",
+        bullets: [
+          "Build enough income before spending everything on the army.",
+          "Upgrade into factories and industry when the next economy step is affordable.",
+          "Keep some currency available so recovery is possible after a failed push."
+        ]
+      },
+      {
+        title: "Use Research Buildings Carefully",
+        body:
+          "The official 2026-07-04 update mentions five new buildings through research. That makes research a key part of progression, especially for players who want better control tools instead of only raw army size.",
+        bullets: [
+          "Research buildings should support your current bottleneck: economy, control, or army pressure.",
+          "Do not unlock everything randomly before your city can pay for the upgrades.",
+          "Use new buildings to support a clear plan rather than reacting to every fight."
+        ]
+      },
+      {
+        title: "Special Invasion Weather Tips",
+        body:
+          "Special Invasion Weather is a new official update feature. Until players learn the exact pressure changes, the safest beginner approach is to avoid sending every unit during uncertain weather windows.",
+        bullets: [
+          "Watch the map before committing a full army push.",
+          "Use smaller attacks first to learn how weather changes pressure.",
+          "Keep production running so the city can recover if the invasion timing goes badly."
+        ]
+      },
+      {
+        title: "Advanced Controls and Auto Buy",
+        body:
+          "Advanced army controls, advanced builder controls, and auto buy can reduce busywork, but they work best after the basic city loop is stable.",
+        bullets: [
+          "Use advanced army controls to avoid wasting units in messy attacks.",
+          "Use builder controls to keep the city improving while you manage the map.",
+          "Turn auto buy into a support tool, not a replacement for choosing the right upgrade path."
+        ]
+      },
+      {
+        title: "Codes Status",
+        body:
+          "Mini War has a code system, but RisingBlox does not list any active Mini War code unless a specific code can be verified against an official source or reliable in-game redemption evidence.",
+        bullets: [
+          "Check the Mini War codes page before long sessions.",
+          "Treat copied code lists as unverified until they show source evidence.",
+          "Use update logs as a reason to check codes, not as proof that a public code exists."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "What should beginners do first in Mini War?",
+        answer:
+          "Beginners should build a stable economy, then train enough soldiers to defend and attack without stopping city growth."
+      },
+      {
+        question: "What changed in the Mini War 2026-07-04 update?",
+        answer:
+          "The official update log mentions Special Invasion Weather, five new research buildings, advanced army and builder controls, auto buy, and additional changes."
+      },
+      {
+        question: "Are there active Mini War codes?",
+        answer:
+          "RisingBlox does not have verified active Mini War codes listed right now. The code system exists, but a specific code still needs source or redemption evidence before being added."
+      }
+    ],
     activeCodes: [],
     expiredCodes: [],
     codesSummary:

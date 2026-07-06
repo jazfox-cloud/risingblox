@@ -18,6 +18,8 @@ It refreshes from Roblox game-page HTML:
 - extracts embedded JSON or page data from the HTML
 - updates the recorded stats in `content/roblox-stats.json`
 
+This script does not use `games.roblox.com`, so the scheduled refresh stays on the HTML path even if the public games API is flaky.
+
 ## Required Per Game
 
 Before a game can show verified numbers, add:

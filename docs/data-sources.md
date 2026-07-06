@@ -19,6 +19,7 @@ It refreshes from Roblox game-page HTML:
 - updates the recorded stats in `content/roblox-stats.json`
 
 This script does not use `games.roblox.com`, so the scheduled refresh stays on the HTML path even if the public games API is flaky.
+If a Roblox page fetch fails, the script skips that game and leaves the saved snapshot untouched.
 
 ## Required Per Game
 

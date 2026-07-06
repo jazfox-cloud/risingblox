@@ -85,7 +85,9 @@ function findAllObjects(node) {
 function extractEmbeddedJson(html) {
   const patterns = [
     /<script[^>]+id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/i,
-    /<script[^>]+type="application\/json"[^>]*>([\s\S]*?)<\/script>/i
+    /<script[^>]+type="application\/json"[^>]*>([\s\S]*?)<\/script>/i,
+    /<script[^>]+data-target="react-app.embeddedData"[^>]*>([\s\S]*?)<\/script>/i,
+    /<script[^>]+id="__NEXT_REDIRECT__"[^>]*>([\s\S]*?)<\/script>/i
   ];
 
   for (const pattern of patterns) {
@@ -128,11 +130,18 @@ function extractStatsFromHtml(html, entry) {
     findFirstValue(directCandidate ?? {}, ["updated", "updatedAt", "lastUpdated", "lastUpdate"]) ?? null;
 
   const placeSlugMatch = blob.match(/\/games\/\d+\/([^"?#]+)/);
+  const titleCandidates = [
+    findFirstValue(directCandidate ?? {}, ["name", "title", "gameName"]),
+    blob.match(/<title>(.*?)<\/title>/i)?.[1],
+    blob.match(/"title":"([^"]+)"/)?.[1]
+  ].filter(Boolean);
+  const pageTitle = titleCandidates[0] ? normalizeWhitespace(String(titleCandidates[0])) : null;
 
   return {
-    sourceUrl: `https://www.roblox.com/games/${entry.robloxPlaceId}${
-      placeSlugMatch?.[1] ? `/${placeSlugMatch[1]}` : ""
-    }`,
+    sourceUrl:
+      pageTitle && placeSlugMatch?.[1]
+        ? `https://www.roblox.com/games/${entry.robloxPlaceId}/${placeSlugMatch[1]}`
+        : `https://www.roblox.com/games/${entry.robloxPlaceId}`,
     onlinePlayers,
     visits,
     upVotes,
@@ -169,13 +178,7 @@ for (const [slug, entry] of entries) {
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
     errors.push(`${slug}: ${message}`);
-    stats[slug] = {
-      ...entry,
-      lastChecked: today,
-      status: "error",
-      error: message
-    };
-    changed = true;
+    console.warn(`Skipping ${slug}: ${message}`);
     continue;
   }
 
@@ -202,7 +205,11 @@ for (const [slug, entry] of entries) {
 }
 
 if (!changed) {
-  console.log(`Validated Roblox stats for ${entries.length} game(s).`);
+  if (errors.length) {
+    console.warn(`No Roblox stats were updated. ${errors.length} fetch error(s) were skipped.`);
+  } else {
+    console.log(`Validated Roblox stats for ${entries.length} game(s).`);
+  }
   process.exit(0);
 }
 

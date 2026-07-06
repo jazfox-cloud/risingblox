@@ -10,9 +10,11 @@ export type Game = {
   beginnerTips: string[];
   activeCodes: { code: string; reward: string }[];
   expiredCodes: string[];
+  codesLastChecked?: string;
   codesSummary?: string;
   codeCheckMethod?: string[];
   codeFaq?: { question: string; answer: string }[];
+  guideTitle?: string;
   guideIntro?: string;
   guideSections?: { title: string; body: string; bullets: string[] }[];
   guideFaq?: { question: string; answer: string }[];
@@ -114,6 +116,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
+    codesLastChecked: "2026-07-06",
     codesSummary:
       "No verified active Iron Soul: Dungeon codes are listed on RisingBlox right now. For the daily check log and deeper source notes, use the dedicated BloxDungeon codes page.",
     codeCheckMethod: [
@@ -212,6 +215,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
+    codesLastChecked: "2026-07-06",
     codesSummary:
       "No verified active Grow a Garden 2 codes are available right now. We only list a code as active after it can be checked against reliable public sources or an in-game redemption flow.",
     codeCheckMethod: [
@@ -397,6 +401,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
+    codesLastChecked: "2026-07-06",
     codesSummary:
       "Mini War has a code system, and the official Roblox page is actively updating, but RisingBlox has not verified any active Mini War codes yet. We will keep the active list empty until a specific code can be checked against an official source or reliable in-game redemption evidence.",
     codeCheckMethod: [
@@ -444,6 +449,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
+    codesLastChecked: "2026-07-06",
     codesSummary:
       "No verified active Noob Incremental codes are available right now. We keep this page conservative until a code can be confirmed through a credible Roblox or developer source.",
     codeCheckMethod: [
@@ -552,16 +558,17 @@ export const games: Game[] = [
     summary:
       "Play Anime Squadron on Roblox for anime lane-defense battles, squad upgrades, boss waves, and early unit progression from Komplex Studio.",
     profileIntro:
-      "Anime Squadron is a Roblox anime strategy game where the early win condition is simple: place a small core squad well, cover each lane cleanly, and upgrade around boss-wave timing instead of chasing rare units too early.",
-    lastUpdated: "2026-06-25",
+      "Anime Squadron is a Roblox anime strategy game with an official UPD 1.0 page signal. The early win condition is simple: place a small core squad well, cover each lane cleanly, and upgrade around boss-wave timing instead of chasing rare units too early.",
+    lastUpdated: "2026-07-06",
     tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [
       "Start by learning how lanes, enemy waves, and boss timing work before chasing rare units.",
       "Upgrade a small core squad first so your early clears stay consistent.",
       "Check the official Roblox page and developer-linked channels before trusting copied code claims."
     ],
+    guideTitle: "Anime Squadron UPD 1.0 Beginner Guide",
     guideIntro:
-      "Anime Squadron is a Roblox anime lane battler from Komplex Studio. The official page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
+      "Anime Squadron UPD 1.0 is a Roblox anime lane battler from Komplex Studio. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
     guideSections: [
       {
         title: "What Is Anime Squadron?",
@@ -584,9 +591,9 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Unit Upgrade Priority",
+        title: "UPD 1.0 Unit Upgrade Priority",
         body:
-          "Anime Squadron highlights summoning, upgrading, leveling, and evolving units. Early progress is usually more consistent when a small core squad gets upgraded before resources are spread too widely.",
+          "Anime Squadron UPD 1.0 highlights summoning, upgrading, leveling, and evolving units. Early progress is usually more consistent when a small core squad gets upgraded before resources are spread too widely.",
         bullets: [
           "Upgrade a small core squad before chasing every new summon.",
           "Level units that help clear waves consistently.",
@@ -594,13 +601,23 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Boss Wave Timing",
+        title: "Boss Wave Strategy",
         body:
           "Boss waves are called out directly in the official page, so beginners should plan upgrades around boss pressure rather than only normal waves.",
         bullets: [
           "Watch which wave introduces the first major boss threat.",
           "Upgrade damage before the boss wave instead of after it arrives.",
           "If a boss survives too long, review placement before blaming unit rarity."
+        ]
+      },
+      {
+        title: "Game Modes Basics",
+        body:
+          "The official page says Anime Squadron has multiple game modes. Beginners should treat each mode as a test of lane coverage, upgrade timing, and squad consistency before pushing harder challenges.",
+        bullets: [
+          "Use easier modes to test unit placement and upgrade timing.",
+          "Bring a balanced squad before trying modes with heavier boss pressure.",
+          "Track which mode exposes your weakest lane or slowest damage window."
         ]
       },
       {
@@ -621,6 +638,11 @@ export const games: Game[] = [
           "Beginners should learn lane coverage, upgrade a small core squad, and prepare before boss waves instead of chasing rare units immediately."
       },
       {
+        question: "What does UPD 1.0 mean for Anime Squadron beginners?",
+        answer:
+          "RisingBlox treats UPD 1.0 as a freshness signal from the official Roblox game page. Beginners should focus on the systems the page highlights: unit upgrades, multiple game modes, and boss-wave pressure."
+      },
+      {
         question: "Are units important in Anime Squadron?",
         answer:
           "Yes. The official Roblox page highlights summoning, upgrading, leveling, and evolving units, so unit progression is central to the game."
@@ -638,6 +660,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
+    codesLastChecked: "2026-07-06",
     codesSummary:
       "No verified active Anime Squadron codes are available right now. RisingBlox checks the official Roblox game page, developer-linked sources, and credible recent code reports before listing a code as active.",
     codeCheckMethod: [

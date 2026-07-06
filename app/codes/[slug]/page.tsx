@@ -33,6 +33,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 export default function CodesPage({ params }: { params: { slug: string } }) {
   const game = getGame(params.slug);
   if (!game) notFound();
+  const codesLastChecked = game.codesLastChecked ?? game.lastUpdated;
   const faqItems =
     game.codeFaq ?? [
       {
@@ -64,7 +65,7 @@ export default function CodesPage({ params }: { params: { slug: string } }) {
       />
       <p className="text-sm font-black uppercase text-coral">Roblox Codes</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">{game.name} Codes</h1>
-      <p className="mt-4 text-gray-600">Last checked: {game.lastUpdated}</p>
+      <p className="mt-4 text-gray-600">Last checked: {codesLastChecked}</p>
       <div className="mt-5 flex flex-wrap gap-3 text-sm font-black">
         <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}`}>
           Game profile

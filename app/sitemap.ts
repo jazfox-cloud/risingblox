@@ -14,12 +14,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(route.lastModified)
   }));
 
-  const gameRoutes = games.flatMap((game) =>
-    ["/games", "/codes", "/guides"].map((prefix) => ({
-      url: `${baseUrl}${prefix}/${game.slug}/`,
+  const gameRoutes = games.flatMap((game) => [
+    {
+      url: `${baseUrl}/games/${game.slug}/`,
       lastModified: new Date(game.lastUpdated)
-    }))
-  );
+    },
+    {
+      url: `${baseUrl}/codes/${game.slug}/`,
+      lastModified: new Date(game.codesLastChecked ?? game.lastUpdated)
+    },
+    {
+      url: `${baseUrl}/guides/${game.slug}/`,
+      lastModified: new Date(game.lastUpdated)
+    }
+  ]);
 
   const standaloneGuideRoutes = [
     {

@@ -17,13 +17,13 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
     : `Beginner guide, early strategy, FAQ, and verified codes status for ${game.name} on Roblox.`;
 
   return {
-    title: `${game.name} Roblox Beginner Guide`,
+    title: game.guideTitle ?? `${game.name} Roblox Beginner Guide`,
     description,
     alternates: {
       canonical: `${baseUrl}/guides/${game.slug}/`
     },
     openGraph: {
-      title: `${game.name} Roblox Beginner Guide`,
+      title: game.guideTitle ?? `${game.name} Roblox Beginner Guide`,
       description,
       url: `${baseUrl}/guides/${game.slug}/`
     }
@@ -62,7 +62,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
       />
       <p className="text-sm font-black uppercase text-coral">Beginner Guide</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">
-        {game.name} Beginner Guide
+        {game.guideTitle ?? `${game.name} Beginner Guide`}
       </h1>
       <p className="mt-4 text-lg leading-8 text-gray-700">
         {game.guideIntro ??

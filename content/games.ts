@@ -30,16 +30,16 @@ export const games: Game[] = [
     name: "Iron Soul: Dungeon",
     genre: "RPG / Action RPG",
     summary:
-      "A fast-rising Roblox dungeon RPG from the verified Iron Soul group, built around ore farming, ancient forges, weapon crafting, skill-tree paths, and dungeon clearing.",
-    lastUpdated: "2026-06-26",
+      "Iron Soul: Dungeon is a Roblox dungeon RPG focused on ore farming, ancient forges, weapon crafting, and dungeon clears. RisingBlox keeps this page as the quick-start overview and sends deeper Iron Soul research to BloxDungeon.",
+    lastUpdated: "2026-07-06",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
       "Treat the forge as the main progression loop: farm materials first, then choose upgrades around your next dungeon goal.",
       "Plan your skill-tree path before spending rerolls or chasing every weapon claim you see in videos.",
-      "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, and code checks."
+      "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, weapons, and code checks."
     ],
     guideIntro:
-      "Iron Soul: Dungeon is a Roblox action RPG from the verified Iron Soul group. The official page centers the early loop on slaying monsters, collecting crystalized ore, using ancient forges, crafting weapons, choosing a skill-tree path, and clearing dungeons for better rewards.",
+      "Iron Soul: Dungeon is a Roblox action RPG from the verified Iron Soul group. RisingBlox keeps this guide focused on beginner progression, while BloxDungeon handles the deeper Iron Soul pages for forge routes, runes, weapons, race tier lists, and source logs.",
     guideSections: [
       {
         title: "What Is Iron Soul: Dungeon?",
@@ -111,14 +111,14 @@ export const games: Game[] = [
       {
         question: "Where can I find deeper Iron Soul data?",
         answer:
-          "Use BloxDungeon for dedicated Iron Soul forge notes, runes, weapons, race tier-list research, codes, and source logs."
+          "Use BloxDungeon for dedicated Iron Soul forge notes, runes, weapons, race tier-list research, codes, progression tools, and source logs."
       }
     ],
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-06",
     codesSummary:
-      "No verified active Iron Soul: Dungeon codes are listed on RisingBlox right now. For the daily check log and deeper source notes, use the dedicated BloxDungeon codes page.",
+      "No verified active Iron Soul: Dungeon codes are listed on RisingBlox right now. For the daily check log, deeper source notes, and the dedicated Iron Soul codes tracker, use BloxDungeon.",
     codeCheckMethod: [
       "Check the official Iron Soul: Dungeon Roblox page from the verified Iron Soul group.",
       "Review BloxDungeon's source-first codes log before adding any active or expired code.",
@@ -133,7 +133,7 @@ export const games: Game[] = [
       {
         question: "Where should I check deeper Iron Soul data?",
         answer:
-          "Use BloxDungeon for the dedicated Iron Soul: Dungeon guide, code checks, forge notes, runes, weapons, and race tier-list research."
+          "Use BloxDungeon for the dedicated Iron Soul: Dungeon guide, code checks, forge notes, runes, weapons, race tier-list research, and progression tools."
       },
       {
         question: "Why is Iron Soul listed on RisingBlox and BloxDungeon?",
@@ -142,7 +142,7 @@ export const games: Game[] = [
       }
     ],
     externalGuide: {
-      label: "Iron Soul Database",
+      label: "Open BloxDungeon",
       url: "https://bloxdungeon.com/"
     }
   },
@@ -556,9 +556,9 @@ export const games: Game[] = [
     name: "Anime Squadron",
     genre: "Strategy / Tower Defense",
     summary:
-      "Play Anime Squadron on Roblox for anime lane-defense battles, squad upgrades, boss waves, and early unit progression from Komplex Studio.",
+      "Anime Squadron is a Roblox anime strategy game from Komplex Studio built around lane defense, squad upgrades, boss waves, and early unit progression.",
     profileIntro:
-      "Anime Squadron is a Roblox anime strategy game with an official UPD 1.0 page signal. The early win condition is simple: place a small core squad well, cover each lane cleanly, and upgrade around boss-wave timing instead of chasing rare units too early.",
+      "Anime Squadron on Roblox is a lane-defense strategy game where your early progress depends on stable lane coverage, a small upgraded core squad, and better boss-wave timing. This RisingBlox page is meant to answer the basic player questions first: what the game is, how to start, and whether any codes are verified.",
     lastUpdated: "2026-07-06",
     tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [
@@ -566,9 +566,9 @@ export const games: Game[] = [
       "Upgrade a small core squad first so your early clears stay consistent.",
       "Check the official Roblox page and developer-linked channels before trusting copied code claims."
     ],
-    guideTitle: "Anime Squadron UPD 1.0 Beginner Guide",
+    guideTitle: "Anime Squadron Roblox Beginner Guide",
     guideIntro:
-      "Anime Squadron UPD 1.0 is a Roblox anime lane battler from Komplex Studio. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
+      "Anime Squadron is a Roblox anime lane battler from Komplex Studio. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
     guideSections: [
       {
         title: "What Is Anime Squadron?",
@@ -591,9 +591,9 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "UPD 1.0 Unit Upgrade Priority",
+        title: "Unit Upgrade Priority",
         body:
-          "Anime Squadron UPD 1.0 highlights summoning, upgrading, leveling, and evolving units. Early progress is usually more consistent when a small core squad gets upgraded before resources are spread too widely.",
+          "The official Roblox page highlights summoning, upgrading, leveling, and evolving units. Early progress is usually more consistent when a small core squad gets upgraded before resources are spread too widely.",
         bullets: [
           "Upgrade a small core squad before chasing every new summon.",
           "Level units that help clear waves consistently.",
@@ -640,7 +640,7 @@ export const games: Game[] = [
       {
         question: "What does UPD 1.0 mean for Anime Squadron beginners?",
         answer:
-          "RisingBlox treats UPD 1.0 as a freshness signal from the official Roblox game page. Beginners should focus on the systems the page highlights: unit upgrades, multiple game modes, and boss-wave pressure."
+          "RisingBlox treats UPD 1.0 as a freshness signal from the official Roblox game page, not a separate game mode. Beginners should still focus on the basics first: unit upgrades, lane coverage, multiple game modes, and boss-wave pressure."
       },
       {
         question: "Are units important in Anime Squadron?",

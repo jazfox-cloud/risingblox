@@ -31,7 +31,7 @@ export const games: Game[] = [
     genre: "RPG / Action RPG",
     summary:
       "Iron Soul: Dungeon is a Roblox dungeon RPG focused on ore farming, ancient forges, weapon crafting, and dungeon clears. RisingBlox keeps this page as the quick-start overview and sends deeper Iron Soul research to BloxDungeon.",
-    lastUpdated: "2026-07-06",
+    lastUpdated: "2026-07-07",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
       "Treat the forge as the main progression loop: farm materials first, then choose upgrades around your next dungeon goal.",
@@ -90,6 +90,26 @@ export const games: Game[] = [
           "Track which enemy type or room ends your run.",
           "Return to farming when dungeon clears become too slow or inconsistent."
         ]
+      },
+      {
+        title: "How to Level Up Fast",
+        body:
+          "The safest fast-leveling route is to keep the forge loop moving instead of forcing harder dungeons too early. Use each monster route to collect ore and materials, upgrade the weapon or skill path that fixes your current clear speed, then return to dungeons when the next run is clearly faster.",
+        bullets: [
+          "Farm monsters until you have enough ore for a meaningful forge or weapon step.",
+          "Upgrade before pushing a dungeon that already feels slow or risky.",
+          "Repeat the route that gives consistent materials rather than chasing one difficult clear."
+        ]
+      },
+      {
+        title: "Best Runes and Skill Path Basics",
+        body:
+          "RisingBlox does not rank exact Iron Soul runes without source-backed data. For beginners, the best rune or skill path is the one that solves the current blocker: faster monster clears, stronger forge progression, or better survival in dungeons.",
+        bullets: [
+          "Choose damage-focused options when normal monsters take too long.",
+          "Choose forge or progression options when weapon upgrades are the bottleneck.",
+          "Choose survival options when dungeon pressure ends runs before rewards are earned."
+        ]
       }
     ],
     guideFaq: [
@@ -107,6 +127,16 @@ export const games: Game[] = [
         question: "Which skill tree path should I choose?",
         answer:
           "Choose based on your problem: attacker for faster clears, forge-focused for crafting progression, or survivor when dungeon pressure is ending runs too early."
+      },
+      {
+        question: "How do I level up fast in Iron Soul: Dungeon?",
+        answer:
+          "Keep the forge loop moving: farm monsters for ore and materials, upgrade before harder dungeons, and repeat consistent routes instead of forcing slow clears."
+      },
+      {
+        question: "What are the best runes in Iron Soul?",
+        answer:
+          "RisingBlox does not claim an exact best-rune ranking without source-backed data. Beginners should choose rune or skill options based on the current blocker: damage, forge progression, or survival."
       },
       {
         question: "Where can I find deeper Iron Soul data?",

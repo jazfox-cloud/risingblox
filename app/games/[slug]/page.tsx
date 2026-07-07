@@ -12,19 +12,19 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const game = getGame(params.slug);
   if (!game) return {};
+  const title = game.profileTitle ?? `${game.name} Roblox Game Profile`;
   const description =
-    game.slug === "anime-squadron"
-      ? "Anime Squadron Roblox profile with gameplay overview, official play link, beginner guidance, and verified codes status."
-      : `${game.name} Roblox profile with gameplay overview, official play link, beginner guidance, and verified codes status.`;
+    game.profileDescription ??
+    `${game.name} Roblox profile with gameplay overview, official play link, beginner guidance, and verified codes status.`;
 
   return {
-    title: `${game.name} Roblox Game Profile`,
+    title,
     description,
     alternates: {
       canonical: `${baseUrl}/games/${game.slug}/`
     },
     openGraph: {
-      title: `${game.name} Roblox Game Profile`,
+      title,
       description,
       url: `${baseUrl}/games/${game.slug}/`
     }

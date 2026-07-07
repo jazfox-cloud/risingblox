@@ -5,6 +5,8 @@ export type Game = {
   summary: string;
   profileIntro?: string;
   profileSections?: { title: string; body: string; bullets: string[] }[];
+  profileTitle?: string;
+  profileDescription?: string;
   lastUpdated: string;
   tags: string[];
   beginnerTips: string[];
@@ -15,6 +17,7 @@ export type Game = {
   codeCheckMethod?: string[];
   codeFaq?: { question: string; answer: string }[];
   guideTitle?: string;
+  guideDescription?: string;
   guideIntro?: string;
   guideSections?: { title: string; body: string; bullets: string[] }[];
   guideFaq?: { question: string; answer: string }[];
@@ -38,6 +41,9 @@ export const games: Game[] = [
       "Plan your skill-tree path before spending rerolls or chasing every weapon claim you see in videos.",
       "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, weapons, and code checks."
     ],
+    guideTitle: "Iron Soul Dungeon Level Up Fast Guide",
+    guideDescription:
+      "Iron Soul Dungeon guide for leveling up fast, beginner forge routes, best runes by playstyle, skill tree basics, starter weapon choices, and blueprint notes.",
     guideIntro:
       "Iron Soul: Dungeon is a Roblox action RPG from the verified Iron Soul group. RisingBlox keeps this guide focused on beginner progression, while BloxDungeon handles the deeper Iron Soul pages for forge routes, runes, weapons, race tier lists, and source logs.",
     guideSections: [
@@ -110,6 +116,36 @@ export const games: Game[] = [
           "Choose forge or progression options when weapon upgrades are the bottleneck.",
           "Choose survival options when dungeon pressure ends runs before rewards are earned."
         ]
+      },
+      {
+        title: "Best Starter Weapon Path",
+        body:
+          "The best starter weapon path is the one that makes early monster farming and dungeon attempts consistent. Do not judge a weapon only by rarity; judge whether it helps you clear faster, survive longer, or reach the next forge step.",
+        bullets: [
+          "Use the weapon that clears normal monsters reliably before chasing harder dungeon rewards.",
+          "Switch weapons when a new craft noticeably improves clear speed or survival.",
+          "Avoid spending rare materials on side upgrades before testing whether the new weapon solves your current wall."
+        ]
+      },
+      {
+        title: "Skill Tree Basics",
+        body:
+          "Iron Soul: Dungeon's official page says the skill tree supports different playstyles. A beginner path should stay focused: attacker when damage is low, forge master when progression is material-limited, or survivor when dungeon pressure ends runs early.",
+        bullets: [
+          "Pick one clear direction before spreading upgrades across every branch.",
+          "Use attacker choices when farming speed is the main blocker.",
+          "Use survivor choices when you can deal damage but cannot finish dungeon routes."
+        ]
+      },
+      {
+        title: "Blueprint and Forge Notes",
+        body:
+          "Blueprint-related searches are appearing in GSC, but RisingBlox will not invent exact blueprint drop tables without source-backed data. For now, treat blueprints as part of the broader forge progression loop and track where a confirmed source explains them.",
+        bullets: [
+          "Use blueprint claims carefully until the exact source is confirmed.",
+          "Tie blueprint planning back to the weapon or forge upgrade you are trying to unlock.",
+          "Use BloxDungeon for deeper Iron Soul source logs when more blueprint evidence is available."
+        ]
       }
     ],
     guideFaq: [
@@ -137,6 +173,21 @@ export const games: Game[] = [
         question: "What are the best runes in Iron Soul?",
         answer:
           "RisingBlox does not claim an exact best-rune ranking without source-backed data. Beginners should choose rune or skill options based on the current blocker: damage, forge progression, or survival."
+      },
+      {
+        question: "What is the best starter weapon in Iron Soul: Dungeon?",
+        answer:
+          "Use the starter weapon path that clears early monsters consistently and helps you reach the next forge step. Do not spend rare materials until a weapon upgrade clearly fixes your current blocker."
+      },
+      {
+        question: "How should I use the Iron Soul skill tree?",
+        answer:
+          "Choose one direction first: attacker for faster farming, forge-focused progression when materials and crafting are the bottleneck, or survivor when dungeons end runs too early."
+      },
+      {
+        question: "How do blueprints work in Iron Soul: Dungeon?",
+        answer:
+          "RisingBlox does not list exact blueprint tables without source-backed data. Treat blueprint claims as unverified until they can be tied to official, in-game, or reliable logged evidence."
       },
       {
         question: "Where can I find deeper Iron Soul data?",
@@ -586,9 +637,12 @@ export const games: Game[] = [
     name: "Anime Squadron",
     genre: "Strategy / Tower Defense",
     summary:
-      "Anime Squadron is a Roblox anime strategy game from Komplex Studio built around lane defense, squad upgrades, boss waves, and early unit progression.",
+      "Anime Squadron Roblox is an anime lane-defense strategy game from Komplex Studio with UPD 1.0 signals, squad upgrades, boss waves, multiple game modes, and early unit progression.",
     profileIntro:
-      "Anime Squadron on Roblox is a lane-defense strategy game where your early progress depends on stable lane coverage, a small upgraded core squad, and better boss-wave timing. This RisingBlox page is meant to answer the basic player questions first: what the game is, how to start, and whether any codes are verified.",
+      "Anime Squadron on Roblox is a lane-defense strategy game where your early progress depends on stable lane coverage, a small upgraded core squad, and better boss-wave timing. The official Roblox page currently carries an UPD 1.0 signal and highlights summoning, upgrading units, multiple game modes, and massive boss waves.",
+    profileTitle: "Anime Squadron Roblox UPD 1.0 Game Profile",
+    profileDescription:
+      "Anime Squadron Roblox profile for UPD 1.0, gameplay basics, unit upgrades, boss waves, game modes, beginner guide links, and verified code status.",
     lastUpdated: "2026-07-06",
     tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [

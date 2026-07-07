@@ -12,9 +12,9 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const game = getGame(params.slug);
   if (!game) return {};
-  const description = game.guideIntro
+  const description = game.guideDescription ?? (game.guideIntro
     ? `${game.guideIntro} Verified beginner steps, FAQ, and codes status links for ${game.name}.`
-    : `Beginner guide, early strategy, FAQ, and verified codes status for ${game.name} on Roblox.`;
+    : `Beginner guide, early strategy, FAQ, and verified codes status for ${game.name} on Roblox.`);
 
   return {
     title: game.guideTitle ?? `${game.name} Roblox Beginner Guide`,

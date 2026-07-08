@@ -34,7 +34,21 @@ export const games: Game[] = [
     genre: "RPG / Action RPG",
     summary:
       "Iron Soul: Dungeon is a Roblox dungeon RPG focused on ore farming, ancient forges, weapon crafting, and dungeon clears. RisingBlox keeps this page as the quick-start overview and sends deeper Iron Soul research to BloxDungeon.",
-    lastUpdated: "2026-07-07",
+    profileIntro:
+      "Iron Soul: Dungeon is tracked from Roblox public game data and the official Roblox page from the verified Iron Soul group. RisingBlox keeps this profile as a quick source-backed overview, while BloxDungeon carries deeper Iron Soul research.",
+    profileSections: [
+      {
+        title: "Official Data Refresh",
+        body:
+          "RisingBlox refreshed Iron Soul: Dungeon against Roblox public game data on 2026-07-08. The official Roblox API showed the game updated on 2026-07-08, with public stats available for online players, visits, votes, and the canonical Roblox play link.",
+        bullets: [
+          "Source: Roblox public game data and the official Iron Soul: Dungeon Roblox page.",
+          "Latest Roblox update timestamp seen by RisingBlox: 2026-07-08.",
+          "Use BloxDungeon for deeper forge, rune, weapon, and source-log research."
+        ]
+      }
+    ],
+    lastUpdated: "2026-07-08",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
       "Treat the forge as the main progression loop: farm materials first, then choose upgrades around your next dungeon goal.",

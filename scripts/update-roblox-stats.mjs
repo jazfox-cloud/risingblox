@@ -2,212 +2,68 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const statsPath = new URL("../content/roblox-stats.json", import.meta.url);
 const stats = JSON.parse(await readFile(statsPath, "utf8"));
-const entries = Object.entries(stats).filter(
-  ([, entry]) => Number.isInteger(entry.robloxUniverseId) && Number.isInteger(entry.robloxPlaceId)
+const entries = Object.entries(stats).filter(([, entry]) =>
+  Number.isInteger(entry.robloxUniverseId)
 );
 
 if (!entries.length) {
   console.log(
-    "No Roblox universe IDs configured. Add robloxUniverseId and robloxPlaceId values in content/roblox-stats.json."
+    "No Roblox universe IDs configured. Add robloxUniverseId values in content/roblox-stats.json."
   );
   process.exit(0);
 }
 
 const today = new Date().toISOString().slice(0, 10);
 const now = new Date().toISOString();
+const universeIds = entries.map(([, entry]) => entry.robloxUniverseId);
 
-function normalizeWhitespace(text) {
-  return text.replace(/\s+/g, " ").trim();
-}
+async function fetchJson(url) {
+  const response = await fetch(url, {
+    headers: {
+      accept: "application/json",
+      "user-agent": "RisingBlox stats refresh (+https://risingblox.com)"
+    }
+  });
 
-function safeJsonParse(text) {
-  try {
-    return JSON.parse(text);
-  } catch {
-    return null;
+  const data = await response.json().catch(() => null);
+  if (!response.ok || !data) {
+    throw new Error(`${url} failed: ${response.status} ${JSON.stringify(data)}`);
   }
+  return data;
 }
 
-function toNumberOrNull(value) {
-  if (value === null || value === undefined || value === "") return null;
-  const parsed = Number(value);
-  return Number.isFinite(parsed) ? parsed : null;
+function byUniverseId(rows) {
+  return new Map((rows ?? []).map((row) => [row.id, row]));
 }
 
-function findFirstValue(node, keys) {
-  const targetKeys = new Set(keys);
-  const stack = [node];
-  const seen = new Set();
+const gamesUrl = `https://games.roblox.com/v1/games?universeIds=${universeIds.join(",")}`;
+const votesUrl = `https://games.roblox.com/v1/games/votes?universeIds=${universeIds.join(",")}`;
 
-  while (stack.length) {
-    const current = stack.pop();
-    if (!current || typeof current !== "object" || seen.has(current)) continue;
-    seen.add(current);
-
-    if (Array.isArray(current)) {
-      for (const item of current) stack.push(item);
-      continue;
-    }
-
-    for (const [key, value] of Object.entries(current)) {
-      if (targetKeys.has(key) && value != null) return value;
-      if (value && typeof value === "object") stack.push(value);
-    }
-  }
-
-  return null;
-}
-
-function findAllObjects(node) {
-  const stack = [node];
-  const seen = new Set();
-  const objects = [];
-
-  while (stack.length) {
-    const current = stack.pop();
-    if (!current || typeof current !== "object" || seen.has(current)) continue;
-    seen.add(current);
-    objects.push(current);
-
-    if (Array.isArray(current)) {
-      for (const item of current) stack.push(item);
-      continue;
-    }
-
-    for (const value of Object.values(current)) {
-      if (value && typeof value === "object") stack.push(value);
-    }
-  }
-
-  return objects;
-}
-
-function extractEmbeddedJson(html) {
-  const patterns = [
-    /<script[^>]+id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/i,
-    /<script[^>]+type="application\/json"[^>]*>([\s\S]*?)<\/script>/i,
-    /<script[^>]+data-target="react-app.embeddedData"[^>]*>([\s\S]*?)<\/script>/i,
-    /<script[^>]+id="__NEXT_REDIRECT__"[^>]*>([\s\S]*?)<\/script>/i
-  ];
-
-  for (const pattern of patterns) {
-    const match = html.match(pattern);
-    if (match?.[1]) {
-      const parsed = safeJsonParse(match[1]);
-      if (parsed) return parsed;
-    }
-  }
-
-  return null;
-}
-
-function extractStatsFromHtml(html, entry) {
-  const embedded = extractEmbeddedJson(html);
-  const candidates = embedded ? [embedded, ...findAllObjects(embedded)] : [];
-  const blob = normalizeWhitespace(html);
-
-  const universeId = String(entry.robloxUniverseId);
-  const placeId = String(entry.robloxPlaceId);
-
-  const directCandidate =
-    candidates.find((candidate) => String(findFirstValue(candidate, ["universeId", "universeID", "id"])) === universeId) ??
-    candidates.find((candidate) => String(findFirstValue(candidate, ["placeId", "placeID", "id"])) === placeId) ??
-    embedded;
-
-  const onlinePlayers = toNumberOrNull(
-    findFirstValue(directCandidate ?? {}, ["playing", "activePlayers", "onlinePlayers", "currentPlayers"])
-  );
-  const visits = toNumberOrNull(
-    findFirstValue(directCandidate ?? {}, ["visits", "placeVisits", "visitCount", "visitTotal"])
-  );
-  const upVotes = toNumberOrNull(
-    findFirstValue(directCandidate ?? {}, ["upVotes", "upvotes", "likes", "likeCount"])
-  );
-  const downVotes = toNumberOrNull(
-    findFirstValue(directCandidate ?? {}, ["downVotes", "downvotes", "dislikes", "dislikeCount"])
-  );
-  const updatedAt =
-    findFirstValue(directCandidate ?? {}, ["updated", "updatedAt", "lastUpdated", "lastUpdate"]) ?? null;
-
-  const placeSlugMatch = blob.match(/\/games\/\d+\/([^"?#]+)/);
-  const titleCandidates = [
-    findFirstValue(directCandidate ?? {}, ["name", "title", "gameName"]),
-    blob.match(/<title>(.*?)<\/title>/i)?.[1],
-    blob.match(/"title":"([^"]+)"/)?.[1]
-  ].filter(Boolean);
-  const pageTitle = titleCandidates[0] ? normalizeWhitespace(String(titleCandidates[0])) : null;
-
-  return {
-    sourceUrl:
-      pageTitle && placeSlugMatch?.[1]
-        ? `https://www.roblox.com/games/${entry.robloxPlaceId}/${placeSlugMatch[1]}`
-        : `https://www.roblox.com/games/${entry.robloxPlaceId}`,
-    onlinePlayers,
-    visits,
-    upVotes,
-    downVotes,
-    updatedAt: typeof updatedAt === "string" ? updatedAt : null
-  };
-}
-
-async function fetchHtml(url) {
-  const headers = {
-    "user-agent":
-      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-    accept: "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-  };
-
-  const attempts = 3;
-  let lastError = null;
-
-  for (let attempt = 1; attempt <= attempts; attempt += 1) {
-    try {
-      const response = await fetch(url, { headers });
-
-      if (!response.ok) {
-        throw new Error(`Roblox page request failed: ${response.status} ${response.statusText}`);
-      }
-
-      return response.text();
-    } catch (error) {
-      lastError = error instanceof Error ? error : new Error(String(error));
-      if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
-      }
-    }
-  }
-
-  throw new Error(`Roblox page request failed after ${attempts} attempts: ${lastError?.message ?? "unknown error"}`);
-}
+const [gameData, voteData] = await Promise.all([fetchJson(gamesUrl), fetchJson(votesUrl)]);
+const gamesById = byUniverseId(gameData.data);
+const votesById = byUniverseId(voteData.data);
 
 let changed = false;
-const errors = [];
 
 for (const [slug, entry] of entries) {
-  const url = `https://www.roblox.com/games/${entry.robloxPlaceId}`;
-
-  let html;
-  try {
-    html = await fetchHtml(url);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    errors.push(`${slug}: ${message}`);
-    console.warn(`Skipping ${slug}: ${message}`);
-    continue;
+  const game = gamesById.get(entry.robloxUniverseId);
+  if (!game) {
+    throw new Error(`Missing Roblox game data for ${slug} (${entry.robloxUniverseId})`);
   }
 
-  const scraped = extractStatsFromHtml(html, entry);
+  const votes = votesById.get(entry.robloxUniverseId) ?? {};
   const nextEntry = {
     ...entry,
-    sourceLabel: "Roblox game page HTML",
-    sourceUrl: scraped.sourceUrl,
+    robloxPlaceId: game.rootPlaceId ?? entry.robloxPlaceId,
+    sourceLabel: "Roblox public game data",
+    sourceUrl: `https://www.roblox.com${game.canonicalUrlPath ?? `/games/${game.rootPlaceId}`}`,
     lastChecked: today,
     status: "verified",
-    onlinePlayers: scraped.onlinePlayers,
-    visits: scraped.visits,
-    upVotes: scraped.upVotes,
-    downVotes: scraped.downVotes,
-    updatedAt: scraped.updatedAt,
+    onlinePlayers: game.playing ?? null,
+    visits: game.visits ?? null,
+    upVotes: votes.upVotes ?? null,
+    downVotes: votes.downVotes ?? null,
+    updatedAt: game.updated ?? null,
     fetchedAt: now,
     error: null
   };
@@ -219,21 +75,9 @@ for (const [slug, entry] of entries) {
 }
 
 if (!changed) {
-  if (errors.length) {
-    console.warn(`No Roblox stats were updated. ${errors.length} fetch error(s) were skipped.`);
-  } else {
-    console.log(`Validated Roblox stats for ${entries.length} game(s).`);
-  }
+  console.log(`Validated Roblox stats for ${entries.length} game(s).`);
   process.exit(0);
 }
 
 await writeFile(statsPath, `${JSON.stringify(stats, null, 2)}\n`);
-
-if (errors.length) {
-  console.warn(`Updated Roblox stats with ${errors.length} error(s).`);
-  for (const error of errors) {
-    console.warn(`- ${error}`);
-  }
-} else {
-  console.log(`Updated Roblox stats for ${entries.length} game(s).`);
-}
+console.log(`Updated Roblox stats for ${entries.length} game(s).`);

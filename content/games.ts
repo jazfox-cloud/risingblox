@@ -657,7 +657,19 @@ export const games: Game[] = [
     profileTitle: "Anime Squadron Roblox UPD 1.0 Game Profile",
     profileDescription:
       "Anime Squadron Roblox profile for UPD 1.0, gameplay basics, unit upgrades, boss waves, game modes, beginner guide links, and verified code status.",
-    lastUpdated: "2026-07-06",
+    profileSections: [
+      {
+        title: "Official UPD 1.0 Refresh",
+        body:
+          "RisingBlox refreshed Anime Squadron against Roblox public game data on 2026-07-09. The official Roblox page still carries an UPD 1.0 signal and describes summon and upgrade systems, multiple game modes, boss waves, and anime squad progression.",
+        bullets: [
+          "Source: Roblox public game data and the official Anime Squadron Roblox page.",
+          "Latest Roblox update timestamp seen by RisingBlox: 2026-07-08.",
+          "RisingBlox still lists no active Anime Squadron codes unless a specific code can be verified."
+        ]
+      }
+    ],
+    lastUpdated: "2026-07-09",
     tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
     beginnerTips: [
       "Start by learning how lanes, enemy waves, and boss timing work before chasing rare units.",

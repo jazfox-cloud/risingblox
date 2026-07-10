@@ -414,9 +414,19 @@ export const games: Game[] = [
           "Do not trust copied code lists unless they show a credible source or redemption evidence.",
           "RisingBlox will keep active codes empty until a specific Mini War code can be verified."
         ]
+      },
+      {
+        title: "Official Update Refresh",
+        body:
+          "RisingBlox refreshed Mini War against Roblox public game data on 2026-07-10. The official Roblox page still highlights Special Invasion Weather, five research buildings, advanced army and builder controls, auto buy, and the core country-building combat loop.",
+        bullets: [
+          "Source: Roblox public game data and the official Mini War Roblox page.",
+          "Latest Roblox update timestamp seen by RisingBlox: 2026-07-10.",
+          "No active Mini War code is listed unless a specific code can be verified."
+        ]
       }
     ],
-    lastUpdated: "2026-07-05",
+    lastUpdated: "2026-07-10",
     tags: ["strategy", "tycoon", "economy", "army", "roblox-codes"],
     beginnerTips: [
       "Stabilize the economy before relying on auto buy or advanced controls.",

@@ -5,8 +5,8 @@ const baseUrl = "https://risingblox.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
-    { path: "/", lastModified: "2026-07-04" },
-    { path: "/trending/", lastModified: "2026-07-04" },
+    { path: "/", lastModified: "2026-07-10" },
+    { path: "/trending/", lastModified: "2026-07-10" },
     { path: "/about/", lastModified: "2026-06-13" },
     { path: "/privacy/", lastModified: "2026-06-13" }
   ].map((route) => ({
@@ -14,20 +14,27 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(route.lastModified)
   }));
 
-  const gameRoutes = games.flatMap((game) => [
-    {
-      url: `${baseUrl}/games/${game.slug}/`,
-      lastModified: new Date(game.lastUpdated)
-    },
-    {
-      url: `${baseUrl}/codes/${game.slug}/`,
-      lastModified: new Date(game.codesLastChecked ?? game.lastUpdated)
-    },
-    {
-      url: `${baseUrl}/guides/${game.slug}/`,
-      lastModified: new Date(game.lastUpdated)
+  const gameRoutes = games.flatMap((game) => {
+    const routes = [
+      {
+        url: `${baseUrl}/games/${game.slug}/`,
+        lastModified: new Date(game.lastUpdated)
+      },
+      {
+        url: `${baseUrl}/guides/${game.slug}/`,
+        lastModified: new Date(game.lastUpdated)
+      }
+    ];
+
+    if (game.hasCodesPage !== false) {
+      routes.push({
+        url: `${baseUrl}/codes/${game.slug}/`,
+        lastModified: new Date(game.codesLastChecked ?? game.lastUpdated)
+      });
     }
-  ]);
+
+    return routes;
+  });
 
   const standaloneGuideRoutes = [
     {

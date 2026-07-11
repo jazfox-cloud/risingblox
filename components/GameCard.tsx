@@ -41,9 +41,11 @@ export function GameCard({ game }: { game: Game }) {
             Play
           </a>
         ) : null}
-        <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}`}>
-          Codes
-        </Link>
+        {game.hasCodesPage !== false ? (
+          <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}`}>
+            Codes
+          </Link>
+        ) : null}
         <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}`}>
           Guide
         </Link>

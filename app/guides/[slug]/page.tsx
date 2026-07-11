@@ -73,9 +73,11 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
         <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}`}>
           Game profile
         </Link>
-        <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/codes/${game.slug}`}>
-          Codes status
-        </Link>
+        {game.hasCodesPage !== false ? (
+          <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/codes/${game.slug}`}>
+            Codes status
+          </Link>
+        ) : null}
       </div>
       {game.externalGuide ? (
         <p className="mt-5 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">

@@ -13,6 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function TrendingPage() {
+  const newThisWeek = games.filter((game) =>
+    ["drain-the-lake", "scale-slimy-fish"].includes(game.slug)
+  );
+  const recentlyUpdated = games.filter((game) =>
+    ["anime-squadron", "mini-war", "iron-soul-dungeon"].includes(game.slug)
+  );
   const standaloneWatchlist = [
     {
       name: "Animal Hospital (Anomaly)",
@@ -40,6 +46,66 @@ export default function TrendingPage() {
           checked against public Roblox pages, developer channels, or a recorded
           review snapshot.
         </p>
+      </section>
+      <section className="mt-8">
+        <div>
+          <p className="text-xs font-black uppercase text-coral">Verified 2026-07-10</p>
+          <h2 className="mt-2 text-2xl font-black">New This Week</h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-gray-600">
+            These games passed a source check and received a deliberately small
+            first page set. Search Console signals will decide whether they expand.
+          </p>
+        </div>
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
+          {newThisWeek.map((game) => {
+            const stats = getDisplayStats(game);
+            return (
+              <article className="rounded-lg border border-black/10 bg-white p-5 shadow-sm" key={game.slug}>
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <p className="text-xs font-bold uppercase text-coral">{game.genre}</p>
+                    <h3 className="mt-2 text-xl font-black">{game.name}</h3>
+                  </div>
+                  <span className="rounded-full bg-limepop/30 px-3 py-1 text-sm font-black">
+                    {stats.opportunity}
+                  </span>
+                </div>
+                <p className="mt-3 text-sm leading-6 text-gray-600">{game.summary}</p>
+                <p className="mt-4 text-sm font-bold text-gray-700">
+                  {stats.onlinePlayers} online · {stats.likeRate} likes
+                </p>
+                <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
+                  <Link className="rounded-md bg-ink px-3 py-2 text-white" href={`/games/${game.slug}/`}>
+                    Profile
+                  </Link>
+                  <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}/`}>
+                    Guide
+                  </Link>
+                  {game.hasCodesPage !== false ? (
+                    <Link className="rounded-md bg-coral px-3 py-2 text-white" href={`/codes/${game.slug}/`}>
+                      Codes
+                    </Link>
+                  ) : null}
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="mt-10 rounded-lg border border-black/10 bg-white p-5 shadow-sm">
+        <h2 className="text-xl font-black">Recently Updated</h2>
+        <div className="mt-4 flex flex-wrap gap-3">
+          {recentlyUpdated.map((game) => (
+            <Link
+              className="rounded-full bg-gray-100 px-4 py-2 text-sm font-bold hover:bg-mint"
+              href={`/games/${game.slug}/`}
+              key={game.slug}
+            >
+              {game.name} · {game.lastUpdated}
+            </Link>
+          ))}
+        </div>
       </section>
       <div className="mt-8 overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm">
         <table className="w-full min-w-[760px] text-left text-sm">

@@ -13,6 +13,10 @@ export const metadata: Metadata = {
 export default function Home() {
   const featured = games[0];
   const featuredStats = getDisplayStats(featured);
+  const latestCodesGame = games.find((game) => game.hasCodesPage !== false) ?? featured;
+  const trendingNow = games.filter((game) =>
+    ["drain-the-lake", "scale-slimy-fish", "anime-squadron"].includes(game.slug)
+  );
   const standalonePages = [
     {
       title: "Animal Hospital (Anomaly)",
@@ -44,8 +48,8 @@ export default function Home() {
             <Link className="rounded-md bg-ink px-5 py-3 font-bold text-white" href="/trending">
               View Trending Games
             </Link>
-            <Link className="rounded-md bg-white px-5 py-3 font-bold shadow-sm" href={`/codes/${featured.slug}`}>
-              Today's Codes
+            <Link className="rounded-md bg-white px-5 py-3 font-bold shadow-sm" href={`/codes/${latestCodesGame.slug}`}>
+              Latest Verified Codes
             </Link>
           </div>
         </div>
@@ -73,6 +77,51 @@ export default function Home() {
             placeholder numbers.
           </p>
         </aside>
+      </section>
+
+      <section className="mt-14 rounded-xl border border-black/10 bg-ink p-6 text-white shadow-sm sm:p-8">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-xs font-black uppercase tracking-wider text-limepop">
+              New this week
+            </p>
+            <h2 className="mt-2 text-3xl font-black">Trending Now</h2>
+            <p className="mt-2 max-w-2xl text-sm leading-6 text-white/70">
+              Fresh Roblox opportunities verified against public game data before
+              they are promoted on RisingBlox.
+            </p>
+          </div>
+          <Link className="text-sm font-black text-limepop" href="/trending/">
+            See the full watchlist
+          </Link>
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {trendingNow.map((game) => {
+            const stats = getDisplayStats(game);
+            return (
+              <article className="rounded-lg bg-white/10 p-5" key={game.slug}>
+                <p className="text-xs font-bold uppercase text-limepop">{stats.opportunity}</p>
+                <h3 className="mt-2 text-xl font-black">{game.name}</h3>
+                <p className="mt-2 text-sm text-white/70">
+                  {stats.onlinePlayers} online · {stats.likeRate} likes
+                </p>
+                <div className="mt-4 flex flex-wrap gap-2 text-sm font-bold">
+                  <Link className="rounded-md bg-white px-3 py-2 text-ink" href={`/games/${game.slug}/`}>
+                    Profile
+                  </Link>
+                  <Link className="rounded-md bg-white/10 px-3 py-2" href={`/guides/${game.slug}/`}>
+                    Guide
+                  </Link>
+                  {game.hasCodesPage !== false ? (
+                    <Link className="rounded-md bg-coral px-3 py-2" href={`/codes/${game.slug}/`}>
+                      Codes
+                    </Link>
+                  ) : null}
+                </div>
+              </article>
+            );
+          })}
+        </div>
       </section>
 
       <section className="mt-14">

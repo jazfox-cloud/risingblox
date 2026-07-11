@@ -6,12 +6,14 @@ import { games, getGame } from "@/content/games";
 const baseUrl = "https://risingblox.com";
 
 export function generateStaticParams() {
-  return games.map((game) => ({ slug: game.slug }));
+  return games
+    .filter((game) => game.hasCodesPage !== false)
+    .map((game) => ({ slug: game.slug }));
 }
 
 export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
   const game = getGame(params.slug);
-  if (!game) return {};
+  if (!game || game.hasCodesPage === false) return {};
   const description = game.codesSummary
     ? `${game.codesSummary} Includes redemption steps, FAQ, and the latest checked status.`
     : `Checked ${game.name} Roblox codes, active code status, expired codes, and redemption steps.`;
@@ -32,7 +34,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
 
 export default function CodesPage({ params }: { params: { slug: string } }) {
   const game = getGame(params.slug);
-  if (!game) notFound();
+  if (!game || game.hasCodesPage === false) notFound();
   const codesLastChecked = game.codesLastChecked ?? game.lastUpdated;
   const faqItems =
     game.codeFaq ?? [

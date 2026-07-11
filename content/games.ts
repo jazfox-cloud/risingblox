@@ -25,9 +25,239 @@ export type Game = {
     label: string;
     url: string;
   };
+  hasCodesPage?: boolean;
 };
 
 export const games: Game[] = [
+  {
+    slug: "drain-the-lake",
+    name: "Drain the Lake",
+    genre: "Simulation / Incremental",
+    summary:
+      "Drain the Lake is a fast-rising Roblox incremental game about filling a bucket, draining water for tokens, upgrading a skill tree, going deeper, and recovering a lost phone.",
+    profileTitle: "Drain the Lake Roblox Game Profile and Beginner Route",
+    profileDescription:
+      "Drain the Lake Roblox profile with the official gameplay loop, current public stats, beginner route, skill tree priorities, and verified play link.",
+    profileIntro:
+      "The official Roblox page gives Drain the Lake a clear five-step loop: fill a bucket, drain it for tokens, upgrade the skill tree, reach deeper water, and recover the phone. RisingBlox verified the game against Roblox public data on 2026-07-10.",
+    profileSections: [
+      {
+        title: "Official Gameplay Loop",
+        body:
+          "Drain the Lake turns each bucket run into tokens for the next skill-tree step. The useful beginner question is not whether to grind, but which upgrade makes the next trip shorter or more productive.",
+        bullets: [
+          "Fill the bucket and return the water to the drain for tokens.",
+          "Use tokens on the skill tree before pushing much deeper.",
+          "Repeat the loop until the route to the phone becomes manageable."
+        ]
+      },
+      {
+        title: "Verified Trend Snapshot",
+        body:
+          "Roblox public game data showed more than 80,000 players online and more than 37 million visits during the 2026-07-10 review. Those numbers are a current trend snapshot, not a promise that demand will remain at the same level.",
+        bullets: [
+          "Created on Roblox: 2026-06-03.",
+          "Official genre: Simulation / Incremental Simulator.",
+          "Latest public update timestamp checked by RisingBlox: 2026-07-10."
+        ]
+      }
+    ],
+    lastUpdated: "2026-07-10",
+    tags: ["simulation", "incremental", "skill-tree", "bucket", "new-roblox-game"],
+    beginnerTips: [
+      "Complete the short bucket-and-drain loop first so you can see which part of the run is slowing progress.",
+      "Buy the skill-tree upgrade that fixes the current bottleneck before spending across every branch.",
+      "Push into deeper water only after the existing route feels consistent."
+    ],
+    guideTitle: "Drain the Lake Beginner Guide - Skill Tree and Fast Progress",
+    guideDescription:
+      "Drain the Lake beginner guide covering the bucket loop, token spending, skill tree decisions, deeper-water progression, and common early mistakes.",
+    guideIntro:
+      "The safest Drain the Lake beginner route is to keep the official bucket-to-token loop moving: complete a short run, identify the slowest part, buy one meaningful skill-tree improvement, and only then go deeper.",
+    guideSections: [
+      {
+        title: "Start With the Short Loop",
+        body:
+          "Learn where to fill and drain the bucket before taking a longer route. Early consistency gives you a clearer view of whether filling, travel, or draining is the current bottleneck.",
+        bullets: [
+          "Finish several short runs before pushing deeper.",
+          "Watch which step takes most of the run time.",
+          "Return for upgrades instead of forcing an inefficient route."
+        ]
+      },
+      {
+        title: "Spend Tokens With a Purpose",
+        body:
+          "The official page confirms that tokens feed the skill tree. RisingBlox does not invent exact upgrade values; use each purchase to solve the part of the loop that currently feels slowest.",
+        bullets: [
+          "Improve the bucket side when collection is the main delay.",
+          "Choose movement or route support when travel dominates the run.",
+          "Avoid spreading early tokens across upgrades that do not change the next run."
+        ]
+      },
+      {
+        title: "When to Go Deeper",
+        body:
+          "Going deeper is part of the official objective, but a deeper route is useful only when the current upgrades can support it without making every trip inefficient.",
+        bullets: [
+          "Test the next depth after a meaningful skill-tree improvement.",
+          "Step back to the shorter route if progress slows sharply.",
+          "Treat the phone as the long-term goal, not the first-run target."
+        ]
+      },
+      {
+        title: "Common Beginner Mistakes",
+        body:
+          "Most avoidable mistakes come from going deep too early, buying upgrades without a clear bottleneck, or trusting unsupported code claims.",
+        bullets: [
+          "Do not turn every run into the longest possible route.",
+          "Do not assume an upgrade is best without checking what it improves.",
+          "The official description currently shows no public code redemption system."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "What is the goal in Drain the Lake?",
+        answer:
+          "The official Roblox description says to drain the lake, go deeper, and recover the phone that fell into the water."
+      },
+      {
+        question: "What should I upgrade first in Drain the Lake?",
+        answer:
+          "Choose the skill-tree upgrade that fixes your current bottleneck, such as a slow bucket loop or an inefficient trip, rather than spreading tokens across every branch."
+      },
+      {
+        question: "Does Drain the Lake have codes?",
+        answer:
+          "The official Roblox description does not currently show a public code or redemption system, so RisingBlox is not publishing a codes page for this game."
+      }
+    ],
+    activeCodes: [],
+    expiredCodes: [],
+    hasCodesPage: false
+  },
+  {
+    slug: "scale-slimy-fish",
+    name: "Scale Slimy Fish",
+    genre: "Simulation / Tycoon",
+    summary:
+      "Scale Slimy Fish is a Roblox fishing tycoon where players catch fish, scrape their scales, feed hungry animals, earn cash, and upgrade rods and knives.",
+    profileTitle: "Scale Slimy Fish Roblox Profile, Codes, and Progression",
+    profileDescription:
+      "Scale Slimy Fish Roblox profile with the official fishing loop, tool upgrades, current public stats, verified codes, and beginner guide links.",
+    profileIntro:
+      "The official Roblox page describes a compact progression loop: catch slimy fish, scrape their scales, feed hungry animals, earn cash, and improve fishing rods and knives. RisingBlox verified the source and current public data on 2026-07-10.",
+    profileSections: [
+      {
+        title: "Official Catch-to-Cash Loop",
+        body:
+          "Progress comes from improving both sides of the workflow: better rods help catch bigger fish, while sharper knives help process them faster before the next cash upgrade.",
+        bullets: [
+          "Catch fish with the best rod you can currently support.",
+          "Scrape scales and feed the processed fish to hungry animals.",
+          "Reinvest cash into the tool that is slowing the loop."
+        ]
+      },
+      {
+        title: "Turtle Arrival Update",
+        body:
+          "The official title carried a Turtle Arrival update signal during the 2026-07-10 review. The page also directly listed three current code strings, which are tracked on the RisingBlox codes page.",
+        bullets: [
+          "Official genre: Simulation / Tycoon.",
+          "Created on Roblox: 2026-06-10.",
+          "Latest public update timestamp checked by RisingBlox: 2026-07-10."
+        ]
+      }
+    ],
+    lastUpdated: "2026-07-10",
+    tags: ["fishing", "tycoon", "tools", "codes", "turtle-update"],
+    beginnerTips: [
+      "Run the full catch, scale, feed, and cash loop before deciding which tool is slowing progress.",
+      "Upgrade the rod when catching is the bottleneck and the knife when processing takes too long.",
+      "Redeem only the codes shown by the official Roblox description, and verify rewards in game."
+    ],
+    guideTitle: "Scale Slimy Fish Beginner Guide - Rod and Knife Upgrades",
+    guideDescription:
+      "Scale Slimy Fish beginner guide for the catch-to-cash loop, rod and knife upgrade choices, official codes, and early progression mistakes.",
+    guideIntro:
+      "Scale Slimy Fish beginners should balance the two official tool paths: rods control what they can catch, while knives control how quickly they can scrape scales and return to earning cash.",
+    guideSections: [
+      {
+        title: "Learn the Full Loop First",
+        body:
+          "Complete the catch, scrape, feed, and cash sequence before spending heavily. That first loop shows whether catching or processing is limiting progress.",
+        bullets: [
+          "Catch a manageable fish with the starter rod.",
+          "Scrape its scales before trying to expand too quickly.",
+          "Feed the animal and use the cash to improve the slower tool."
+        ]
+      },
+      {
+        title: "Rod or Knife First?",
+        body:
+          "The official description connects better rods with bigger fish and sharper knives with faster scaling. The right first upgrade depends on which step blocks the next profitable loop.",
+        bullets: [
+          "Choose the rod when catches are too limited.",
+          "Choose the knife when scaling time holds up every sale.",
+          "Alternate upgrades when neither side can keep up with the other."
+        ]
+      },
+      {
+        title: "Use Official Codes Carefully",
+        body:
+          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 check. Rewards can change, so the codes page records the source without inventing an exact reward.",
+        bullets: [
+          "Enter the code exactly as written.",
+          "Check the official page again after major updates.",
+          "Treat a failed redemption as a status change that needs rechecking."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "Should I upgrade the rod or knife first?",
+        answer:
+          "Upgrade the rod if catching is limiting progress, or the knife if scraping scales is slowing every cash cycle."
+      },
+      {
+        question: "What are the official Scale Slimy Fish codes?",
+        answer:
+          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 check. See the codes page for the latest status."
+      }
+    ],
+    activeCodes: [
+      { code: "10kccu", reward: "Officially listed; verify the current reward in game" },
+      { code: "weather", reward: "Officially listed; verify the current reward in game" },
+      { code: "turtle", reward: "Officially listed; verify the current reward in game" }
+    ],
+    expiredCodes: [],
+    codesLastChecked: "2026-07-10",
+    codesSummary:
+      "The official Scale Slimy Fish Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 check. RisingBlox does not claim an exact reward without a matching official statement or in-game verification.",
+    codeCheckMethod: [
+      "Check the official Scale Slimy Fish Roblox description from the Scale the Deeps group.",
+      "Keep only code strings shown by the developer or confirmed through in-game redemption evidence.",
+      "Recheck the list after named updates such as Turtle Arrival."
+    ],
+    codeFaq: [
+      {
+        question: "What Scale Slimy Fish codes are listed officially?",
+        answer:
+          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 review."
+      },
+      {
+        question: "Why does RisingBlox not list exact rewards?",
+        answer:
+          "The official description confirms the code strings but not their exact rewards, so rewards remain unclaimed until they can be verified in game or through an official announcement."
+      },
+      {
+        question: "Where do I redeem Scale Slimy Fish codes?",
+        answer:
+          "Open the game and check its settings or codes interface. Enter each code exactly as shown and confirm the reward in game."
+      }
+    ]
+  },
   {
     slug: "iron-soul-dungeon",
     name: "Iron Soul: Dungeon",
@@ -664,9 +894,9 @@ export const games: Game[] = [
       "Anime Squadron Roblox is an anime lane-defense strategy game from Komplex Studio with UPD 1.0 signals, squad upgrades, boss waves, multiple game modes, and early unit progression.",
     profileIntro:
       "Anime Squadron on Roblox is a lane-defense strategy game where your early progress depends on stable lane coverage, a small upgraded core squad, and better boss-wave timing. The official Roblox page currently carries an UPD 1.0 signal and highlights summoning, upgrading units, multiple game modes, and massive boss waves.",
-    profileTitle: "Anime Squadron Roblox UPD 1.0 Game Profile",
+    profileTitle: "Anime Squadron Roblox Guide, Units, and Boss Waves",
     profileDescription:
-      "Anime Squadron Roblox profile for UPD 1.0, gameplay basics, unit upgrades, boss waves, game modes, beginner guide links, and verified code status.",
+      "Anime Squadron Roblox guide hub for units, lane coverage, boss waves, game modes, beginner strategy, UPD 1.0 notes, and verified codes status.",
     profileSections: [
       {
         title: "Official UPD 1.0 Refresh",
@@ -686,7 +916,9 @@ export const games: Game[] = [
       "Upgrade a small core squad first so your early clears stay consistent.",
       "Check the official Roblox page and developer-linked channels before trusting copied code claims."
     ],
-    guideTitle: "Anime Squadron Roblox Beginner Guide",
+    guideTitle: "Anime Squadron Roblox Guide - Units and Boss Wave Strategy",
+    guideDescription:
+      "Anime Squadron Roblox guide covering early units, lane placement, upgrade priority, boss waves, game modes, UPD 1.0 notes, and codes status.",
     guideIntro:
       "Anime Squadron is a Roblox anime lane battler from Komplex Studio. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
     guideSections: [

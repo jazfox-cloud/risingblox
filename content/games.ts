@@ -39,7 +39,7 @@ export const games: Game[] = [
     profileDescription:
       "Drain the Lake Roblox profile with the official gameplay loop, current public stats, beginner route, skill tree priorities, and verified play link.",
     profileIntro:
-      "The official Roblox page gives Drain the Lake a clear five-step loop: fill a bucket, drain it for tokens, upgrade the skill tree, reach deeper water, and recover the phone. RisingBlox verified the game against Roblox public data on 2026-07-10.",
+      "The official Roblox page gives Drain the Lake a clear five-step loop: fill a bucket, drain it for tokens, upgrade the skill tree, reach deeper water, and recover the phone. RisingBlox keeps this page focused on the beginner route and verified public Roblox data snapshots.",
     profileSections: [
       {
         title: "Official Gameplay Loop",
@@ -49,6 +49,16 @@ export const games: Game[] = [
           "Fill the bucket and return the water to the drain for tokens.",
           "Use tokens on the skill tree before pushing much deeper.",
           "Repeat the loop until the route to the phone becomes manageable."
+        ]
+      },
+      {
+        title: "Official Data Snapshot",
+        body:
+          "RisingBlox reviewed the latest saved Roblox public data for Drain the Lake on 2026-07-11. The tracked snapshot showed more than 80,000 players online, more than 37 million visits, and a Roblox update timestamp from 2026-07-10.",
+        bullets: [
+          "Source: Roblox public game data and the official Drain the Lake Roblox page.",
+          "Latest saved Roblox update timestamp: 2026-07-10.",
+          "Use the stats as a freshness signal, not as a guarantee that player counts stay fixed."
         ]
       },
       {
@@ -62,7 +72,7 @@ export const games: Game[] = [
         ]
       }
     ],
-    lastUpdated: "2026-07-10",
+    lastUpdated: "2026-07-11",
     tags: ["simulation", "incremental", "skill-tree", "bucket", "new-roblox-game"],
     beginnerTips: [
       "Complete the short bucket-and-drain loop first so you can see which part of the run is slowing progress.",
@@ -73,12 +83,12 @@ export const games: Game[] = [
     guideDescription:
       "Drain the Lake beginner guide covering the bucket loop, token spending, skill tree decisions, deeper-water progression, and common early mistakes.",
     guideIntro:
-      "The safest Drain the Lake beginner route is to keep the official bucket-to-token loop moving: complete a short run, identify the slowest part, buy one meaningful skill-tree improvement, and only then go deeper.",
+      "The safest Drain the Lake beginner route is to keep the official bucket-to-token loop moving: complete a short run, identify the slowest part, buy one meaningful skill-tree improvement, and only then go deeper. Fast progress comes from shortening the next route, not from forcing the longest route immediately.",
     guideSections: [
       {
         title: "Start With the Short Loop",
         body:
-          "Learn where to fill and drain the bucket before taking a longer route. Early consistency gives you a clearer view of whether filling, travel, or draining is the current bottleneck.",
+          "Learn where to fill and drain the bucket before taking a longer route. Early consistency gives you a clearer view of whether filling, travel, or draining is the current bottleneck, which makes the first skill-tree choices easier.",
         bullets: [
           "Finish several short runs before pushing deeper.",
           "Watch which step takes most of the run time.",
@@ -88,11 +98,21 @@ export const games: Game[] = [
       {
         title: "Spend Tokens With a Purpose",
         body:
-          "The official page confirms that tokens feed the skill tree. RisingBlox does not invent exact upgrade values; use each purchase to solve the part of the loop that currently feels slowest.",
+          "The official page confirms that tokens feed the skill tree. RisingBlox does not invent exact upgrade values; use each purchase to solve the part of the loop that currently feels slowest and then test whether the next run improves.",
         bullets: [
           "Improve the bucket side when collection is the main delay.",
           "Choose movement or route support when travel dominates the run.",
           "Avoid spreading early tokens across upgrades that do not change the next run."
+        ]
+      },
+      {
+        title: "Fast Progress Route",
+        body:
+          "A practical fast-progress route is short loop, targeted upgrade, deeper test, then reset back to the shorter loop if the new path is inefficient. This keeps tokens moving while still testing progress toward the phone.",
+        bullets: [
+          "Use short loops to build the first upgrade base.",
+          "Try deeper water after a noticeable skill-tree improvement.",
+          "Return to the reliable route if the deeper attempt takes too long for the reward."
         ]
       },
       {

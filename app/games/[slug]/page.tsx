@@ -54,7 +54,7 @@ export default function GamePage({ params }: { params: { slug: string } }) {
           {game.hasCodesPage !== false ? (
             <a
               className="rounded-md bg-white px-5 py-3 font-bold shadow-sm"
-              href={`/codes/${game.slug}`}
+              href={`/codes/${game.slug}/`}
             >
               Check Codes
             </a>
@@ -117,11 +117,11 @@ export default function GamePage({ params }: { params: { slug: string } }) {
             <h2>Next Steps</h2>
             <p>
               For practical starter tips, read the{" "}
-              <a href={`/guides/${game.slug}`}>{game.name} beginner guide</a>
+              <a href={`/guides/${game.slug}/`}>{game.name} beginner guide</a>
               {game.hasCodesPage !== false ? (
                 <>
                   . For rewards research, check the{" "}
-                  <a href={`/codes/${game.slug}`}>{game.name} codes status</a>
+                  <a href={`/codes/${game.slug}/`}>{game.name} codes status</a>
                 </>
               ) : null}
               .

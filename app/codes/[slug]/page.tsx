@@ -69,10 +69,10 @@ export default function CodesPage({ params }: { params: { slug: string } }) {
       <h1 className="mt-3 text-4xl font-black tracking-tight">{game.name} Codes</h1>
       <p className="mt-4 text-gray-600">Last checked: {codesLastChecked}</p>
       <div className="mt-5 flex flex-wrap gap-3 text-sm font-black">
-        <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}`}>
+        <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}/`}>
           Game profile
         </Link>
-        <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/guides/${game.slug}`}>
+        <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/guides/${game.slug}/`}>
           Beginner guide
         </Link>
       </div>

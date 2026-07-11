@@ -126,7 +126,7 @@ export default function TrendingPage() {
               return (
                 <tr key={game.slug}>
                   <td className="px-4 py-4">
-                    <Link className="font-black hover:text-coral" href={`/games/${game.slug}`}>
+                    <Link className="font-black hover:text-coral" href={`/games/${game.slug}/`}>
                       {game.name}
                     </Link>
                     <p className="text-gray-500">{game.genre}</p>

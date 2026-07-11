@@ -45,10 +45,10 @@ export default function Home() {
             active codes, and manually reviewed watchlist signals for creators and players.
           </p>
           <div className="mt-7 flex flex-wrap gap-3">
-            <Link className="rounded-md bg-ink px-5 py-3 font-bold text-white" href="/trending">
+            <Link className="rounded-md bg-ink px-5 py-3 font-bold text-white" href="/trending/">
               View Trending Games
             </Link>
-            <Link className="rounded-md bg-white px-5 py-3 font-bold shadow-sm" href={`/codes/${latestCodesGame.slug}`}>
+            <Link className="rounded-md bg-white px-5 py-3 font-bold shadow-sm" href={`/codes/${latestCodesGame.slug}/`}>
               Latest Verified Codes
             </Link>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
               Verified Roblox game pages with profiles, guides, and code checks.
             </p>
           </div>
-          <Link className="text-sm font-black text-coral" href="/trending">
+          <Link className="text-sm font-black text-coral" href="/trending/">
             Full list
           </Link>
         </div>

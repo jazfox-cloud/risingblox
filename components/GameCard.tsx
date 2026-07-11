@@ -28,7 +28,7 @@ export function GameCard({ game }: { game: Game }) {
         </div>
       </div>
       <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
-        <Link className="rounded-md bg-ink px-3 py-2 text-white" href={`/games/${game.slug}`}>
+        <Link className="rounded-md bg-ink px-3 py-2 text-white" href={`/games/${game.slug}/`}>
           Profile
         </Link>
         {stats.sourceUrl ? (
@@ -42,11 +42,11 @@ export function GameCard({ game }: { game: Game }) {
           </a>
         ) : null}
         {game.hasCodesPage !== false ? (
-          <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}`}>
+          <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}/`}>
             Codes
           </Link>
         ) : null}
-        <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}`}>
+        <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}/`}>
           Guide
         </Link>
         {game.externalGuide ? (

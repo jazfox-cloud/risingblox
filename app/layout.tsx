@@ -23,6 +23,7 @@ const navItems = [
   { href: "/", label: "Home" },
   { href: "/trending", label: "Trending" },
   { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
   { href: "/privacy", label: "Privacy" }
 ];
 
@@ -55,8 +56,10 @@ export default function RootLayout({
         <main>{children}</main>
         <footer className="mt-16 border-t border-black/10 bg-white">
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600">
-            RisingBlox is an independent Roblox trends and guides site. It is
-            not affiliated with, endorsed by, or sponsored by Roblox Corporation.
+            <p>RisingBlox is an independent Roblox trends and guides site. It is not affiliated with, endorsed by, or sponsored by Roblox Corporation.</p>
+            <div className="mt-3 flex flex-wrap gap-4">
+              <Link href="/about/">About</Link><Link href="/contact/">Contact</Link><Link href="/privacy/">Privacy</Link><Link href="/terms/">Terms</Link>
+            </div>
           </div>
         </footer>
       </body>

@@ -8,7 +8,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/", lastModified: "2026-07-10" },
     { path: "/trending/", lastModified: "2026-07-10" },
     { path: "/about/", lastModified: "2026-06-13" },
-    { path: "/privacy/", lastModified: "2026-06-13" }
+    { path: "/contact/", lastModified: "2026-07-11" },
+    { path: "/privacy/", lastModified: "2026-07-11" },
+    { path: "/terms/", lastModified: "2026-07-11" }
   ].map((route) => ({
     url: `${baseUrl}${route.path === "/" ? "/" : route.path}`,
     lastModified: new Date(route.lastModified)

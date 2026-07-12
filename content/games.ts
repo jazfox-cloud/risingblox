@@ -254,22 +254,22 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     codesSummary:
-      "The official Scale Slimy Fish Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 check. RisingBlox does not claim an exact reward without a matching official statement or in-game verification.",
+      "RisingBlox only keeps Scale Slimy Fish codes that can be checked against official Roblox text, developer-linked announcements, or in-game redemption evidence. Exact rewards stay unclaimed until verified.",
     codeCheckMethod: [
-      "Check the official Scale Slimy Fish Roblox description from the Scale the Deeps group.",
-      "Keep only code strings shown by the developer or confirmed through in-game redemption evidence.",
-      "Recheck the list after named updates such as Turtle Arrival."
+      "Check the official Scale Slimy Fish Roblox description and any developer-linked announcements.",
+      "Keep only code strings that appear in official text or can be confirmed through in-game redemption evidence.",
+      "Recheck the list after major updates or community announcements."
     ],
     codeFaq: [
       {
         question: "What Scale Slimy Fish codes are listed officially?",
         answer:
-          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 review."
+          "RisingBlox only lists Scale Slimy Fish codes after official text, developer-linked announcements, or in-game redemption evidence confirm them."
       },
       {
         question: "Why does RisingBlox not list exact rewards?",
         answer:
-          "The official description confirms the code strings but not their exact rewards, so rewards remain unclaimed until they can be verified in game or through an official announcement."
+          "Exact rewards stay blank until they can be verified through official text, a developer-linked announcement, or in-game redemption evidence."
       },
       {
         question: "Where do I redeem Scale Slimy Fish codes?",
@@ -463,17 +463,17 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     codesSummary:
-      "No verified active Iron Soul: Dungeon codes are listed on RisingBlox right now. For the daily check log, deeper source notes, and the dedicated Iron Soul codes tracker, use BloxDungeon.",
+      "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
-      "Check the official Iron Soul: Dungeon Roblox page from the verified Iron Soul group.",
+      "Check the official Iron Soul: Dungeon Roblox page and any developer-linked announcements.",
       "Review BloxDungeon's source-first codes log before adding any active or expired code.",
-      "Do not list copied code claims unless the exact code and reward can be traced to a credible source or in-game redemption evidence."
+      "Keep only code claims that can be traced to official text, a developer-linked post, or in-game redemption evidence."
     ],
     codeFaq: [
       {
         question: "Are there any active Iron Soul: Dungeon codes right now?",
         answer:
-          "RisingBlox does not have any verified active Iron Soul: Dungeon codes listed at this time."
+          "RisingBlox does not list Iron Soul: Dungeon codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
       },
       {
         question: "Where should I check deeper Iron Soul data?",
@@ -562,17 +562,17 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     codesSummary:
-      "No verified active Grow a Garden 2 codes are available right now. We only list a code as active after it can be checked against reliable public sources or an in-game redemption flow.",
+      "RisingBlox only lists Grow a Garden 2 codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.",
     codeCheckMethod: [
-      "Check the Roblox game page and developer-linked channels for official code announcements.",
-      "Compare new code claims against multiple recent sources before adding them.",
+      "Check the Roblox game page and any developer-linked channels for official code announcements.",
+      "Keep only claims that can be checked against official text or in-game redemption evidence.",
       "Move any unconfirmed or expired claim out of the active codes list."
     ],
     codeFaq: [
       {
         question: "Are there any active Grow a Garden 2 codes right now?",
         answer:
-          "We do not have any verified active Grow a Garden 2 codes listed at this time."
+          "RisingBlox does not list Grow a Garden 2 codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
       },
       {
         question: "Why are there no codes listed?",
@@ -758,19 +758,17 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     codesSummary:
-      "Mini War has a code system, and the official Roblox page is actively updating, but RisingBlox has not verified any active Mini War codes yet. We will keep the active list empty until a specific code can be checked against an official source or reliable in-game redemption evidence.",
+      "RisingBlox only lists Mini War codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. The active list stays empty until a specific code is verified.",
     codeCheckMethod: [
-      "Check the official Mini War Roblox page from the verified M&M Community group.",
-      "Track the 2026-07-04 official update log, which adds Special Invasion Weather, new research buildings, advanced controls, and auto buy but does not list a specific public code.",
-      "Track the earlier official update log that introduced the code system without confirming a specific active code.",
-      "Look for code announcements tied to updates, milestones, or events.",
-      "Do not list copied code claims unless they can be verified from a credible source or in-game redemption evidence."
+      "Check the official Mini War Roblox page and any developer-linked announcements.",
+      "Track update logs, milestone posts, and event announcements for code references.",
+      "Keep only claims that can be verified through official text or in-game redemption evidence."
     ],
     codeFaq: [
       {
         question: "Are there any active Mini War codes right now?",
         answer:
-          "We do not have any verified active Mini War codes listed at this time."
+          "RisingBlox does not list Mini War codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
       },
       {
         question: "Why is a Mini War code not listed here?",
@@ -806,17 +804,17 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     codesSummary:
-      "No verified active Noob Incremental codes are available right now. We keep this page conservative until a code can be confirmed through a credible Roblox or developer source.",
+      "RisingBlox only lists Noob Incremental codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.",
     codeCheckMethod: [
-      "Check the official Noob Incremental Roblox page and developer-linked community channels.",
+      "Check the official Noob Incremental Roblox page and any developer-linked community channels.",
       "Review recent update notes and community announcements for code claims.",
-      "Move codes into active or expired lists only after the claim can be checked."
+      "Move codes into active or expired lists only after official text or in-game redemption evidence confirms them."
     ],
     codeFaq: [
       {
         question: "Are there any active Noob Incremental codes right now?",
         answer:
-          "We do not have any verified active Noob Incremental codes listed at this time."
+          "RisingBlox does not list Noob Incremental codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
       },
       {
         question: "Why are there no Noob Incremental codes listed?",
@@ -1034,17 +1032,17 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     codesSummary:
-      "No verified active Anime Squadron codes are available right now. RisingBlox checks the official Roblox game page, developer-linked sources, and credible recent code reports before listing a code as active.",
+      "RisingBlox only lists Anime Squadron codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.",
     codeCheckMethod: [
-      "Check the official Anime Squadron Roblox page from Komplex Studio.",
-      "Look for developer-linked social channels, update posts, or in-game redemption prompts.",
-      "Avoid adding copied Anime Squadron code lists until a claim can be verified or marked expired."
+      "Check the official Anime Squadron Roblox page and any developer-linked social channels.",
+      "Look for update posts or in-game redemption prompts that can verify the code.",
+      "Avoid adding copied code lists until a claim is confirmed by official text or redemption evidence."
     ],
     codeFaq: [
       {
         question: "Are there any active Anime Squadron codes right now?",
         answer:
-          "We do not have any verified active Anime Squadron codes listed at this time."
+          "RisingBlox does not list Anime Squadron codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
       },
       {
         question: "Why does this Anime Squadron codes page say no verified codes?",

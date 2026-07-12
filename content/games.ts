@@ -28,7 +28,10 @@ export type Game = {
   hasCodesPage?: boolean;
 };
 
-function buildNoCodePolicy(gameName: string) {
+function buildNoCodePolicy(
+  gameName: string,
+  extraFaq: { question: string; answer: string }[] = []
+) {
   return {
     codesSummary: `RisingBlox only lists ${gameName} codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.`,
     codeCheckMethod: [
@@ -50,7 +53,8 @@ function buildNoCodePolicy(gameName: string) {
         question: `How often is this ${gameName} codes page checked?`,
         answer:
           "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
-      }
+      },
+      ...extraFaq
     ]
   };
 }
@@ -280,19 +284,7 @@ export const games: Game[] = [
     ],
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
-    codesSummary:
-      "RisingBlox only keeps Scale Slimy Fish codes that can be checked against official Roblox text, developer-linked announcements, or in-game redemption evidence. Exact rewards stay unclaimed until verified.",
-    codeCheckMethod: [
-      "Check the official Scale Slimy Fish Roblox description and any developer-linked announcements.",
-      "Keep only code strings that appear in official text or can be confirmed through in-game redemption evidence.",
-      "Recheck the list after major updates or community announcements."
-    ],
-    codeFaq: [
-      {
-        question: "What Scale Slimy Fish codes are listed officially?",
-        answer:
-          "RisingBlox only lists Scale Slimy Fish codes after official text, developer-linked announcements, or in-game redemption evidence confirm them."
-      },
+    ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
         answer:
@@ -303,7 +295,7 @@ export const games: Game[] = [
         answer:
           "Open the game and check its settings or codes interface. Enter each code exactly as shown and confirm the reward in game."
       }
-    ]
+    ])
   },
   {
     slug: "iron-soul-dungeon",

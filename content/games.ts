@@ -28,6 +28,33 @@ export type Game = {
   hasCodesPage?: boolean;
 };
 
+function buildNoCodePolicy(gameName: string) {
+  return {
+    codesSummary: `RisingBlox only lists ${gameName} codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.`,
+    codeCheckMethod: [
+      `Check the official ${gameName} Roblox page and any developer-linked announcements.`,
+      "Keep only claims that can be checked against official text or in-game redemption evidence.",
+      "Move any unconfirmed or expired claim out of the active codes list."
+    ],
+    codeFaq: [
+      {
+        question: `Are there any active ${gameName} codes right now?`,
+        answer: `RisingBlox does not list ${gameName} codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them.`
+      },
+      {
+        question: `Why are there no ${gameName} codes listed?`,
+        answer:
+          "RisingBlox avoids publishing placeholder or unverified Roblox codes. A code is added only when it can be checked with enough confidence."
+      },
+      {
+        question: `How often is this ${gameName} codes page checked?`,
+        answer:
+          "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
+      }
+    ]
+  };
+}
+
 export const games: Game[] = [
   {
     slug: "drain-the-lake",
@@ -561,30 +588,7 @@ export const games: Game[] = [
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
-    codesSummary:
-      "RisingBlox only lists Grow a Garden 2 codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.",
-    codeCheckMethod: [
-      "Check the Roblox game page and any developer-linked channels for official code announcements.",
-      "Keep only claims that can be checked against official text or in-game redemption evidence.",
-      "Move any unconfirmed or expired claim out of the active codes list."
-    ],
-    codeFaq: [
-      {
-        question: "Are there any active Grow a Garden 2 codes right now?",
-        answer:
-          "RisingBlox does not list Grow a Garden 2 codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
-      },
-      {
-        question: "Why are there no codes listed?",
-        answer:
-          "RisingBlox avoids publishing placeholder or unverified Roblox codes. A code is added only when it can be checked with enough confidence."
-      },
-      {
-        question: "How often is this page checked?",
-        answer:
-          "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
-      }
-    ]
+    ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
     slug: "mini-war",
@@ -757,24 +761,9 @@ export const games: Game[] = [
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
-    codesSummary:
-      "RisingBlox only lists Mini War codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. The active list stays empty until a specific code is verified.",
-    codeCheckMethod: [
-      "Check the official Mini War Roblox page and any developer-linked announcements.",
-      "Track update logs, milestone posts, and event announcements for code references.",
-      "Keep only claims that can be verified through official text or in-game redemption evidence."
-    ],
+    ...buildNoCodePolicy("Mini War"),
     codeFaq: [
-      {
-        question: "Are there any active Mini War codes right now?",
-        answer:
-          "RisingBlox does not list Mini War codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
-      },
-      {
-        question: "Why is a Mini War code not listed here?",
-        answer:
-          "RisingBlox avoids publishing unverified Roblox codes. If a code cannot be checked with enough confidence, it is not added to the active list."
-      },
+      ...buildNoCodePolicy("Mini War").codeFaq,
       {
         question: "Does Mini War have a code system?",
         answer:
@@ -803,30 +792,7 @@ export const games: Game[] = [
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
-    codesSummary:
-      "RisingBlox only lists Noob Incremental codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.",
-    codeCheckMethod: [
-      "Check the official Noob Incremental Roblox page and any developer-linked community channels.",
-      "Review recent update notes and community announcements for code claims.",
-      "Move codes into active or expired lists only after official text or in-game redemption evidence confirms them."
-    ],
-    codeFaq: [
-      {
-        question: "Are there any active Noob Incremental codes right now?",
-        answer:
-          "RisingBlox does not list Noob Incremental codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
-      },
-      {
-        question: "Why are there no Noob Incremental codes listed?",
-        answer:
-          "RisingBlox does not publish placeholder codes. A code is added only when it can be checked against a credible source or redemption flow."
-      },
-      {
-        question: "How often is this Noob Incremental codes page checked?",
-        answer:
-          "This page is reviewed during RisingBlox content checks and updated when a credible new code appears."
-      }
-    ],
+    ...buildNoCodePolicy("Noob Incremental"),
     guideIntro:
       "Noob Incremental is an incremental simulator from the verified Ghoulax Games group. The official Roblox page describes hundreds of upgrades, dozens of stats, multiple prestige layers, runes, and the core loop of buying Noobs to make Oof.",
     guideSections: [
@@ -1031,24 +997,9 @@ export const games: Game[] = [
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
-    codesSummary:
-      "RisingBlox only lists Anime Squadron codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them.",
-    codeCheckMethod: [
-      "Check the official Anime Squadron Roblox page and any developer-linked social channels.",
-      "Look for update posts or in-game redemption prompts that can verify the code.",
-      "Avoid adding copied code lists until a claim is confirmed by official text or redemption evidence."
-    ],
+    ...buildNoCodePolicy("Anime Squadron"),
     codeFaq: [
-      {
-        question: "Are there any active Anime Squadron codes right now?",
-        answer:
-          "RisingBlox does not list Anime Squadron codes unless official text, a developer-linked announcement, or in-game redemption evidence confirms them."
-      },
-      {
-        question: "Why does this Anime Squadron codes page say no verified codes?",
-        answer:
-          "RisingBlox avoids publishing unverified Roblox codes. A code is added only after it can be checked against a credible source or an in-game redemption flow."
-      },
+      ...buildNoCodePolicy("Anime Squadron").codeFaq,
       {
         question: "What keywords does this Anime Squadron page track?",
         answer:

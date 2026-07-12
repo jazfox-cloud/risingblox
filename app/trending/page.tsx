@@ -1,16 +1,13 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { games } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
+import { staticPageMetadata } from "@/app/static-page-metadata";
 
-export const metadata: Metadata = {
-  title: "Trending Roblox Games",
-  description:
-    "A manually maintained watchlist of rising Roblox games with verification status, review notes, and update dates.",
-  alternates: {
-    canonical: "https://risingblox.com/trending/"
-  }
-};
+export const metadata = staticPageMetadata(
+  "trending",
+  "Trending Roblox Games",
+  "A manually maintained watchlist of rising Roblox games with verification status, review notes, and update dates."
+);
 
 export default function TrendingPage() {
   const newThisWeek = games.filter((game) =>

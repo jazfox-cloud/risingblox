@@ -1,12 +1,10 @@
-import type { Metadata } from "next";
+import { staticPageMetadata } from "@/app/static-page-metadata";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "About RisingBlox and its independent Roblox trends coverage.",
-  alternates: {
-    canonical: "https://risingblox.com/about/"
-  }
-};
+export const metadata = staticPageMetadata(
+  "about",
+  "About",
+  "About RisingBlox and its independent Roblox trends coverage."
+);
 
 export default function AboutPage() {
   return (

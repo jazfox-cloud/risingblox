@@ -1,12 +1,11 @@
-import type { Metadata } from "next";
+import { staticPageMetadata } from "@/app/static-page-metadata";
+import EmailLink from "@/components/EmailLink";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy",
-  description: "RisingBlox privacy policy for analytics, advertising, and future email products.",
-  alternates: {
-    canonical: "https://risingblox.com/privacy/"
-  }
-};
+export const metadata = staticPageMetadata(
+  "privacy",
+  "Privacy Policy",
+  "RisingBlox privacy policy for analytics, advertising, and future email products."
+);
 
 export default function PrivacyPage() {
   return (
@@ -26,7 +25,7 @@ export default function PrivacyPage() {
         <p>RisingBlox may use third-party advertising services, including Google AdSense. Third-party vendors, including Google, may use cookies to serve and measure ads based on a visitor&apos;s prior visits to this or other websites.</p>
         <p>You can control or opt out of personalized Google advertising through <a href="https://adssettings.google.com/">Google Ads Settings</a>. Additional industry opt-out choices are available at <a href="https://www.aboutads.info/choices/">aboutads.info</a>.</p>
         <h2>Contact</h2>
-        <p>For privacy questions, email <a href="mailto:hello@risingblox.com">hello@risingblox.com</a>.</p>
+        <p>For privacy questions, email <EmailLink />.</p>
       </div>
     </div>
   );

@@ -1032,7 +1032,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-10",
+    codesLastChecked: "2026-07-11",
     codesSummary:
       "No verified active Anime Squadron codes are available right now. RisingBlox checks the official Roblox game page, developer-linked sources, and credible recent code reports before listing a code as active.",
     codeCheckMethod: [

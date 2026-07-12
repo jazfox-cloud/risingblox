@@ -252,7 +252,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Officially listed; verify the current reward in game" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-07-10",
+    codesLastChecked: "2026-07-11",
     codesSummary:
       "The official Scale Slimy Fish Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 check. RisingBlox does not claim an exact reward without a matching official statement or in-game verification.",
     codeCheckMethod: [
@@ -461,7 +461,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-10",
+    codesLastChecked: "2026-07-11",
     codesSummary:
       "No verified active Iron Soul: Dungeon codes are listed on RisingBlox right now. For the daily check log, deeper source notes, and the dedicated Iron Soul codes tracker, use BloxDungeon.",
     codeCheckMethod: [
@@ -560,7 +560,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-10",
+    codesLastChecked: "2026-07-11",
     codesSummary:
       "No verified active Grow a Garden 2 codes are available right now. We only list a code as active after it can be checked against reliable public sources or an in-game redemption flow.",
     codeCheckMethod: [
@@ -756,7 +756,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-10",
+    codesLastChecked: "2026-07-11",
     codesSummary:
       "Mini War has a code system, and the official Roblox page is actively updating, but RisingBlox has not verified any active Mini War codes yet. We will keep the active list empty until a specific code can be checked against an official source or reliable in-game redemption evidence.",
     codeCheckMethod: [
@@ -804,7 +804,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-10",
+    codesLastChecked: "2026-07-11",
     codesSummary:
       "No verified active Noob Incremental codes are available right now. We keep this page conservative until a code can be confirmed through a credible Roblox or developer source.",
     codeCheckMethod: [

@@ -5,6 +5,13 @@ import { games, getGame } from "@/content/games";
 
 const baseUrl = "https://risingblox.com";
 
+function toSectionId(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
@@ -98,6 +105,25 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           .
         </p>
       ) : null}
+      {game.guideSections?.length ? (
+        <nav className="mt-6 rounded-lg border border-black/10 bg-white p-5 shadow-sm" aria-label="Guide sections">
+          <p className="text-sm font-black uppercase tracking-wide text-coral">In This Guide</p>
+          <ul className="mt-3 grid gap-2 text-sm font-semibold text-ink sm:grid-cols-2">
+            {game.guideSections.map((section) => (
+              <li key={section.title}>
+                <a className="hover:text-coral" href={`#${toSectionId(section.title)}`}>
+                  {section.title}
+                </a>
+              </li>
+            ))}
+            <li>
+              <a className="hover:text-coral" href="#faq">
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </nav>
+      ) : null}
 
       <section className="content-prose mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
         <h2>Best Early Strategy</h2>
@@ -109,7 +135,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
 
         {game.guideSections?.map((section) => (
           <div key={section.title}>
-            <h2>{section.title}</h2>
+            <h2 id={toSectionId(section.title)}>{section.title}</h2>
             <p>{section.body}</p>
             <ul>
               {section.bullets.map((bullet) => (
@@ -119,7 +145,7 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           </div>
         ))}
 
-        <h2>FAQ</h2>
+        <h2 id="faq">FAQ</h2>
         {faqItems.map((item) => (
           <div key={item.question}>
             <h3 className="mt-5 font-black text-ink">{item.question}</h3>

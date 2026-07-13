@@ -324,11 +324,11 @@ export const games: Game[] = [
       "Plan your skill-tree path before spending rerolls or chasing every weapon claim you see in videos.",
       "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, weapons, and code checks."
     ],
-    guideTitle: "Iron Soul Dungeon Level Up Fast Guide",
+    guideTitle: "Iron Soul Dungeon Guide: Level Up Fast, Forge Route, Relics, and Best Runes",
     guideDescription:
-      "Iron Soul Dungeon guide for leveling up fast, beginner forge routes, best runes by playstyle, skill tree basics, starter weapon choices, and blueprint notes.",
+      "Iron Soul Dungeon guide for leveling up fast, beginner forge guide routes, relic farming basics, best runes by playstyle, starter weapon choices, and blueprint notes.",
     guideIntro:
-      "Iron Soul: Dungeon is a Roblox action RPG from the verified Iron Soul group. RisingBlox keeps this guide focused on beginner progression, while BloxDungeon handles the deeper Iron Soul pages for forge routes, runes, weapons, race tier lists, and source logs.",
+      "This Iron Soul Dungeon guide focuses on the beginner searches already showing up in Google Search Console: how to level up fast, how to use the forge route, how to think about relics, and how to choose best runes without inventing fake rankings. RisingBlox keeps the quick-start version here, while BloxDungeon handles the deeper Iron Soul research stack.",
     guideSections: [
       {
         title: "What Is Iron Soul: Dungeon?",
@@ -341,13 +341,13 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Ore and Forge Loop",
+        title: "Forge Guide Route",
         body:
-          "The official description makes the forge the center of progression. Beginners should treat ore farming as the resource base for stronger weapons instead of rushing into every dungeon immediately.",
+          "The official description makes the forge the center of progression, so the safest beginner forge guide route is farm ore, return before efficiency crashes, craft or upgrade one meaningful weapon step, then re-test the same dungeon path. This is better than rushing every new dungeon as soon as it unlocks.",
         bullets: [
           "Farm enough ore before chasing a new dungeon goal.",
           "Bring materials back to the forge before progress slows too much.",
-          "Use each new weapon as a test of whether your next dungeon route is ready."
+          "Use each new weapon as a test of whether your next dungeon route is actually ready."
         ]
       },
       {
@@ -391,6 +391,16 @@ export const games: Game[] = [
         ]
       },
       {
+        title: "How to Get Relics",
+        body:
+          "Search Console is already showing relic intent, but RisingBlox will not invent exact relic drop tables. The useful beginner approach is to treat relic progress the same way as the rest of Iron Soul: identify which enemy route, dungeon room, or progression step is tied to your current goal, then repeat the route that you can actually clear consistently.",
+        bullets: [
+          "Do not assume the hardest dungeon is the best relic route if clears are still failing.",
+          "Track which room or enemy type gives the materials and progress you can repeat.",
+          "Check deeper source logs on BloxDungeon before trusting exact relic-location claims."
+        ]
+      },
+      {
         title: "Best Runes and Skill Path Basics",
         body:
           "RisingBlox does not rank exact Iron Soul runes without source-backed data. For beginners, the best rune or skill path is the one that solves the current blocker: faster monster clears, stronger forge progression, or better survival in dungeons. See the focused best runes page at /guides/iron-soul-dungeon-best-runes/ for the dedicated priority guide.",
@@ -421,9 +431,9 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Blueprint and Forge Notes",
+        title: "Blueprint and Wiki Notes",
         body:
-          "Blueprint-related searches are appearing in GSC, but RisingBlox will not invent exact blueprint drop tables without source-backed data. For now, treat blueprints as part of the broader forge progression loop and track where a confirmed source explains them.",
+          "Blueprint- and wiki-style searches are appearing in GSC, but RisingBlox will not pretend to have a full Iron Soul wiki without source-backed data. For now, treat blueprints as part of the broader forge progression loop and use this page as a starter checklist rather than a fake database.",
         bullets: [
           "Use blueprint claims carefully until the exact source is confirmed.",
           "Tie blueprint planning back to the weapon or forge upgrade you are trying to unlock.",
@@ -453,6 +463,11 @@ export const games: Game[] = [
           "Keep the forge loop moving: farm monsters for ore and materials, upgrade before harder dungeons, and repeat consistent routes instead of forcing slow clears."
       },
       {
+        question: "How do I get relics in Iron Soul?",
+        answer:
+          "RisingBlox does not publish exact relic tables without source-backed data. Start with the route or dungeon room you can clear consistently, then track which repeatable path actually supports your current relic or progression goal."
+      },
+      {
         question: "What are the best runes in Iron Soul?",
         answer:
           "RisingBlox does not claim an exact best-rune ranking without source-backed data. Beginners should choose rune or skill options based on the current blocker: damage, forge progression, or survival. The focused best runes guide is available at /guides/iron-soul-dungeon-best-runes/."
@@ -471,6 +486,11 @@ export const games: Game[] = [
         question: "How do blueprints work in Iron Soul: Dungeon?",
         answer:
           "RisingBlox does not list exact blueprint tables without source-backed data. Treat blueprint claims as unverified until they can be tied to official, in-game, or reliable logged evidence."
+      },
+      {
+        question: "Is this page a full Iron Soul Dungeon wiki?",
+        answer:
+          "No. This page is a source-backed quick-start guide for beginner intent like leveling, forge routes, relic thinking, and rune direction. Use BloxDungeon when you need deeper source logs or dedicated feature pages."
       },
       {
         question: "Where can I find deeper Iron Soul data?",
@@ -870,7 +890,7 @@ export const games: Game[] = [
       "Anime Squadron Roblox is an anime lane-defense strategy game from Komplex Studio with UPD 1.0 signals, squad upgrades, boss waves, multiple game modes, and early unit progression.",
     profileIntro:
       "Anime Squadron on Roblox is a lane-defense strategy game where your early progress depends on stable lane coverage, a small upgraded core squad, and better boss-wave timing. The official Roblox page currently carries an UPD 1.0 signal and highlights summoning, upgrading units, multiple game modes, and massive boss waves.",
-    profileTitle: "Anime Squadron Roblox Guide, Units, and Boss Waves",
+    profileTitle: "Anime Squadron Roblox Guide, Codes Status, Units, and Boss Waves",
     profileDescription:
       "Anime Squadron Roblox guide hub for units, lane coverage, boss waves, game modes, beginner strategy, UPD 1.0 notes, and verified codes status.",
     profileSections: [
@@ -892,11 +912,11 @@ export const games: Game[] = [
       "Upgrade a small core squad first so your early clears stay consistent.",
       "Check the official Roblox page and developer-linked channels before trusting copied code claims."
     ],
-    guideTitle: "Anime Squadron Roblox Guide - Units and Boss Wave Strategy",
+    guideTitle: "Anime Squadron Roblox Guide: Units, Boss Wave Tips, and Codes Status",
     guideDescription:
-      "Anime Squadron Roblox guide covering early units, lane placement, upgrade priority, boss waves, game modes, UPD 1.0 notes, and codes status.",
+      "Anime Squadron Roblox guide covering early units, lane placement, upgrade priority, boss waves, Anime Squadron Roblox codes status, game modes, and UPD 1.0 notes.",
     guideIntro:
-      "Anime Squadron is a Roblox anime lane battler from Komplex Studio. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
+      "This Anime Squadron Roblox guide is tuned to the early queries already surfacing for the site: Anime Squadron Roblox, Anime Squadron guide, units, boss waves, and codes status. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
     guideSections: [
       {
         title: "What Is Anime Squadron?",
@@ -929,6 +949,16 @@ export const games: Game[] = [
         ]
       },
       {
+        title: "Units for Beginners",
+        body:
+          "Search interest around Anime Squadron units is starting to appear, but RisingBlox will not invent a fake unit tier list without repeatable evidence. The practical beginner question is which units deserve your scarce upgrades right now, not which rare name looks best in isolation.",
+        bullets: [
+          "Keep investing in units that are already part of successful repeated clears.",
+          "Judge a unit by lane coverage, wave control, and boss contribution, not only rarity.",
+          "Wait for stronger data before splitting this topic into a separate tier-list page."
+        ]
+      },
+      {
         title: "Boss Wave Strategy",
         body:
           "Boss waves are called out directly in the official page, so beginners should plan upgrades around boss pressure rather than only normal waves.",
@@ -946,6 +976,16 @@ export const games: Game[] = [
           "Use easier modes to test unit placement and upgrade timing.",
           "Bring a balanced squad before trying modes with heavier boss pressure.",
           "Track which mode exposes your weakest lane or slowest damage window."
+        ]
+      },
+      {
+        title: "Anime Squadron Codes Status",
+        body:
+          "Anime Squadron is getting impressions, but RisingBlox still has no verified active codes listed right now. That means this page should treat codes as a status check, not as a promise that a new codes page cluster is justified yet.",
+        bullets: [
+          "Check the dedicated codes page around updates and developer announcements.",
+          "Do not publish copied code lists until official or in-game evidence confirms them.",
+          "Wait for stronger codes-specific query data before expanding beyond the current status page."
         ]
       },
       {
@@ -974,6 +1014,11 @@ export const games: Game[] = [
         question: "Are units important in Anime Squadron?",
         answer:
           "Yes. The official Roblox page highlights summoning, upgrading, leveling, and evolving units, so unit progression is central to the game."
+      },
+      {
+        question: "Should RisingBlox build an Anime Squadron tier list yet?",
+        answer:
+          "Not yet. The current signal is still light and mostly covers general Anime Squadron and Anime Squadron Roblox intent. RisingBlox should keep improving the existing guide until stronger unit- or tier-list-specific query data appears."
       },
       {
         question: "How should I handle boss waves in Anime Squadron?",

@@ -393,7 +393,7 @@ export const games: Game[] = [
       {
         title: "Best Runes and Skill Path Basics",
         body:
-          "RisingBlox does not rank exact Iron Soul runes without source-backed data. For beginners, the best rune or skill path is the one that solves the current blocker: faster monster clears, stronger forge progression, or better survival in dungeons.",
+          "RisingBlox does not rank exact Iron Soul runes without source-backed data. For beginners, the best rune or skill path is the one that solves the current blocker: faster monster clears, stronger forge progression, or better survival in dungeons. See the focused best runes page at /guides/iron-soul-dungeon-best-runes/ for the dedicated priority guide.",
         bullets: [
           "Choose damage-focused options when normal monsters take too long.",
           "Choose forge or progression options when weapon upgrades are the bottleneck.",
@@ -455,7 +455,7 @@ export const games: Game[] = [
       {
         question: "What are the best runes in Iron Soul?",
         answer:
-          "RisingBlox does not claim an exact best-rune ranking without source-backed data. Beginners should choose rune or skill options based on the current blocker: damage, forge progression, or survival."
+          "RisingBlox does not claim an exact best-rune ranking without source-backed data. Beginners should choose rune or skill options based on the current blocker: damage, forge progression, or survival. The focused best runes guide is available at /guides/iron-soul-dungeon-best-runes/."
       },
       {
         question: "What is the best starter weapon in Iron Soul: Dungeon?",

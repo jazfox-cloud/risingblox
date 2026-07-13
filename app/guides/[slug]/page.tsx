@@ -89,6 +89,15 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           .
         </p>
       ) : null}
+      {game.slug === "iron-soul-dungeon" ? (
+        <p className="mt-4 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
+          For a focused rune priority breakdown, open the{" "}
+          <Link className="font-black text-coral" href="/guides/iron-soul-dungeon-best-runes/">
+            Iron Soul Dungeon best runes guide
+          </Link>
+          .
+        </p>
+      ) : null}
 
       <section className="content-prose mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
         <h2>Best Early Strategy</h2>

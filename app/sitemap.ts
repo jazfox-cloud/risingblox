@@ -46,6 +46,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/guides/animal-hospital-anomaly/`,
       lastModified: new Date("2026-06-27")
+    },
+    {
+      url: `${baseUrl}/guides/iron-soul-dungeon-best-runes/`,
+      lastModified: new Date("2026-07-13")
     }
   ];
 

@@ -54,7 +54,7 @@ export default function Home() {
           </div>
         </div>
         <aside className="rounded-lg border border-black/10 bg-white p-6 shadow-sm">
-          <p className="text-sm font-black uppercase text-coral">Today's Pick</p>
+          <p className="text-sm font-black uppercase text-coral">Today&apos;s Pick</p>
           <h2 className="mt-2 text-3xl font-black">{featured.name}</h2>
           <p className="mt-3 text-gray-600">{featured.summary}</p>
           <dl className="mt-6 grid grid-cols-3 gap-3 text-sm">

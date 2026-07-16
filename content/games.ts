@@ -15,12 +15,17 @@ export type Game = {
   codesLastChecked?: string;
   codesSummary?: string;
   codeCheckMethod?: string[];
+  codeRedemptionSteps?: string[];
   codeFaq?: { question: string; answer: string }[];
   guideTitle?: string;
   guideDescription?: string;
   guideIntro?: string;
   guideSections?: { title: string; body: string; bullets: string[] }[];
   guideFaq?: { question: string; answer: string }[];
+  guideLastVerified?: string;
+  guideSourceLabel?: string;
+  guideSourceUrl?: string;
+  guideSourceNote?: string;
   externalGuide?: {
     label: string;
     url: string;
@@ -302,58 +307,63 @@ export const games: Game[] = [
     name: "Iron Soul: Dungeon",
     genre: "RPG / Action RPG",
     summary:
-      "Iron Soul: Dungeon is a Roblox dungeon RPG focused on ore farming, ancient forges, weapon crafting, and dungeon clears. RisingBlox keeps this page as the quick-start overview and sends deeper Iron Soul research to BloxDungeon.",
+      "Iron Soul: Dungeon is a Roblox action RPG built around collecting crystalized ore and rare materials, forging weapons, choosing a skill-tree direction, and preparing for harder dungeons.",
     profileIntro:
-      "Iron Soul: Dungeon is tracked from Roblox public game data and the official Roblox page from the verified Iron Soul group. RisingBlox keeps this profile as a quick source-backed overview, while BloxDungeon carries deeper Iron Soul research.",
+      "Iron Soul: Dungeon is published by the verified Iron Soul Roblox group. The official game description presents a gather-forge-upgrade loop with dynamic combat, skill-tree choices, weapon crafting, and harder dungeon areas. This profile records the official source and current status; the progression guide handles the beginner route, while BloxDungeon remains the destination for deeper source logs and tools.",
     profileSections: [
       {
-        title: "Official Data Refresh",
+        title: "Official Game Status",
         body:
-          "RisingBlox refreshed Iron Soul: Dungeon against Roblox public game data on 2026-07-08. The official Roblox API showed the game updated on 2026-07-08, with public stats available for online players, visits, votes, and the canonical Roblox play link.",
+          "RisingBlox rechecked Iron Soul: Dungeon against the official Roblox Games API and game description on 2026-07-16. The source still describes crystalized ore, rare materials, ancient forges, weapon crafting, skill-tree paths, and dungeons as the public progression framework.",
         bullets: [
           "Source: Roblox public game data and the official Iron Soul: Dungeon Roblox page.",
-          "Latest Roblox update timestamp seen by RisingBlox: 2026-07-08.",
+          "Latest Roblox update timestamp seen during this check: 2026-07-15.",
           "Use BloxDungeon for deeper forge, rune, weapon, and source-log research."
         ]
       }
     ],
-    lastUpdated: "2026-07-08",
+    lastUpdated: "2026-07-16",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
-      "Treat the forge as the main progression loop: farm materials first, then choose upgrades around your next dungeon goal.",
-      "Plan your skill-tree path before spending rerolls or chasing every weapon claim you see in videos.",
-      "Use the dedicated BloxDungeon database for deeper Iron Soul forge, runes, race tier-list, weapons, and code checks."
+      "Start with the verified gather-forge-upgrade loop before attempting harder dungeon areas.",
+      "Choose a skill-tree direction around the blocker you can observe: clear speed, forge progression, or survival.",
+      "Treat exact rune, relic, blueprint, and drop-rate claims as unverified unless an official or logged in-game source supports them."
     ],
-    guideTitle: "Iron Soul Dungeon Guide: Level Up Fast, Forge Route, Relics, and Best Runes",
+    guideTitle: "Iron Soul Dungeon Progression Guide: Leveling, Forge, and Skill Tree",
     guideDescription:
-      "Iron Soul Dungeon guide for leveling up fast, beginner forge guide routes, relic farming basics, best runes by playstyle, starter weapon choices, and blueprint notes.",
+      "A source-backed Iron Soul Dungeon progression guide covering first steps, the ore and forge loop, harder dungeons, skill-tree direction, progression blockers, and cautious rune checks.",
     guideIntro:
-      "This Iron Soul Dungeon guide focuses on the beginner searches already showing up in Google Search Console: how to level up fast, how to use the forge route, how to think about relics, and how to choose best runes without inventing fake rankings. RisingBlox keeps the quick-start version here, while BloxDungeon handles the deeper Iron Soul research stack.",
+      "Start Iron Soul: Dungeon by repeating the progression loop documented on the official Roblox page: defeat monsters, collect crystalized ore and rare materials, return to an ancient forge, and craft or improve a weapon before testing a harder dungeon route. If progress slows, identify whether the blocker is clear speed, forge progress, or survival, then use the skill tree and next weapon test to address that specific problem. This is a source-backed quick-start and progression guide, not a complete wiki. It does not claim an exact fastest XP route, rune ranking, relic table, blueprint list, or drop rate without official or logged in-game evidence. Deeper source logs and specialized tools remain on BloxDungeon.",
+    guideLastVerified: "2026-07-16",
+    guideSourceLabel: "Official Iron Soul: Dungeon Roblox page and Roblox Games API",
+    guideSourceUrl: "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon",
+    guideSourceNote:
+      "The official source verifies the ore, material, forge, weapon, skill-tree, and dungeon framework. It does not currently document exact XP, rune, relic, blueprint, or drop-rate tables.",
     guideSections: [
       {
-        title: "What Is Iron Soul: Dungeon?",
+        title: "First Steps",
         body:
-          "Iron Soul: Dungeon is built around a forge-driven RPG loop. You fight creatures, collect rare materials, turn crystalized ore into stronger weapons, and use each dungeon clear to push the next upgrade cycle.",
+          "Use the official progression framework before optimizing anything: fight creatures, collect crystalized ore and rare materials, return to a forge, and test the next weapon or skill-tree improvement on content you already understand.",
         bullets: [
-          "Fight monsters to collect crystalized ore and rare materials.",
-          "Use ancient forges to craft and upgrade weapons.",
-          "Clear harder dungeon areas once your weapon and skill setup can support it."
+          "Learn one repeatable monster route instead of rushing every unlocked area.",
+          "Bank materials at an ancient forge and make one meaningful weapon test.",
+          "Use the result of that test to decide whether to farm again or attempt a harder dungeon."
         ]
       },
       {
-        title: "Forge Guide Route",
+        title: "Early Farming Loop",
         body:
-          "The official description makes the forge the center of progression, so the safest beginner forge guide route is farm ore, return before efficiency crashes, craft or upgrade one meaningful weapon step, then re-test the same dungeon path. This is better than rushing every new dungeon as soon as it unlocks.",
+          "The official page confirms that defeated creatures drop crystalized ore and rare materials. Early farming should therefore favor a route you can repeat consistently, followed by a forge return and a controlled test of the resulting weapon change.",
         bullets: [
-          "Farm enough ore before chasing a new dungeon goal.",
-          "Bring materials back to the forge before progress slows too much.",
-          "Use each new weapon as a test of whether your next dungeon route is actually ready."
+          "Repeat enemies you can defeat reliably enough to gather materials.",
+          "Return to the forge instead of turning every run into an unsupported endurance challenge.",
+          "Compare the same route after a weapon change so you can see whether progress actually improved."
         ]
       },
       {
-        title: "Skill Tree Paths",
+        title: "Skill Tree Direction",
         body:
-          "Iron Soul: Dungeon says players can choose abilities for different playstyles, including relentless attacker, forge master, or survivor. Pick a direction before spreading upgrades too widely.",
+          "The official description names attacker, forge master, and survivor as example playstyle directions. It does not publish a universal best build, so choose the direction that addresses the problem visible in your current runs.",
         bullets: [
           "Attacker paths should support faster monster clears.",
           "Forge-focused paths should support crafting and weapon progression.",
@@ -361,19 +371,19 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Weapon Crafting Priority",
+        title: "Forge Progression",
         body:
-          "The official page says every new weapon changes how you fight. That means beginners should evaluate weapons by how they affect clears, not only by rarity or appearance.",
+          "The public description says the crafting loop is gather, forge, upgrade and that each new weapon changes combat. Treat forge progression as a sequence of observable tests rather than an unsupported rarity tier list.",
         bullets: [
           "Craft weapons that help with the content you are currently failing.",
           "Do not spend every material on side upgrades before testing a weapon change.",
-          "Use BloxDungeon for deeper weapon, forge, rune, and race tier-list notes."
+          "Use BloxDungeon when you need source logs beyond this beginner progression loop."
         ]
       },
       {
-        title: "Dungeon Progression",
+        title: "When to Attempt Harder Areas",
         body:
-          "Dungeons are described as lost lands with greater rewards, so the best timing is after your weapon, skill tree, and survival setup can handle the next difficulty step.",
+          "The official page describes dungeons as lost lands with greater rewards, but it does not publish a recommended level threshold. Attempt a harder area after a forge or skill-tree change and use clear consistency—not an invented level requirement—as the readiness check.",
         bullets: [
           "Enter new dungeons after a forge upgrade or meaningful skill-tree improvement.",
           "Track which enemy type or room ends your run.",
@@ -383,7 +393,7 @@ export const games: Game[] = [
       {
         title: "How to Level Up Fast",
         body:
-          "The safest fast-leveling route is to keep the forge loop moving instead of forcing harder dungeons too early. Use each monster route to collect ore and materials, upgrade the weapon or skill path that fixes your current clear speed, then return to dungeons when the next run is clearly faster.",
+          "The official source does not document a numeric XP formula or a single fastest leveling route. The source-backed answer is to reduce failed or slow runs: repeat a reliable monster route, gather ore and materials, make one forge or skill-tree improvement, and retest before moving to harder dungeons.",
         bullets: [
           "Farm monsters until you have enough ore for a meaningful forge or weapon step.",
           "Upgrade before pushing a dungeon that already feels slow or risky.",
@@ -391,53 +401,53 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "How to Get Relics",
+        title: "Common Progression Blockers",
         body:
-          "Search Console is already showing relic intent, but RisingBlox will not invent exact relic drop tables. The useful beginner approach is to treat relic progress the same way as the rest of Iron Soul: identify which enemy route, dungeon room, or progression step is tied to your current goal, then repeat the route that you can actually clear consistently.",
+          "Most safe troubleshooting begins by naming the visible blocker. A run can stall because normal enemies take too long, forge progress has stopped changing the result, or a dungeon ends the attempt before rewards are secured. The official source supports those broad systems, but not an exact fix for every build.",
         bullets: [
-          "Do not assume the hardest dungeon is the best relic route if clears are still failing.",
-          "Track which room or enemy type gives the materials and progress you can repeat.",
-          "Check deeper source logs on BloxDungeon before trusting exact relic-location claims."
+          "If normal enemies are slow, test attacker-oriented skill choices or a weapon change.",
+          "If materials are not producing progress, return to the forge plan and avoid unrelated spending claims.",
+          "If harder dungeons end runs early, strengthen consistency before chasing greater rewards."
         ]
       },
       {
-        title: "Best Runes and Skill Path Basics",
+        title: "Introductory Rune Decisions",
         body:
-          "RisingBlox does not rank exact Iron Soul runes without source-backed data. For beginners, the best rune or skill path is the one that solves the current blocker: faster monster clears, stronger forge progression, or better survival in dungeons. See the focused best runes page at /guides/iron-soul-dungeon-best-runes/ for the dedicated priority guide.",
+          "The current official Roblox description does not document rune names, effects, drop rates, or a best setup. Treat any rune choice as unverified until you can read its current in-game text, then compare it with the blocker you already identified. The focused runes page provides a verification checklist rather than a fabricated ranking.",
         bullets: [
-          "Choose damage-focused options when normal monsters take too long.",
-          "Choose forge or progression options when weapon upgrades are the bottleneck.",
-          "Choose survival options when dungeon pressure ends runs before rewards are earned."
+          "Record the exact rune name and effect shown in the current game before relying on it.",
+          "Test one change on the same route so the result is comparable.",
+          "Do not copy an exact tier list unless its version and evidence can be verified."
         ]
       },
       {
-        title: "Best Starter Weapon Path",
+        title: "Testing a Forge Upgrade",
         body:
-          "The best starter weapon path is the one that makes early monster farming and dungeon attempts consistent. Do not judge a weapon only by rarity; judge whether it helps you clear faster, survive longer, or reach the next forge step.",
+          "The official page confirms that forged weapons change how you fight, but it does not name one universal best starter weapon. Test the weapon you can verify in the current forge against a familiar route before spending more materials.",
         bullets: [
-          "Use the weapon that clears normal monsters reliably before chasing harder dungeon rewards.",
-          "Switch weapons when a new craft noticeably improves clear speed or survival.",
-          "Avoid spending rare materials on side upgrades before testing whether the new weapon solves your current wall."
+          "Use the same enemy route before and after the forge change.",
+          "Keep the change when it improves the blocker you were trying to solve.",
+          "Avoid publishing or following exact costs unless the current forge screen or an official source verifies them."
         ]
       },
       {
-        title: "Skill Tree Basics",
+        title: "What to Verify After an Update",
         body:
-          "Iron Soul: Dungeon's official page says the skill tree supports different playstyles. A beginner path should stay focused: attacker when damage is low, forge master when progression is material-limited, or survivor when dungeon pressure ends runs early.",
+          "Roblox updates can change weapons, skills, areas, and interfaces without documenting every detail in the public description. Recheck the official page and current in-game text before treating an older route as current.",
         bullets: [
-          "Pick one clear direction before spreading upgrades across every branch.",
-          "Use attacker choices when farming speed is the main blocker.",
-          "Use survivor choices when you can deal damage but cannot finish dungeon routes."
+          "Confirm that the skill-tree labels still match the current interface.",
+          "Confirm weapon effects and costs in the current forge.",
+          "Treat exact rune, relic, blueprint, and drop-rate claims as unverified until rechecked."
         ]
       },
       {
-        title: "Blueprint and Wiki Notes",
+        title: "Source Boundaries",
         body:
-          "Blueprint- and wiki-style searches are appearing in GSC, but RisingBlox will not pretend to have a full Iron Soul wiki without source-backed data. For now, treat blueprints as part of the broader forge progression loop and use this page as a starter checklist rather than a fake database.",
+          "This page is intentionally a progression guide, not a complete Iron Soul wiki. The official Roblox description verifies the broad combat, material, forge, weapon, skill-tree, and dungeon systems; it does not verify an exhaustive database.",
         bullets: [
-          "Use blueprint claims carefully until the exact source is confirmed.",
-          "Tie blueprint planning back to the weapon or forge upgrade you are trying to unlock.",
-          "Use BloxDungeon for deeper Iron Soul source logs when more blueprint evidence is available."
+          "Do not infer exact mechanics from a search query alone.",
+          "Use current in-game text or a developer source for precise claims.",
+          "Use BloxDungeon for deeper Iron Soul source logs and specialized tools."
         ]
       }
     ],
@@ -463,29 +473,29 @@ export const games: Game[] = [
           "Keep the forge loop moving: farm monsters for ore and materials, upgrade before harder dungeons, and repeat consistent routes instead of forcing slow clears."
       },
       {
-        question: "How do I get relics in Iron Soul?",
+        question: "What should I do when Iron Soul progression stalls?",
         answer:
-          "RisingBlox does not publish exact relic tables without source-backed data. Start with the route or dungeon room you can clear consistently, then track which repeatable path actually supports your current relic or progression goal."
+          "Identify whether the blocker is normal-enemy clear speed, forge progress, or dungeon survival. Make one verified weapon or skill-tree change, then retest the same route."
       },
       {
         question: "What are the best runes in Iron Soul?",
         answer:
-          "RisingBlox does not claim an exact best-rune ranking without source-backed data. Beginners should choose rune or skill options based on the current blocker: damage, forge progression, or survival. The focused best runes guide is available at /guides/iron-soul-dungeon-best-runes/."
+          "The current official Roblox description does not document rune names, effects, or rankings. Use the focused runes page as a verification checklist and rely on current in-game text before choosing a build."
       },
       {
-        question: "What is the best starter weapon in Iron Soul: Dungeon?",
+        question: "How should I test a forged weapon?",
         answer:
-          "Use the starter weapon path that clears early monsters consistently and helps you reach the next forge step. Do not spend rare materials until a weapon upgrade clearly fixes your current blocker."
+          "Test the forged weapon on a route you already know. Keep the change when it improves the specific clear-speed or survival blocker you were trying to solve."
       },
       {
-        question: "How should I use the Iron Soul skill tree?",
+        question: "What should I verify after an Iron Soul update?",
         answer:
-          "Choose one direction first: attacker for faster farming, forge-focused progression when materials and crafting are the bottleneck, or survivor when dungeons end runs too early."
+          "Recheck skill-tree labels, weapon effects, forge costs, and any rune or drop claims against the current game or a developer source before following an older route."
       },
       {
-        question: "How do blueprints work in Iron Soul: Dungeon?",
+        question: "Does this guide include exact drop rates or blueprint tables?",
         answer:
-          "RisingBlox does not list exact blueprint tables without source-backed data. Treat blueprint claims as unverified until they can be tied to official, in-game, or reliable logged evidence."
+          "No. The official source used for this guide does not provide exact drop rates, rune tables, relic locations, or blueprint data, so those claims remain outside this page until verified."
       },
       {
         question: "Is this page a full Iron Soul Dungeon wiki?",
@@ -793,69 +803,115 @@ export const games: Game[] = [
     name: "Noob Incremental",
     genre: "Incremental / Idle",
     summary:
-      "An incremental Roblox game focused on layered upgrades, rebirth paths, and steady account progression.",
-    lastUpdated: "2026-06-22",
-    tags: ["incremental", "idle", "rebirth"],
+      "Noob Incremental is a Roblox incremental simulator from Ghoulax Games where players buy Noobs to make Oof, purchase upgrades, roll and level runes, and use Prestige layers to unlock more content.",
+    profileTitle: "Noob Incremental Roblox Game Profile and Progression Overview",
+    profileDescription:
+      "Noob Incremental Roblox profile with the official Oof loop, upgrades, runes, Prestige layers, current public data, and a source-backed progression guide.",
+    profileIntro:
+      "The official Noob Incremental Roblox page describes a game with hundreds of upgrades, dozens of stats, multiple Prestige layers, and runes. Its public progression order starts with buying Noobs to make Oof, spending on upgrades, rolling and leveling runes, then using Prestige to unlock more content. RisingBlox keeps the profile focused on those verified facts and sends step-by-step decisions to the progression guide.",
+    profileSections: [
+      {
+        title: "Official Progression Loop",
+        body:
+          "The official Roblox description supplies a clear progression sequence without publishing an exact optimal build or reset threshold.",
+        bullets: [
+          "Buy Noobs to produce Oof.",
+          "Use upgrades to become stronger.",
+          "Roll and level runes as that feature becomes available.",
+          "Use Prestige layers to unlock new content."
+        ]
+      },
+      {
+        title: "Current Official Status",
+        body:
+          "RisingBlox rechecked the official Roblox Games API and game description on 2026-07-16. The public title carried an UPD 2 signal, and the verified creator was Ghoulax Games.",
+        bullets: [
+          "Source: official Noob Incremental Roblox page and Roblox Games API.",
+          "Creator shown by Roblox: Ghoulax Games.",
+          "Exact upgrade effects, costs, and Prestige thresholds must be verified in the current game."
+        ]
+      }
+    ],
+    lastUpdated: "2026-07-16",
+    tags: ["incremental", "idle", "prestige", "runes", "progression"],
     beginnerTips: [
-      "Buy income upgrades first, then chase multipliers.",
-      "Rebirth when the next run will clearly outpace the current one.",
-      "Use boosts during active play instead of leaving them idle."
+      "Follow the verified opening loop: buy Noobs, make Oof, then compare the upgrades currently visible in game.",
+      "Treat Prestige as an unlock decision, not a timed reset with an invented universal threshold.",
+      "Record current rune text before investing because the official page confirms runes exist but does not publish their exact effects."
     ],
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-14",
     ...buildNoCodePolicy("Noob Incremental"),
+    guideTitle: "Noob Incremental Progression Guide: Upgrades, Runes, and Prestige",
+    guideDescription:
+      "A source-backed Noob Incremental progression guide for the first Oof loop, early upgrade decisions, rune checks, Prestige timing, blockers, and update verification.",
     guideIntro:
-      "Noob Incremental is an incremental simulator from the verified Ghoulax Games group. The official Roblox page describes hundreds of upgrades, dozens of stats, multiple prestige layers, runes, and the core loop of buying Noobs to make Oof.",
+      "Begin with the sequence stated on the official Noob Incremental Roblox page: buy Noobs to produce Oof, compare the upgrades currently available, roll and level runes when that feature opens, and use Prestige when it unlocks the next layer of content. The source confirms hundreds of upgrades, dozens of stats, multiple Prestige layers, and runes, but it does not publish one best upgrade order, an exact reset threshold, or permanent rune rankings. This guide therefore explains how to make the next visible progression decision without inventing costs or formulas. It uses the existing stable guide URL as the single Noob Incremental progression page; no duplicate wiki, tier list, or mechanic page is being added.",
+    guideLastVerified: "2026-07-16",
+    guideSourceLabel: "Official Noob Incremental Roblox page and Roblox Games API",
+    guideSourceUrl: "https://www.roblox.com/games/76911729991355/Noob-Incremental",
+    guideSourceNote:
+      "The official source verifies the Oof, upgrade, rune, and Prestige framework. Exact upgrade effects, costs, unlock thresholds, and rune values require current in-game verification.",
     guideSections: [
       {
-        title: "What Is Noob Incremental?",
+        title: "What to Do First",
         body:
-          "The early game is about turning basic Oof income into stronger upgrades, then using prestige layers and runes to unlock better long-term scaling. Treat each run as a way to improve your next reset instead of trying to hold one slow run forever.",
+          "The official how-to-play sequence begins with buying Noobs to make Oof. Use that first loop to learn what the current interface exposes before making claims about an optimal build.",
         bullets: [
           "Buy Noobs to start producing Oof.",
-          "Spend early currency on upgrades that make the next income step faster.",
-          "Watch for unlocks that introduce new stats, runes, or prestige choices."
+          "Open the current upgrade interface and read the exact effects available to your account.",
+          "Make one upgrade change, then check whether the next Oof cycle actually improves."
         ]
       },
       {
-        title: "Early Upgrade Priority",
+        title: "Early Upgrade Priorities",
         body:
-          "For beginners, the safest path is to buy income upgrades first, then add multipliers once the next upgrade tier starts to slow down. This keeps your account moving without wasting early currency on small side gains.",
+          "Roblox confirms that upgrades make the player stronger but does not publish a universal best order. Prioritize from the current in-game descriptions: first address the upgrade that directly improves the Oof loop or unlocks the next verified feature, then compare the result before spreading resources.",
         bullets: [
-          "Prioritize upgrades that increase Oof gain or make Noobs more efficient.",
-          "Do not spread currency evenly across every visible option if one path clearly speeds up income.",
-          "Use short active sessions to test whether a new upgrade meaningfully changes your next minute of progress."
+          "Read the exact effect shown in game instead of relying on an old cost table.",
+          "Prefer one measurable progression goal over buying every visible option at once.",
+          "Retest the same Oof cycle after the purchase so the effect is observable."
         ]
       },
       {
-        title: "Runes Explained",
+        title: "When Runes Become Relevant",
         body:
-          "The official Roblox description says players can roll runes and level them up. That makes runes a likely mid-game scaling system, so beginners should avoid treating the first roll as permanent or perfect.",
+          "The official page confirms that players can roll runes and level them up. It does not publish rune names, odds, exact effects, or a best ranking, so rune decisions should begin with the current in-game text.",
         bullets: [
-          "Roll runes after your basic income loop feels stable.",
-          "Level runes that support your current progression goal instead of chasing every possible stat.",
-          "If a rune improves income speed or reset value, test it before investing in narrower bonuses."
+          "Record the rune name and effect displayed in the current version.",
+          "Level a rune only after you can explain which visible blocker it addresses.",
+          "Do not treat copied odds or tier labels as verified."
         ]
       },
       {
-        title: "When to Prestige",
+        title: "When Prestige Becomes Relevant",
         body:
-          "Prestige is listed as a way to unlock new content. In incremental games, the best reset timing is usually when the next run will clearly become faster than the current one.",
+          "The official description says Prestige unlocks new content. It does not provide one exact timing threshold, so the safe decision point is when the current interface shows the Prestige layer and explains what the reset will unlock or change.",
         bullets: [
-          "Prestige when progress slows and the reset reward changes your next run noticeably.",
-          "Avoid resetting only because the button is available.",
-          "After each prestige, rebuild your income loop first before experimenting with runes or side stats."
+          "Read the current Prestige confirmation and unlock description before resetting.",
+          "Do not claim a universal Oof, time, or stat threshold without in-game evidence.",
+          "After Prestige, re-establish the verified Noob-to-Oof loop before comparing later systems."
         ]
       },
       {
-        title: "Common Beginner Mistakes",
+        title: "Common Progression Blockers",
         body:
-          "Most early mistakes come from spending too widely, resetting too early, or ignoring the systems that compound across runs.",
+          "A progression blocker should be described by what the current game shows, not by a generic idle-game formula. Check whether the next obstacle is the Oof loop, an upgrade requirement, a rune decision, or a Prestige unlock.",
         bullets: [
-          "Do not ignore core income upgrades while chasing advanced-looking systems.",
-          "Do not prestige before the reward is large enough to make the next run faster.",
-          "Do not assume copied code claims are real; check the codes page before planning around rewards."
+          "If Oof progress is slow, re-read visible upgrade effects and test one change.",
+          "If a feature is locked, verify its current requirement rather than copying an old threshold.",
+          "If Prestige is available, confirm the documented unlock before accepting the reset."
+        ]
+      },
+      {
+        title: "What to Verify After an Update",
+        body:
+          "The official page carried an UPD 2 signal during the 2026-07-16 check. Update labels are freshness signals, not proof that older costs, rune effects, or unlock requirements remain unchanged.",
+        bullets: [
+          "Recheck upgrade names, effects, and costs in the current interface.",
+          "Recheck rune text and leveling requirements.",
+          "Recheck what each Prestige layer says it unlocks."
         ]
       }
     ],
@@ -863,22 +919,22 @@ export const games: Game[] = [
       {
         question: "What should I do first in Noob Incremental?",
         answer:
-          "Start by buying Noobs to make Oof, then use that income on upgrades that make your next income step faster."
+          "Follow the official opening loop: buy Noobs to make Oof, read the upgrades currently available, make one change, and compare the next cycle."
       },
       {
         question: "When should I use runes in Noob Incremental?",
         answer:
-          "Use runes after your basic income loop is stable. The official page says runes can be rolled and leveled, so treat them as a scaling system rather than a one-time choice."
+          "Use rune decisions when the feature is available and you can read the current rune effect. The official page confirms rolling and leveling runes, but not exact rankings or odds."
       },
       {
         question: "When should I prestige in Noob Incremental?",
         answer:
-          "Prestige when the reward will make your next run clearly faster or unlock useful content. Avoid resetting just because the option appears."
+          "Prestige becomes relevant when the current interface exposes the layer and explains the new content it unlocks. No universal reset threshold is verified here."
       },
       {
-        question: "Are there Noob Incremental codes?",
+        question: "Does this guide include exact upgrade costs or rune odds?",
         answer:
-          "RisingBlox does not have verified active Noob Incremental codes listed right now. Check the dedicated codes page for the latest verified status."
+          "No. The official source used here does not publish a complete current cost table or rune odds, so those details require in-game or developer verification."
       }
     ]
   },
@@ -887,45 +943,60 @@ export const games: Game[] = [
     name: "Anime Squadron",
     genre: "Strategy / Tower Defense",
     summary:
-      "Anime Squadron Roblox is an anime lane-defense strategy game from Komplex Studio with UPD 1.0 signals, squad upgrades, boss waves, multiple game modes, and early unit progression.",
+      "Anime Squadron is a Roblox lane battler from Komplex Studio built around summoning and upgrading units, planning a lineup, playing multiple modes, and defending against bosses and nonstop enemy waves.",
     profileIntro:
-      "Anime Squadron on Roblox is a lane-defense strategy game where your early progress depends on stable lane coverage, a small upgraded core squad, and better boss-wave timing. The official Roblox page currently carries an UPD 1.0 signal and highlights summoning, upgrading units, multiple game modes, and massive boss waves.",
-    profileTitle: "Anime Squadron Roblox Guide, Codes Status, Units, and Boss Waves",
+      "Anime Squadron is an official Roblox lane battler published by Komplex Studio. The public game description confirms summoning, upgrading, leveling and evolving units, planning a lineup, multiple game modes, team play, ranked progression, bosses, and nonstop enemy waves. This profile records the game identity, developer, source, and current public status; practical opening decisions belong in the beginner guide.",
+    profileTitle: "Anime Squadron Roblox Game Profile and Official Status",
     profileDescription:
-      "Anime Squadron Roblox guide hub for units, lane coverage, boss waves, game modes, beginner strategy, UPD 1.0 notes, and verified codes status.",
+      "Anime Squadron Roblox profile with the official lane-battler description, Komplex Studio creator information, current update status, public data, beginner guide, and codes status links.",
     profileSections: [
       {
-        title: "Official UPD 1.0 Refresh",
+        title: "Official Gameplay Scope",
         body:
-          "RisingBlox refreshed Anime Squadron against Roblox public game data on 2026-07-09. The official Roblox page still carries an UPD 1.0 signal and describes summon and upgrade systems, multiple game modes, boss waves, and anime squad progression.",
+          "The official Roblox description defines Anime Squadron as a strategic lane battler. It confirms units, lineup planning, multiple modes, bosses, and enemy waves without publishing a current best-unit ranking.",
         bullets: [
-          "Source: Roblox public game data and the official Anime Squadron Roblox page.",
-          "Latest Roblox update timestamp seen by RisingBlox: 2026-07-08.",
-          "RisingBlox still lists no active Anime Squadron codes unless a specific code can be verified."
+          "Summon, upgrade, level, and evolve units.",
+          "Plan a lineup for multiple game modes.",
+          "Defend against bosses and nonstop enemy waves."
+        ]
+      },
+      {
+        title: "Developer and Current Status",
+        body:
+          "RisingBlox rechecked the official Roblox Games API and game description on 2026-07-16. Roblox listed Komplex Studio as the creator and the public title carried an UPD 1.5 signal.",
+        bullets: [
+          "Source: official Anime Squadron Roblox page and Roblox Games API.",
+          "Creator shown by Roblox: Komplex Studio.",
+          "Exact unit rankings, costs, and mode-specific formulas are not claimed on this profile."
         ]
       }
     ],
-    lastUpdated: "2026-07-09",
-    tags: ["anime", "tower-defense", "strategy", "units", "roblox-codes"],
+    lastUpdated: "2026-07-16",
+    tags: ["anime", "lane-battler", "tower-defense", "strategy", "units"],
     beginnerTips: [
-      "Start by learning how lanes, enemy waves, and boss timing work before chasing rare units.",
-      "Upgrade a small core squad first so your early clears stay consistent.",
-      "Check the official Roblox page and developer-linked channels before trusting copied code claims."
+      "Use early runs to observe lane coverage and the timing of nonstop enemy waves.",
+      "Plan a lineup and test upgrades on units you are actually deploying.",
+      "Prepare before boss pressure instead of assuming a rare unit alone solves the route."
     ],
-    guideTitle: "Anime Squadron Roblox Guide: Units, Boss Wave Tips, and Codes Status",
+    guideTitle: "Anime Squadron Beginner Guide: Lane Coverage and Boss Preparation",
     guideDescription:
-      "Anime Squadron Roblox guide covering early units, lane placement, upgrade priority, boss waves, Anime Squadron Roblox codes status, game modes, and UPD 1.0 notes.",
+      "A source-backed Anime Squadron beginner guide for the opening lineup, lane coverage, upgrade allocation, multiple modes, and boss-wave preparation without an unverified unit tier list.",
     guideIntro:
-      "This Anime Squadron Roblox guide is tuned to the early queries already surfacing for the site: Anime Squadron Roblox, Anime Squadron guide, units, boss waves, and codes status. The official Roblox page highlights summoning and upgrading units, deploying anime heroes, leveling and evolving them, handling multiple game modes, and surviving boss waves.",
+      "Start Anime Squadron by treating it as the strategic lane battler described on the official Roblox page: deploy a lineup, watch how nonstop enemy waves move through the lanes, and spend early upgrades on units you are actually testing before boss pressure arrives. The source confirms summoning, upgrading, leveling and evolving units, multiple modes, and massive bosses, but it does not publish a universal best-unit list, exact resource formula, or mode-specific build. This guide therefore focuses on observable opening decisions—coverage, upgrade concentration, and boss preparation—while the profile remains the source-and-status page and the codes URL remains a separate verification-only status page.",
+    guideLastVerified: "2026-07-16",
+    guideSourceLabel: "Official Anime Squadron Roblox page and Roblox Games API",
+    guideSourceUrl: "https://www.roblox.com/games/71132543521245/Anime-Squadron",
+    guideSourceNote:
+      "The official source verifies units, lineup planning, multiple modes, bosses, and waves. It does not verify a current unit tier list, exact costs, or an optimal lineup.",
     guideSections: [
       {
-        title: "What Is Anime Squadron?",
+        title: "What to Do First",
         body:
-          "Anime Squadron is built around defending lanes with a squad of anime-style units. The beginner goal is to understand enemy pathing, keep lanes covered, and upgrade a small team before chasing every rare unit.",
+          "Use the first runs to learn how the current lineup and lanes behave. The official page confirms strategic lineup planning and nonstop waves, so the first useful decision is where coverage fails—not which unverified unit is supposedly best.",
         bullets: [
-          "Treat it as a lane battler first, not only a unit collector.",
-          "Learn how enemy waves move before spending heavily on upgrades.",
-          "Use early runs to identify which lanes or boss waves cause failures."
+          "Deploy a lineup and observe which lane first allows enemies through.",
+          "Hold enough resources to test an upgrade before spreading them across every unit.",
+          "Record whether the next failure comes from normal waves or boss pressure."
         ]
       },
       {
@@ -949,13 +1020,13 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Units for Beginners",
+        title: "Resource Allocation",
         body:
-          "Search interest around Anime Squadron units is starting to appear, but RisingBlox will not invent a fake unit tier list without repeatable evidence. The practical beginner question is which units deserve your scarce upgrades right now, not which rare name looks best in isolation.",
+          "The official description confirms that units can be upgraded, leveled, and evolved, but it does not publish exact costs or one best allocation. Concentrate early resources on the deployed units whose effects you can observe, then compare the next wave before investing again.",
         bullets: [
-          "Keep investing in units that are already part of successful repeated clears.",
-          "Judge a unit by lane coverage, wave control, and boss contribution, not only rarity.",
-          "Wait for stronger data before splitting this topic into a separate tier-list page."
+          "Read the current upgrade text before spending.",
+          "Test one meaningful upgrade on a unit already covering an active lane.",
+          "Do not publish or follow exact cost tables unless the current game or developer source verifies them."
         ]
       },
       {
@@ -979,13 +1050,13 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Anime Squadron Codes Status",
+        title: "What to Recheck After an Update",
         body:
-          "Anime Squadron is getting impressions, but RisingBlox still has no verified active codes listed right now. That means this page should treat codes as a status check, not as a promise that a new codes page cluster is justified yet.",
+          "The official title carried an UPD 1.5 signal during the 2026-07-16 check. That is a freshness signal, not proof that older unit advice, costs, modes, or boss behavior stayed unchanged.",
         bullets: [
-          "Check the dedicated codes page around updates and developer announcements.",
-          "Do not publish copied code lists until official or in-game evidence confirms them.",
-          "Wait for stronger codes-specific query data before expanding beyond the current status page."
+          "Recheck unit upgrade and evolve text in the current interface.",
+          "Recheck which modes are currently available.",
+          "Recheck where normal waves or bosses expose weak coverage."
         ]
       },
       {
@@ -1006,46 +1077,50 @@ export const games: Game[] = [
           "Beginners should learn lane coverage, upgrade a small core squad, and prepare before boss waves instead of chasing rare units immediately."
       },
       {
-        question: "What does UPD 1.0 mean for Anime Squadron beginners?",
+        question: "How should I plan an early Anime Squadron lineup?",
         answer:
-          "RisingBlox treats UPD 1.0 as a freshness signal from the official Roblox game page, not a separate game mode. Beginners should still focus on the basics first: unit upgrades, lane coverage, multiple game modes, and boss-wave pressure."
+          "Deploy a lineup, observe which lane fails first, and spend the next upgrade on a unit whose contribution you can see. The official source does not provide one universal best lineup."
       },
       {
-        question: "Are units important in Anime Squadron?",
+        question: "When should I upgrade an Anime Squadron unit?",
         answer:
-          "Yes. The official Roblox page highlights summoning, upgrading, leveling, and evolving units, so unit progression is central to the game."
+          "Upgrade after reading the current effect and identifying the lane or boss problem the unit is meant to address. Exact best costs and rankings are not verified here."
       },
       {
-        question: "Should RisingBlox build an Anime Squadron tier list yet?",
+        question: "How should I prepare for boss waves?",
         answer:
-          "Not yet. The current signal is still light and mostly covers general Anime Squadron and Anime Squadron Roblox intent. RisingBlox should keep improving the existing guide until stronger unit- or tier-list-specific query data appears."
+          "Identify when boss pressure begins, strengthen coverage before that point, and compare placement as well as upgrades when a boss survives too long."
       },
       {
-        question: "How should I handle boss waves in Anime Squadron?",
+        question: "What should I do if one lane keeps leaking enemies?",
         answer:
-          "Watch when boss waves appear, upgrade damage before they arrive, and adjust placement if bosses survive too long."
+          "Move or strengthen coverage on the failing path, then retest the same wave. Avoid over-investing in a different lane that is already stable."
       },
       {
-        question: "Are there Anime Squadron codes?",
+        question: "Does this guide rank Anime Squadron units?",
         answer:
-          "RisingBlox does not have verified active Anime Squadron codes listed right now. Check the dedicated codes page for the current verified status."
+          "No. The official source confirms units and upgrades but does not publish a current best-unit ranking, so this guide does not invent one."
       }
     ],
     activeCodes: [],
     expiredCodes: [],
     codesLastChecked: "2026-07-11",
     ...buildNoCodePolicy("Anime Squadron"),
+    codeRedemptionSteps: [
+      "No official Anime Squadron redemption interface or active code was verified in the sources checked for this page.",
+      "If Komplex Studio publishes a code, verify the current in-game redemption path from that official announcement or in-game evidence before entering it.",
+      "Do not use copied redemption instructions that cannot be matched to the current game."
+    ],
     codeFaq: [
-      ...buildNoCodePolicy("Anime Squadron").codeFaq,
       {
-        question: "What keywords does this Anime Squadron page track?",
+        question: "Are there any verified active Anime Squadron codes?",
         answer:
-          "This page tracks Anime Squadron codes, Anime Squadron Roblox, Anime Squadron guide, and related beginner search questions."
+          "No verified active Anime Squadron codes are listed. RisingBlox requires official Roblox text, a developer-linked announcement, or in-game redemption evidence before adding one."
       },
       {
-        question: "How often should Anime Squadron codes be checked?",
+        question: "Is the Anime Squadron redemption method verified?",
         answer:
-          "Roblox code pages should be checked around updates, like milestones, and developer announcements, then updated with the latest checked date."
+          "Not from the current official sources. The page will not claim a button or menu path until an official announcement or in-game check verifies it."
       }
     ]
   }

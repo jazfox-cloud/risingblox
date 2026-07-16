@@ -76,6 +76,21 @@ export default function GuidePage({ params }: { params: { slug: string } }) {
           "Start with the highest-impact basics before spending currency or boosts."}
       </p>
       <p className="mt-3 text-sm text-gray-600">Last updated: {game.lastUpdated}</p>
+      {game.guideLastVerified ? (
+        <aside className="mt-5 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
+          <p className="font-black text-ink">Last verified: {game.guideLastVerified}</p>
+          <p className="mt-1">
+            Source:{" "}
+            {game.guideSourceUrl ? (
+              <a href={game.guideSourceUrl}>{game.guideSourceLabel ?? "Official Roblox page"}</a>
+            ) : (
+              game.guideSourceLabel ?? "Project source record"
+            )}
+            .
+          </p>
+          {game.guideSourceNote ? <p className="mt-1">{game.guideSourceNote}</p> : null}
+        </aside>
+      ) : null}
       <div className="mt-5 flex flex-wrap gap-3 text-sm font-black">
         <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}/`}>
           Game profile

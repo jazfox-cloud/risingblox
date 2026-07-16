@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
@@ -35,6 +36,9 @@ export default function GamePage({ params }: { params: { slug: string } }) {
   const game = getGame(params.slug);
   if (!game) notFound();
   const stats = getDisplayStats(game);
+  const guideLinkLabel = ["iron-soul-dungeon", "noob-incremental"].includes(game.slug)
+    ? `${game.name} progression guide`
+    : `${game.name} beginner guide`;
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10">
@@ -51,12 +55,20 @@ export default function GamePage({ params }: { params: { slug: string } }) {
           >
             Play on Roblox
           </a>
+          {game.slug === "iron-soul-dungeon" ? (
+            <Link
+              className="rounded-md bg-mint px-5 py-3 font-bold text-ink shadow-sm"
+              href={`/guides/${game.slug}/`}
+            >
+              Progression guide
+            </Link>
+          ) : null}
           {game.hasCodesPage !== false ? (
             <a
               className="rounded-md bg-white px-5 py-3 font-bold shadow-sm"
               href={`/codes/${game.slug}/`}
             >
-              Check Codes
+              Codes status
             </a>
           ) : null}
           {game.externalGuide ? (
@@ -112,22 +124,18 @@ export default function GamePage({ params }: { params: { slug: string } }) {
             </ul>
           </div>
         ))}
-        {!game.externalGuide ? (
-          <>
-            <h2>Next Steps</h2>
-            <p>
-              For practical starter tips, read the{" "}
-              <a href={`/guides/${game.slug}/`}>{game.name} beginner guide</a>
-              {game.hasCodesPage !== false ? (
-                <>
-                  . For rewards research, check the{" "}
-                  <a href={`/codes/${game.slug}/`}>{game.name} codes status</a>
-                </>
-              ) : null}
-              .
-            </p>
-          </>
-        ) : null}
+        <h2>Next Steps</h2>
+        <p>
+          Continue with the{" "}
+          <Link href={`/guides/${game.slug}/`}>{guideLinkLabel}</Link>
+          {game.hasCodesPage !== false ? (
+            <>
+              , or check the{" "}
+              <Link href={`/codes/${game.slug}/`}>{game.name} codes status</Link>
+            </>
+          ) : null}
+          .
+        </p>
         <h2>Data Notes</h2>
         <p>
           RisingBlox does not treat placeholder numbers as verified stats. Online

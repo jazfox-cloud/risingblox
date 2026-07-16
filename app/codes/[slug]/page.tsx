@@ -122,9 +122,13 @@ export default function CodesPage({ params }: { params: { slug: string } }) {
 
         <h2>How to Redeem</h2>
         <ol>
-          <li>Open {game.name} on Roblox.</li>
-          <li>Find the codes, settings, or rewards button inside the game.</li>
-          <li>Enter the code exactly as shown and claim the reward.</li>
+          {(game.codeRedemptionSteps ?? [
+            `Open ${game.name} on Roblox.`,
+            "Use a codes or rewards interface only when the current game or an official source confirms that it exists.",
+            "Enter only a verified code and confirm the result in game."
+          ]).map((step) => (
+            <li key={step}>{step}</li>
+          ))}
         </ol>
 
         <h2>Expired Codes</h2>

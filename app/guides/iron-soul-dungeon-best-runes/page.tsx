@@ -2,51 +2,44 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const baseUrl = "https://risingblox.com";
-const lastUpdated = "2026-07-13";
-
-const robloxSnapshot = {
-  checked: "2026-07-13",
-  source: "Roblox public game data and the official Iron Soul: Dungeon Roblox page",
-  onlinePlayers: "13,820",
-  visits: "124,506,505",
-  updatedAt: "2026-07-10T12:35:59Z",
-  officialUrl: "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon"
-};
+const lastUpdated = "2026-07-16";
+const officialRobloxUrl =
+  "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon";
 
 const faqItems = [
   {
     question: "What are the best runes in Iron Soul: Dungeon?",
     answer:
-      "For most beginners, the best rune setup is the one that fixes the current blocker: damage when monsters take too long, survival when boss waves end runs early, or farming consistency when materials and ore are the bottleneck."
+      "The current official Roblox description does not publish rune names, effects, drop rates, or a ranked best setup. Verify the exact in-game rune text and test one change against the progression blocker you are trying to solve."
   },
   {
-    question: "Should I copy a single rune tier list?",
+    question: "Does RisingBlox have a verified Iron Soul rune tier list?",
     answer:
-      "Use tier lists as a starting point, not as a rule. RisingBlox avoids exact rune rankings unless the claim can be tied to official, in-game, or reliable logged evidence."
+      "No. A tier list would require current rune names, effects, version context, and repeatable evidence. Those inputs are not present in the official source used for this update."
   },
   {
-    question: "Which rune type should I choose for boss waves?",
+    question: "How should I compare two runes?",
     answer:
-      "Prioritize survival and reliable damage for boss waves. A setup that keeps the run alive usually beats a high-risk farming setup when the boss is the wall."
+      "Record the current in-game text, change one rune at a time, and repeat the same familiar route. Compare the blocker you can observe instead of relying on an unsupported rarity label."
   },
   {
-    question: "Are rune drop rates verified?",
+    question: "Where should I start before testing runes?",
     answer:
-      "No verified rune drop-rate table is listed here. This page focuses on practical priority logic until source-backed rune data is available."
+      "Start with the Iron Soul Dungeon progression guide to identify whether the current problem is clear speed, forge progress, or survival, then test only a rune whose current text relates to that problem."
   }
 ];
 
 export const metadata: Metadata = {
-  title: "Iron Soul Dungeon Best Runes Guide - Rune Priority by Playstyle",
+  title: "Iron Soul Dungeon Runes Guide - Verification Before You Build",
   description:
-    "A conservative Iron Soul Dungeon best runes guide for Roblox players, covering damage, survival, boss waves, farming, and beginner rune priority without unverified drop-rate claims.",
+    "A conservative Iron Soul Dungeon runes guide explaining what to verify in game, how to compare rune changes, and why RisingBlox does not publish unsupported rune rankings or drop rates.",
   alternates: {
     canonical: `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
   },
   openGraph: {
-    title: "Iron Soul Dungeon Best Runes Guide",
+    title: "Iron Soul Dungeon Runes Guide",
     description:
-      "Choose Iron Soul Dungeon runes by playstyle: damage, survival, boss waves, and farming priority based on your current progression blocker.",
+      "Verify current rune text, compare one change at a time, and avoid unsupported Iron Soul rune rankings or drop-rate claims.",
     url: `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
   }
 };
@@ -74,26 +67,33 @@ export default function IronSoulDungeonBestRunesPage() {
 
       <p className="text-sm font-black uppercase text-coral">Iron Soul Guide</p>
       <h1 className="mt-3 text-4xl font-black tracking-tight">
-        Iron Soul Dungeon Best Runes Guide
+        Iron Soul Dungeon Runes: What to Verify Before You Build
       </h1>
       <p className="mt-4 text-lg leading-8 text-gray-700">
-        The best Iron Soul: Dungeon rune choice depends on the wall in front of
-        you. Use damage when normal enemies slow the run, survival when boss
-        waves end attempts, and farming consistency when ore or materials are
-        blocking the next forge step.
+        The official Iron Soul: Dungeon Roblox description checked on 2026-07-16
+        explains combat, ore, rare materials, forges, weapons, skill-tree paths,
+        and dungeons. It does not document rune names, effects, odds, drop rates,
+        or a best setup. This page therefore provides a verification and testing
+        process instead of presenting an unsupported rune tier list.
       </p>
-      <p className="mt-3 text-sm text-gray-600">Last updated: {lastUpdated}</p>
+      <p className="mt-3 text-sm text-gray-600">Last verified: {lastUpdated}</p>
 
       <div className="mt-5 flex flex-wrap gap-3 text-sm font-black">
-        <Link className="rounded-md bg-mint px-4 py-2 text-ink" href="/guides/iron-soul-dungeon/">
-          Beginner guide
+        <Link
+          className="rounded-md bg-mint px-4 py-2 text-ink"
+          href="/guides/iron-soul-dungeon/"
+        >
+          Iron Soul progression guide
         </Link>
-        <Link className="rounded-md bg-coral px-4 py-2 text-white" href="/games/iron-soul-dungeon/">
+        <Link
+          className="rounded-md bg-coral px-4 py-2 text-white"
+          href="/games/iron-soul-dungeon/"
+        >
           Game profile
         </Link>
         <a
           className="rounded-md bg-ink px-4 py-2 text-white"
-          href={robloxSnapshot.officialUrl}
+          href={officialRobloxUrl}
           rel="nofollow noopener noreferrer"
           target="_blank"
         >
@@ -102,73 +102,40 @@ export default function IronSoulDungeonBestRunesPage() {
       </div>
 
       <section className="content-prose mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
-        <h2>Quick Rune Priority</h2>
+        <h2>Start With the Progression Blocker</h2>
         <p>
-          Do not choose runes only by rarity or a copied tier label. Start with
-          the problem that is stopping progress, then pick the rune direction
-          that makes the next run more consistent.
+          Before comparing runes, identify the problem visible in a repeatable
+          route. The progression guide uses three broad checks supported by the
+          official game framework: monster clear speed, forge progression, and
+          surviving a harder dungeon attempt. A rune claim is useful only after
+          its current in-game text can be connected to one of those observed
+          problems.
         </p>
+
+        <h2>Rune Verification Checklist</h2>
+        <ol>
+          <li>Record the exact rune name and effect shown in the current game.</li>
+          <li>Record the Roblox update or game version being tested.</li>
+          <li>Change one rune or related choice at a time.</li>
+          <li>Repeat the same familiar route so the result is comparable.</li>
+          <li>Keep the change only when it improves the blocker you identified.</li>
+        </ol>
+
+        <h2>What Not to Assume</h2>
         <ul>
-          <li>Damage priority: use when regular enemies take too long to clear.</li>
-          <li>Survival priority: use when boss waves or dungeon pressure end runs early.</li>
-          <li>Farming priority: use when ore, materials, or forge progress are the bottleneck.</li>
-          <li>Balanced priority: use when you are testing a new dungeon route for the first time.</li>
+          <li>Rarity alone does not prove that a rune is best for every route.</li>
+          <li>An old screenshot does not prove the current effect or value.</li>
+          <li>A copied tier list does not verify rune names, odds, or drop rates.</li>
+          <li>Skill-tree labels from the official description are not rune data.</li>
         </ul>
 
-        <h2>Early Game Rune Setup</h2>
+        <h2>Source Boundary</h2>
         <p>
-          Early Iron Soul runs should favor consistent clears over risky
-          optimization. If a rune choice helps you finish more rooms, return to
-          the forge faster, or reduce failed attempts, it is usually stronger
-          than a narrow damage choice that only works in ideal fights.
-        </p>
-        <ul>
-          <li>Pick reliable damage if normal monsters are the slowest part.</li>
-          <li>Pick survival if you reach rewards but fail before banking progress.</li>
-          <li>Do not spend rare resources chasing every rune claim before testing the route.</li>
-        </ul>
-
-        <h2>Boss Wave Strategy</h2>
-        <p>
-          Boss waves reward stability. A farming setup can be useful before the
-          boss, but if the boss is ending the run, the rune priority should move
-          toward survival plus steady damage.
-        </p>
-        <ul>
-          <li>Use survival when the boss removes too much health too quickly.</li>
-          <li>Use damage when you survive but the fight takes too long.</li>
-          <li>Use balanced choices when learning attack timing or a new dungeon area.</li>
-        </ul>
-
-        <h2>Farming and Forge Runs</h2>
-        <p>
-          If your main goal is ore or material farming, judge runes by repeat
-          speed and failure rate. The best farming rune setup is the one that
-          lets you repeat the same route with fewer interruptions.
-        </p>
-        <ul>
-          <li>Favor runes that shorten the route you already farm consistently.</li>
-          <li>Return to forge upgrades when farming starts to slow down.</li>
-          <li>Switch away from pure farming when the next dungeon boss becomes the wall.</li>
-        </ul>
-
-        <h2>Verified Source Snapshot</h2>
-        <p>
-          RisingBlox checked Iron Soul: Dungeon against {robloxSnapshot.source} on{" "}
-          {robloxSnapshot.checked}. Counts can change quickly after Roblox
-          updates, so treat this as a freshness signal.
-        </p>
-        <ul>
-          <li>Online players at check: {robloxSnapshot.onlinePlayers}</li>
-          <li>Visits at check: {robloxSnapshot.visits}</li>
-          <li>Latest Roblox update timestamp seen: {robloxSnapshot.updatedAt}</li>
-        </ul>
-
-        <h2>What We Are Not Claiming Yet</h2>
-        <p>
-          This page does not publish exact rune drop rates, hidden mechanics, or
-          a hard ranked tier list. Those claims need official text, in-game
-          evidence, or reliable logged testing before they belong on RisingBlox.
+          This update used the official Roblox game page and Roblox Games API.
+          Those sources verify the public Iron Soul progression framework, but
+          they do not expose a rune table. Exact rune claims remain excluded
+          until supported by official text, a developer-linked source, or logged
+          in-game verification.
         </p>
 
         <h2>FAQ</h2>

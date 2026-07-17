@@ -120,7 +120,8 @@ GitHub 提示 `actions/checkout@v4` 和 `actions/setup-node@v4` 的 action runti
 - 安全提交：`ca372837eb05e1dcb2f89ba94c7e131871bebdf9`（`Fix dependency security vulnerabilities`）。
 - Push：成功推送至 `origin/main`，触发既有 Cloudflare Git 部署。
 - Production URL：<https://risingblox.com/>。
-- Deployment ID / Preview URL：当前 Git 链路和公开响应未提供，未编造。
+- Cloudflare Pages deployment ID：`3ad08ff5-239e-490a-8781-6e1a15059ce6`（安全代码提交部署，check conclusion: success）。
+- Preview URL：Cloudflare check 未返回公开 preview URL，未编造。
 - 新构建验证：生产 webpack 指纹与本地 Next 15.5.20 导出一致。
 - 生产验收：主页、两个 game 页面、一个 codes 页面、一个 guide 页面、`sitemap.xml`、`robots.txt` 均 HTTP 200；未知路由 HTTP 404。
 - Cloudflare：响应头 `server: cloudflare`，验收请求具有有效 `cf-ray`。

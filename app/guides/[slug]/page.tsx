@@ -16,8 +16,11 @@ export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const game = getGame(params.slug);
+type PageProps = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const game = getGame(slug);
   if (!game) return {};
   const description = game.guideDescription ?? (game.guideIntro
     ? `${game.guideIntro} Verified beginner steps, FAQ, and codes status links for ${game.name}.`
@@ -37,8 +40,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function GuidePage({ params }: { params: { slug: string } }) {
-  const game = getGame(params.slug);
+export default async function GuidePage({ params }: PageProps) {
+  const { slug } = await params;
+  const game = getGame(slug);
   if (!game) notFound();
   const faqItems =
     game.guideFaq ?? [

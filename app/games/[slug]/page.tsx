@@ -10,8 +10,11 @@ export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const game = getGame(params.slug);
+type PageProps = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const game = getGame(slug);
   if (!game) return {};
   const title = game.profileTitle ?? `${game.name} Roblox Game Profile`;
   const description =
@@ -32,8 +35,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function GamePage({ params }: { params: { slug: string } }) {
-  const game = getGame(params.slug);
+export default async function GamePage({ params }: PageProps) {
+  const { slug } = await params;
+  const game = getGame(slug);
   if (!game) notFound();
   const stats = getDisplayStats(game);
   const guideLinkLabel = ["iron-soul-dungeon", "noob-incremental"].includes(game.slug)

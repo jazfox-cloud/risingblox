@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import ChecklistTools from "./ChecklistTools";
 
 const baseUrl = "https://risingblox.com";
@@ -99,18 +100,18 @@ export default function AnimalHospitalAnomalyGuide() {
         <a className="rounded-md bg-mint px-4 py-3 text-ink" href="#checklist">
           Open Checklist
         </a>
-        <a
+        <Link
           className="rounded-md bg-coral px-4 py-3 text-white"
           href="/codes/animal-hospital-anomaly/"
         >
           Codes status
-        </a>
-        <a
+        </Link>
+        <Link
           className="rounded-md bg-white px-4 py-3 text-ink shadow-sm"
           href="/games/animal-hospital-anomaly/"
         >
           Game profile
-        </a>
+        </Link>
       </div>
 
       <section className="content-prose mt-10 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
@@ -172,7 +173,7 @@ export default function AnimalHospitalAnomalyGuide() {
         <p>
           No verified active Animal Hospital (Anomaly) codes are listed on
           RisingBlox right now. See the{" "}
-          <a href="/codes/animal-hospital-anomaly/">codes status page</a> for
+          <Link href="/codes/animal-hospital-anomaly/">codes status page</Link> for
           the latest source notes.
         </p>
 
@@ -180,9 +181,9 @@ export default function AnimalHospitalAnomalyGuide() {
         <ul>
           <li>
             RisingBlox game profile:{" "}
-            <a href="/games/animal-hospital-anomaly/">
+            <Link href="/games/animal-hospital-anomaly/">
               Animal Hospital (Anomaly) profile
-            </a>
+            </Link>
           </li>
           <li>
             Official Roblox game page:{" "}

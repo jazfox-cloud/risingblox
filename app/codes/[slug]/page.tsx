@@ -11,8 +11,11 @@ export function generateStaticParams() {
     .map((game) => ({ slug: game.slug }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
-  const game = getGame(params.slug);
+type PageProps = { params: Promise<{ slug: string }> };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const game = getGame(slug);
   if (!game || game.hasCodesPage === false) return {};
   const description = game.codesSummary
     ? `${game.codesSummary} Includes redemption steps, FAQ, and the latest checked status.`
@@ -32,8 +35,9 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function CodesPage({ params }: { params: { slug: string } }) {
-  const game = getGame(params.slug);
+export default async function CodesPage({ params }: PageProps) {
+  const { slug } = await params;
+  const game = getGame(slug);
   if (!game || game.hasCodesPage === false) notFound();
   const codesLastChecked = game.codesLastChecked ?? game.lastUpdated;
   const faqItems =

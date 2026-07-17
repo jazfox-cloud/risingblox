@@ -12,14 +12,40 @@ The update script is:
 npm run update:stats
 ```
 
-It refreshes from Roblox game-page HTML:
+It refreshes the configured universe IDs from the Roblox public game APIs:
 
-- fetches `https://www.roblox.com/games/<placeId>` for each tracked game
-- extracts embedded JSON or page data from the HTML
-- updates the recorded stats in `content/roblox-stats.json`
+- `https://games.roblox.com/v1/games`
+- `https://games.roblox.com/v1/games/votes`
 
-This script does not use `games.roblox.com`, so the scheduled refresh stays on the HTML path even if the public games API is flaky.
-If a Roblox page fetch fails, the script skips that game and leaves the saved snapshot untouched.
+Every request has a 15-second timeout. DNS, network, timeout, rate-limit, and selected
+Roblox server failures are retried up to three times. All game and vote responses are
+validated before the file is replaced atomically. Missing records, invalid numeric
+fields, and decreases in cumulative visits or votes fail the refresh and preserve the
+last successful snapshot. Online player counts are real-time and may decrease.
+
+The script only changes the file when source-backed values change. A check that returns
+the same values exits successfully with `No Roblox stats changes detected` and does not
+update timestamps.
+
+## Automated Refresh
+
+`.github/workflows/update-roblox-stats.yml` runs every day at 08:00 in
+`Europe/London`, including daylight-saving changes, and can also be started manually
+from **GitHub → Actions → Update Roblox Stats → Run workflow**.
+
+The workflow checks DNS and HTTPS access, installs the locked dependencies, runs the
+updater, and permits only `content/roblox-stats.json` to change. If data changed, lint,
+tests, and the production build must pass before the workflow commits and pushes to the
+default branch. If data did not change, it creates no commit. The existing Cloudflare
+Pages Git integration handles deployment after a successful push.
+
+The former Codex Automation no longer performs Roblox API requests because its local
+execution environment could not reliably resolve `games.roblox.com`.
+
+For failures, inspect the workflow run log and job summary. The updater classifies
+failures as DNS, network, timeout, rate-limit, Roblox server/client, invalid response,
+validation, or write errors. GitHub repository settings must allow Actions read/write
+workflow permissions for the automatic commit.
 
 ## Required Per Game
 

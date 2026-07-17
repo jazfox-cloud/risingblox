@@ -55,6 +55,18 @@ Cloudflare Pages settings:
 
 The project uses static export through `next.config.mjs`, so the first version does not need a server runtime.
 
+Cloudflare Pages is connected to the GitHub repository. Pushes to the default branch
+trigger the existing Cloudflare build and deployment pipeline; this repository does
+not run a second `wrangler deploy` step.
+
+## Roblox Stats Refresh
+
+Roblox game statistics are refreshed by
+`.github/workflows/update-roblox-stats.yml` every day at 08:00 Europe/London. The
+workflow can also be run manually from the GitHub Actions page. It creates a commit
+only when `content/roblox-stats.json` changes and only after lint, tests, and the build
+pass. Operational and troubleshooting details are in `docs/data-sources.md`.
+
 ## Review Loop
 
 Use a weekly review while validating the MVP:

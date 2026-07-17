@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "update:stats": "node scripts/update-roblox-stats.mjs",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "node --test scripts/update-roblox-stats.test.mjs"
   },
   "dependencies": {
     "next": "14.2.23",

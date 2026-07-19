@@ -4,6 +4,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://risingblox.com"),
+  other: {
+    "google-adsense-account": "ca-pub-2134598094429002"
+  },
   title: {
     default: "RisingBlox - Rising Roblox Games, Codes, and Guides",
     template: "%s | RisingBlox"
@@ -34,6 +37,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2134598094429002"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
         <header
           className="border-b border-black/10 bg-white/80 backdrop-blur"

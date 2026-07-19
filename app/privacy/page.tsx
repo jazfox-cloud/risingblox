@@ -5,7 +5,7 @@ import PrivacyChoicesLink from "@/components/PrivacyChoicesLink";
 export const metadata = staticPageMetadata(
   "privacy",
   "Privacy Policy",
-  "RisingBlox privacy policy describing current hosting and contact processing and the separate disclosures that will apply if advertising is enabled."
+  "RisingBlox privacy policy describing current hosting, contact processing, and Google advertising integration."
 );
 
 export default function PrivacyPage() {
@@ -20,9 +20,10 @@ export default function PrivacyPage() {
         <p><strong>Effective date and last updated:</strong> July 19, 2026.</p>
         <h2>Current data practices</h2>
         <p>
-          RisingBlox does not currently load Google Analytics, Google AdSense, another
-          advertising network, or a non-essential analytics cookie. The published site
-          does not intentionally use localStorage for tracking or advertising.
+          RisingBlox does not currently load Google Analytics or another analytics
+          service. The site loads the Google AdSense script for account verification
+          and advertising. The site does not intentionally use localStorage for its own
+          tracking or advertising purposes.
         </p>
         <p>
           Cloudflare hosts and protects the site and may process network and security
@@ -40,10 +41,9 @@ export default function PrivacyPage() {
           External links, including Roblox and Google pages, are operated by their own
           providers. Their privacy practices apply after you leave RisingBlox.
         </p>
-        <h2>Future Google advertising</h2>
+        <h2>Google advertising</h2>
         <p>
-          RisingBlox may add Google AdSense only after account-backed technical setup.
-          It is not active now. If enabled, Google and other third-party vendors may use
+          RisingBlox has integrated Google AdSense. Google and other third-party vendors may use
           cookies, IP addresses, device identifiers, or similar technologies to deliver
           and measure personalized or non-personalized ads and to prevent fraud and abuse.
         </p>
@@ -56,16 +56,15 @@ export default function PrivacyPage() {
         <p>
           Google explains how it uses information from partner sites in its
           <a href="https://policies.google.com/technologies/partner-sites"> partner-sites notice</a>.
-          If advertising is enabled, visitors can also review personalized-ad controls in
+          Visitors can also review personalized-ad controls in
           <a href="https://adssettings.google.com/"> Google Ads Settings</a>.
         </p>
         <h2 id="privacy-choices">Privacy choices</h2>
         <div data-ad-exclusion-zone="privacy-choice-control">
           <p>
-            No advertising CMP is configured because RisingBlox does not currently load
-            advertising or non-essential analytics. When a compatible certified CMP is
-            active, its official control will appear below so visitors can reopen their
-            choices. Until then, no inactive or simulated consent control is shown.
+            A compatible certified CMP is not yet active. Once configured, its official
+            control will appear below so visitors can reopen their choices. Until then,
+            no inactive or simulated consent control is shown.
           </p>
           <PrivacyChoicesLink />
         </div>

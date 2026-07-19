@@ -39,9 +39,9 @@ test("privacy and trust surfaces match the staged integration state", () => {
   }
 
   const privacy = read("app/privacy/page.tsx");
-  assert.match(privacy, /does not currently load Google Analytics, Google AdSense/);
+  assert.match(privacy, /has integrated Google AdSense/);
   assert.match(privacy, /Google-certified CMP/);
-  assert.match(privacy, /It is not active now/);
+  assert.match(privacy, /certified CMP is not yet active/);
   assert.match(read("components/PrivacyChoicesLink.tsx"), /showRevocationMessage/);
 });
 
@@ -56,13 +56,12 @@ test("error and interactive areas are marked as future ad-exclusion zones", () =
   }
 });
 
-test("the repository contains no AdSense integration placeholders", () => {
-  const source = [
-    read("app/layout.tsx"),
-    read("app/privacy/page.tsx"),
-    read("components/PrivacyChoicesLink.tsx")
-  ].join("\n");
-  assert.doesNotMatch(source, /ca-pub-\d+/i);
-  assert.doesNotMatch(source, /pagead2\.googlesyndication\.com/i);
-  assert.doesNotMatch(source, /adsbygoogle/i);
+test("AdSense account verification is configured site-wide", () => {
+  const layout = read("app/layout.tsx");
+  const adsTxt = read("public/ads.txt").trim();
+  assert.match(layout, /google-adsense-account/);
+  assert.match(layout, /ca-pub-2134598094429002/);
+  assert.match(layout, /pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-2134598094429002/);
+  assert.match(layout, /crossOrigin="anonymous"/);
+  assert.equal(adsTxt, "google.com, pub-2134598094429002, DIRECT, f08c47fec0942fa0");
 });

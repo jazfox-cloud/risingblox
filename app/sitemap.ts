@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { games } from "@/content/games";
+import { games, hasIndexableCodes } from "@/content/games";
 
 const baseUrl = "https://risingblox.com";
 
@@ -9,10 +9,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     { path: "/", lastModified: "2026-07-10" },
     { path: "/trending/", lastModified: "2026-07-10" },
-    { path: "/about/", lastModified: "2026-06-13" },
+    { path: "/about/", lastModified: "2026-07-19" },
     { path: "/contact/", lastModified: "2026-07-11" },
-    { path: "/privacy/", lastModified: "2026-07-11" },
-    { path: "/terms/", lastModified: "2026-07-11" }
+    { path: "/privacy/", lastModified: "2026-07-19" },
+    { path: "/terms/", lastModified: "2026-07-11" },
+    { path: "/disclaimer/", lastModified: "2026-07-19" },
+    { path: "/sources/", lastModified: "2026-07-19" }
   ].map((route) => ({
     url: `${baseUrl}${route.path === "/" ? "/" : route.path}`,
     lastModified: new Date(route.lastModified)
@@ -30,7 +32,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }
     ];
 
-    if (game.hasCodesPage !== false) {
+    if (game.hasCodesPage !== false && hasIndexableCodes(game)) {
       routes.push({
         url: `${baseUrl}/codes/${game.slug}/`,
         lastModified: new Date(game.codesLastChecked ?? game.lastUpdated)
@@ -55,12 +57,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ];
 
-  const standaloneCodeRoutes = [
-    {
-      url: `${baseUrl}/codes/animal-hospital-anomaly/`,
-      lastModified: new Date("2026-06-29")
-    }
-  ];
-
-  return [...staticRoutes, ...gameRoutes, ...standaloneGuideRoutes, ...standaloneCodeRoutes];
+  return [...staticRoutes, ...gameRoutes, ...standaloneGuideRoutes];
 }

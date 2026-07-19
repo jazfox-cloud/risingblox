@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { games, getGame } from "@/content/games";
+import { games, getGame, hasIndexableCodes } from "@/content/games";
 
 const baseUrl = "https://risingblox.com";
 
@@ -27,6 +27,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `${baseUrl}/codes/${game.slug}/`
     },
+    robots: hasIndexableCodes(game)
+      ? { index: true, follow: true }
+      : { index: false, follow: true },
     openGraph: {
       title: `${game.name} Roblox Codes`,
       description,
@@ -101,7 +104,10 @@ export default async function CodesPage({ params }: PageProps) {
               </div>
             ))
           ) : (
-            <div className="rounded-md border border-dashed border-gray-300 bg-gray-50 p-5">
+            <div
+              className="rounded-md border border-dashed border-gray-300 bg-gray-50 p-5"
+              data-ad-exclusion-zone="empty-code-status"
+            >
               <p className="font-black">No verified active codes right now.</p>
               <p className="mt-2 text-sm leading-6 text-gray-600">
                 {game.codesSummary ??
@@ -143,7 +149,9 @@ export default async function CodesPage({ params }: PageProps) {
             ))}
           </ul>
         ) : (
-          <p>No verified expired codes are listed yet.</p>
+          <p data-ad-exclusion-zone="empty-code-status">
+            No verified expired codes are listed yet.
+          </p>
         )}
 
         <h2>FAQ</h2>

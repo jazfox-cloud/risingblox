@@ -33,6 +33,10 @@ export type Game = {
   hasCodesPage?: boolean;
 };
 
+export function hasIndexableCodes(game: Game) {
+  return game.activeCodes.length > 0 || game.expiredCodes.length > 0;
+}
+
 function buildNoCodePolicy(
   gameName: string,
   extraFaq: { question: string; answer: string }[] = []
@@ -510,7 +514,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-14",
+    codesLastChecked: "2026-07-19",
     codesSummary:
       "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
@@ -600,16 +604,100 @@ export const games: Game[] = [
         ]
       }
     ],
-    lastUpdated: "2026-06-23",
+    lastUpdated: "2026-07-19",
     tags: ["farming", "simulator", "tycoon", "seed-restock", "guilds"],
     beginnerTips: [
-      "Prioritize seed upgrades before cosmetic purchases.",
-      "Reinvest early harvest rewards to unlock faster growth loops.",
-      "Check code pages before long sessions to avoid missing boosts."
+      "Check the restocking seed shop before planning the next planting cycle.",
+      "Plant on the brown farm plots, wait for crops to finish growing, then harvest and sell for sheckles.",
+      "Plant before leaving when you want offline growth, and learn the night-stealing risk before leaving valuable crops unattended."
+    ],
+    guideTitle: "Grow a Garden 2 Beginner Guide - Seeds, Harvests, and Night Stealing",
+    guideDescription:
+      "A source-backed Grow a Garden 2 beginner guide covering the seed restock loop, planting and harvesting, sheckles, guild rewards, offline growth, and night stealing.",
+    guideIntro:
+      "Grow a Garden 2 begins with a loop documented on the official Roblox page: buy seeds when the shop restocks, plant them on the brown farm plots, wait for the crops to grow, harvest them, and sell the result for sheckles. Guilds add weekly rewards, gardens continue growing while the player is offline, and the official description warns that stealing begins at night. This guide stays within those verified systems; it does not invent crop values, seed rarities, growth timers, protection mechanics, or codes that the source does not publish.",
+    guideLastVerified: "2026-07-19",
+    guideSourceLabel: "Official Grow a Garden 2 Roblox page and Roblox Games API",
+    guideSourceUrl: "https://www.roblox.com/games/97598239454123/Grow-a-Garden-2",
+    guideSourceNote:
+      "The official source verifies the seed-shop, planting, harvest, sheckles, guild, offline-growth, and night-stealing framework. Exact prices, timers, crop rankings, guild reward values, and protection rules require current in-game verification.",
+    guideSections: [
+      {
+        title: "Complete the Verified Farm Loop",
+        body:
+          "Start with the sequence shown by the official instructions instead of optimizing an unverified crop list. Visit the restocking shop, buy a seed, equip it, click a brown plot to plant it, wait for growth to finish, then harvest and sell before planning the next cycle.",
+        bullets: [
+          "Check which seeds are actually available in the current shop.",
+          "Use the brown plots identified by the official planting instructions.",
+          "Finish one complete harvest-and-sell cycle before changing the plan."
+        ]
+      },
+      {
+        title: "Plan Around Seed Restocks",
+        body:
+          "The official description confirms that the seed shop restocks, but it does not publish a permanent schedule or a best-seed ranking. Treat each restock as a current in-game decision and avoid relying on an old list of prices or availability.",
+        bullets: [
+          "Review the current shop before spending sheckles elsewhere.",
+          "Do not assume a seed is available because an older guide mentions it.",
+          "Record current prices and crop behavior in game before comparing value."
+        ]
+      },
+      {
+        title: "Use Offline Growth Deliberately",
+        body:
+          "Grow a Garden 2 states that gardens continue growing while the player is offline. A practical use is to plant before a break and return to check harvest readiness, without claiming an exact offline timer the official source does not provide.",
+        bullets: [
+          "Plant before leaving if you want the offline-growth system to work on the next crop cycle.",
+          "Check the actual crop state after returning instead of assuming a fixed timer.",
+          "Harvest and sell before reinvesting in the next verified shop offer."
+        ]
+      },
+      {
+        title: "Treat Night as a Risk Window",
+        body:
+          "The official page warns that stealing starts at night when a player leaves the garden. It does not document every protection rule, so beginners should observe the current night behavior before leaving valuable progress exposed.",
+        bullets: [
+          "Watch the first night cycle to learn what the current game permits.",
+          "Harvest important crops before leaving when the risk is unclear.",
+          "Do not publish or trust an exact protection method without current in-game evidence."
+        ]
+      },
+      {
+        title: "Add Guild Rewards After the Basic Loop",
+        body:
+          "The official description confirms that guilds compete for exclusive weekly rewards. Stabilize the seed-to-sheckles loop first, then use the current guild interface to understand contribution rules and reward timing.",
+        bullets: [
+          "Learn planting and selling before relying on guild rewards for progress.",
+          "Read the current guild interface for contribution and weekly timing details.",
+          "Treat exact reward values as unverified unless the game or developer publishes them."
+        ]
+      }
+    ],
+    guideFaq: [
+      {
+        question: "What should a Grow a Garden 2 beginner do first?",
+        answer:
+          "Buy an available seed from the restocking shop, equip it, plant it on a brown farm plot, wait for it to grow, then harvest and sell it for sheckles."
+      },
+      {
+        question: "Does the garden grow while I am offline?",
+        answer:
+          "Yes. The official Roblox description says the garden grows while the player is offline, but it does not publish one exact timer for every crop."
+      },
+      {
+        question: "What happens at night in Grow a Garden 2?",
+        answer:
+          "The official description warns that stealing starts at night if the player leaves the garden. Current protection details should be checked in game."
+      },
+      {
+        question: "Are Grow a Garden 2 codes verified?",
+        answer:
+          "No active or expired Grow a Garden 2 code is currently verified in RisingBlox's source record, so the separate code-status page is excluded from search indexing until evidence changes."
+      }
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-14",
+    codesLastChecked: "2026-07-19",
     ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
@@ -796,7 +884,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-14",
+    codesLastChecked: "2026-07-19",
     ...buildNoCodePolicy("Mini War"),
     codeFaq: [
       ...buildNoCodePolicy("Mini War").codeFaq,
@@ -855,7 +943,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-14",
+    codesLastChecked: "2026-07-19",
     ...buildNoCodePolicy("Noob Incremental"),
     guideTitle: "Noob Incremental Progression Guide: Upgrades, Runes, and Prestige",
     guideDescription:
@@ -1118,7 +1206,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-11",
+    codesLastChecked: "2026-07-19",
     ...buildNoCodePolicy("Anime Squadron"),
     codeRedemptionSteps: [
       "No official Anime Squadron redemption interface or active code was verified in the sources checked for this page.",

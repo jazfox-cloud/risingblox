@@ -1,5 +1,5 @@
 import Link from "next/link";
-import type { Game } from "@/content/games";
+import { hasIndexableCodes, type Game } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 
 export function GameCard({ game }: { game: Game }) {
@@ -41,7 +41,7 @@ export function GameCard({ game }: { game: Game }) {
             Play
           </a>
         ) : null}
-        {game.hasCodesPage !== false ? (
+        {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
           <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}/`}>
             Codes
           </Link>

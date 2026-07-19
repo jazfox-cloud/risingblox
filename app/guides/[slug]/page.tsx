@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { games, getGame } from "@/content/games";
+import { games, getGame, hasIndexableCodes } from "@/content/games";
 
 const baseUrl = "https://risingblox.com";
 
@@ -99,7 +99,7 @@ export default async function GuidePage({ params }: PageProps) {
         <Link className="rounded-md bg-mint px-4 py-2 text-ink" href={`/games/${game.slug}/`}>
           Game profile
         </Link>
-        {game.hasCodesPage !== false ? (
+        {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
           <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/codes/${game.slug}/`}>
             Codes status
           </Link>

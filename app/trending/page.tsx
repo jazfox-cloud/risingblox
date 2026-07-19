@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { games } from "@/content/games";
+import { games, hasIndexableCodes } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 import { staticPageMetadata } from "@/app/static-page-metadata";
 
@@ -23,8 +23,7 @@ export default function TrendingPage() {
       status: "Verified Roblox source",
       updated: "2026-07-03",
       href: "/games/animal-hospital-anomaly/",
-      guideHref: "/guides/animal-hospital-anomaly/",
-      codesHref: "/codes/animal-hospital-anomaly/"
+      guideHref: "/guides/animal-hospital-anomaly/"
     }
   ];
 
@@ -78,7 +77,7 @@ export default function TrendingPage() {
                   <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}/`}>
                     Guide
                   </Link>
-                  {game.hasCodesPage !== false ? (
+                  {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
                     <Link className="rounded-md bg-coral px-3 py-2 text-white" href={`/codes/${game.slug}/`}>
                       Codes
                     </Link>
@@ -162,9 +161,6 @@ export default function TrendingPage() {
                 </Link>
                 <Link className="rounded-md bg-gray-100 px-3 py-2" href={item.guideHref}>
                   Guide
-                </Link>
-                <Link className="rounded-md bg-gray-100 px-3 py-2" href={item.codesHref}>
-                  Codes
                 </Link>
               </div>
             </article>

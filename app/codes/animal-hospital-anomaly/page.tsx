@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const baseUrl = "https://risingblox.com";
-const checkedDate = "2026-06-29";
+const checkedDate = "2026-07-19";
 const officialRobloxUrl = "https://www.roblox.com/games/78515283254292/Animal-Hospital";
 const robloxSnapshot = {
   universeId: "10148749921",
   placeId: "78515283254292",
   creator: "Animal Anomaly",
-  playing: "377,402",
-  visits: "177,622,798",
-  updated: "2026-06-28T14:53:41Z"
+  playing: "358,271",
+  visits: "1,074,435,618",
+  updated: "2026-07-17T21:49:03.9349316Z"
 };
 
 const faqItems = [
@@ -43,6 +43,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/codes/animal-hospital-anomaly/`
   },
+  robots: { index: false, follow: true },
   openGraph: {
     title: "Animal Hospital (Anomaly) Codes - Roblox Code Status",
     description:
@@ -108,7 +109,10 @@ export default function AnimalHospitalAnomalyCodesPage() {
 
       <section className="mt-8 rounded-lg border border-black/10 bg-white p-6 shadow-sm">
         <h2 className="text-2xl font-black">Active Codes</h2>
-        <div className="mt-5 rounded-md border border-dashed border-gray-300 bg-gray-50 p-5">
+        <div
+          className="mt-5 rounded-md border border-dashed border-gray-300 bg-gray-50 p-5"
+          data-ad-exclusion-zone="empty-code-status"
+        >
           <p className="font-black">No verified active codes right now.</p>
           <p className="mt-2 text-sm leading-6 text-gray-600">
             We checked the official Roblox game page and public source signals

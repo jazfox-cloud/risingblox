@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GameCard } from "@/components/GameCard";
-import { games } from "@/content/games";
+import { games, hasIndexableCodes } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 
 export const metadata: Metadata = {
@@ -13,7 +13,9 @@ export const metadata: Metadata = {
 export default function Home() {
   const featured = games[0];
   const featuredStats = getDisplayStats(featured);
-  const latestCodesGame = games.find((game) => game.hasCodesPage !== false) ?? featured;
+  const latestCodesGame = games.find(
+    (game) => game.hasCodesPage !== false && hasIndexableCodes(game)
+  ) ?? featured;
   const trendingNow = games.filter((game) =>
     ["drain-the-lake", "scale-slimy-fish", "anime-squadron"].includes(game.slug)
   );
@@ -21,11 +23,10 @@ export default function Home() {
     {
       title: "Animal Hospital (Anomaly)",
       summary:
-        "A verified Roblox survival trend with a dedicated profile, beginner guide, and codes status page.",
+        "A verified Roblox survival trend with a dedicated profile and beginner guide.",
       links: [
         { href: "/games/animal-hospital-anomaly/", label: "Profile" },
-        { href: "/guides/animal-hospital-anomaly/", label: "Guide" },
-        { href: "/codes/animal-hospital-anomaly/", label: "Codes" }
+        { href: "/guides/animal-hospital-anomaly/", label: "Guide" }
       ]
     }
   ];
@@ -112,7 +113,7 @@ export default function Home() {
                   <Link className="rounded-md bg-white/10 px-3 py-2" href={`/guides/${game.slug}/`}>
                     Guide
                   </Link>
-                  {game.hasCodesPage !== false ? (
+                  {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
                     <Link className="rounded-md bg-coral px-3 py-2" href={`/codes/${game.slug}/`}>
                       Codes
                     </Link>

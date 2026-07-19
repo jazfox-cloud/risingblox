@@ -35,7 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <header className="border-b border-black/10 bg-white/80 backdrop-blur">
+        <header
+          className="border-b border-black/10 bg-white/80 backdrop-blur"
+          data-ad-exclusion-zone="site-header-navigation"
+        >
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
             <Link href="/" className="text-xl font-black tracking-tight">
               RisingBlox
@@ -54,11 +57,20 @@ export default function RootLayout({
           </div>
         </header>
         <main>{children}</main>
-        <footer className="mt-16 border-t border-black/10 bg-white">
+        <footer
+          className="mt-16 border-t border-black/10 bg-white"
+          data-ad-exclusion-zone="site-footer-legal"
+        >
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600">
             <p>RisingBlox is an independent Roblox trends and guides site. It is not affiliated with, endorsed by, or sponsored by Roblox Corporation.</p>
             <div className="mt-3 flex flex-wrap gap-4">
-              <Link href="/about/">About</Link><Link href="/contact/">Contact</Link><Link href="/privacy/">Privacy</Link><Link href="/terms/">Terms</Link>
+              <Link href="/about/">About</Link>
+              <Link href="/contact/">Contact</Link>
+              <Link href="/privacy/">Privacy</Link>
+              <Link href="/privacy/#privacy-choices">Privacy Choices</Link>
+              <Link href="/terms/">Terms</Link>
+              <Link href="/disclaimer/">Disclaimer</Link>
+              <Link href="/sources/">Sources</Link>
             </div>
           </div>
         </footer>

@@ -618,8 +618,11 @@ export const games: Game[] = [
     genre: "Strategy / Battle",
     summary:
       "Mini War is a Roblox tycoon strategy game about building a country, growing the economy, training an army, unlocking advanced units, and capturing other players' lands.",
+    profileTitle: "Mini War Roblox Game Profile - Economy, Army, and Latest Update",
+    profileDescription:
+      "Mini War Roblox profile with the verified country-building loop, economy and army strategy, latest public Roblox snapshot, beginner guide links, and codes status.",
     profileIntro:
-      "Mini War's official Roblox page frames the core loop around building a country, growing economic power, training soldiers, and choosing whether to play as a rich city builder, a military empire, or a balanced takeover strategy. The 2026-07-04 update adds Special Invasion Weather, five new research buildings, advanced army and builder controls, and an auto-buy option.",
+      "Mini War Roblox is a tycoon strategy game where the verified loop is to build a country, grow economic power, train soldiers, unlock advanced units, and capture other players' lands. RisingBlox keeps this profile focused on the official Roblox page, current public data snapshots, beginner guide links, and codes status instead of unverified code claims.",
     profileSections: [
       {
         title: "Official Gameplay Loop",
@@ -700,9 +703,20 @@ export const games: Game[] = [
           "Latest Roblox update timestamp seen by RisingBlox: 2026-07-10.",
           "No active Mini War code is listed unless a specific code can be verified."
         ]
+      },
+      {
+        title: "Latest Verified Snapshot",
+        body:
+          "RisingBlox rechecked Mini War against saved Roblox public game data on 2026-07-18. The verified snapshot showed active player demand, more than 264 million visits, and a Roblox update timestamp from 2026-07-17.",
+        bullets: [
+          "Source: Roblox public game data and the official Mini War Roblox page.",
+          "Online players at check: 23,775.",
+          "Visits at check: 264,312,458.",
+          "Latest Roblox update timestamp seen by RisingBlox: 2026-07-17T22:33:49Z."
+        ]
       }
     ],
-    lastUpdated: "2026-07-10",
+    lastUpdated: "2026-07-18",
     tags: ["strategy", "tycoon", "economy", "army", "roblox-codes"],
     beginnerTips: [
       "Stabilize the economy before relying on auto buy or advanced controls.",

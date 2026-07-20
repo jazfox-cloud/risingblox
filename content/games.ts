@@ -326,24 +326,35 @@ export const games: Game[] = [
         ]
       }
     ],
-    lastUpdated: "2026-07-16",
+    lastUpdated: "2026-07-20",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
       "Start with the verified gather-forge-upgrade loop before attempting harder dungeon areas.",
       "Choose a skill-tree direction around the blocker you can observe: clear speed, forge progression, or survival.",
       "Treat exact rune, relic, blueprint, and drop-rate claims as unverified unless an official or logged in-game source supports them."
     ],
-    guideTitle: "Iron Soul Dungeon Progression Guide: Leveling, Forge, and Skill Tree",
+    guideTitle: "Iron Soul Dungeon Guide: Level Up Fast, Best Runes, Forge, and Blueprints",
     guideDescription:
-      "A source-backed Iron Soul Dungeon progression guide covering first steps, the ore and forge loop, harder dungeons, skill-tree direction, progression blockers, and cautious rune checks.",
+      "Iron Soul Dungeon guide for leveling up fast, forge progression, best rune decisions, starter weapon testing, blueprint caution, and source-backed beginner progression.",
     guideIntro:
-      "Start Iron Soul: Dungeon by repeating the progression loop documented on the official Roblox page: defeat monsters, collect crystalized ore and rare materials, return to an ancient forge, and craft or improve a weapon before testing a harder dungeon route. If progress slows, identify whether the blocker is clear speed, forge progress, or survival, then use the skill tree and next weapon test to address that specific problem. This is a source-backed quick-start and progression guide, not a complete wiki. It does not claim an exact fastest XP route, rune ranking, relic table, blueprint list, or drop rate without official or logged in-game evidence. Deeper source logs and specialized tools remain on BloxDungeon.",
+      "Use this Iron Soul Dungeon guide to level up faster without guessing: repeat a reliable monster route, collect crystalized ore and rare materials, return to the forge, test one weapon or skill-tree change, then decide whether the next blocker is damage, survival, runes, or blueprint evidence. This page answers the current beginner searches around level up fast, best runes, starter weapons, forge progression, and blueprint caution without inventing drop rates or hidden tables.",
     guideLastVerified: "2026-07-16",
     guideSourceLabel: "Official Iron Soul: Dungeon Roblox page and Roblox Games API",
     guideSourceUrl: "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon",
     guideSourceNote:
       "The official source verifies the ore, material, forge, weapon, skill-tree, and dungeon framework. It does not currently document exact XP, rune, relic, blueprint, or drop-rate tables.",
     guideSections: [
+      {
+        title: "Quick Answers",
+        body:
+          "Search Console now shows Iron Soul Dungeon searches around leveling fast, best runes, blueprints, and starter weapons. The short answer is to improve one verified part of the loop at a time instead of copying an unsupported build.",
+        bullets: [
+          "Level up fast: reduce failed runs by farming a reliable monster route, then upgrade before pushing harder dungeons.",
+          "Best runes: choose rune effects from current in-game text that solve the visible blocker, such as damage, survival, or farming consistency.",
+          "Blueprints: treat exact blueprint tables as unverified unless they come from current in-game evidence, official text, or logged source notes.",
+          "Starter weapons: test a forged weapon on the same route before spending more materials."
+        ]
+      },
       {
         title: "First Steps",
         body:

@@ -292,7 +292,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Officially listed; verify the current reward in game" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-07-20",
+    codesLastChecked: "2026-07-21",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -525,7 +525,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-19",
+    codesLastChecked: "2026-07-21",
     codesSummary:
       "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
@@ -708,7 +708,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-19",
+    codesLastChecked: "2026-07-21",
     ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
@@ -895,7 +895,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-19",
+    codesLastChecked: "2026-07-21",
     ...buildNoCodePolicy("Mini War"),
     codeFaq: [
       ...buildNoCodePolicy("Mini War").codeFaq,
@@ -954,7 +954,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-19",
+    codesLastChecked: "2026-07-21",
     ...buildNoCodePolicy("Noob Incremental"),
     guideTitle: "Noob Incremental Progression Guide: Upgrades, Runes, and Prestige",
     guideDescription:
@@ -1217,7 +1217,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-19",
+    codesLastChecked: "2026-07-21",
     ...buildNoCodePolicy("Anime Squadron"),
     codeRedemptionSteps: [
       "No official Anime Squadron redemption interface or active code was verified in the sources checked for this page.",

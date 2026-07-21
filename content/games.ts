@@ -615,24 +615,35 @@ export const games: Game[] = [
         ]
       }
     ],
-    lastUpdated: "2026-07-19",
+    lastUpdated: "2026-07-21",
     tags: ["farming", "simulator", "tycoon", "seed-restock", "guilds"],
     beginnerTips: [
       "Check the restocking seed shop before planning the next planting cycle.",
       "Plant on the brown farm plots, wait for crops to finish growing, then harvest and sell for sheckles.",
       "Plant before leaving when you want offline growth, and learn the night-stealing risk before leaving valuable crops unattended."
     ],
-    guideTitle: "Grow a Garden 2 Beginner Guide - Seeds, Harvests, and Night Stealing",
+    guideTitle: "Grow a Garden 2 Beginner Guide: Seeds, Harvests, Offline Growth, and Night Stealing",
     guideDescription:
-      "A source-backed Grow a Garden 2 beginner guide covering the seed restock loop, planting and harvesting, sheckles, guild rewards, offline growth, and night stealing.",
+      "Grow a Garden 2 beginner guide for seed restocks, planting, harvests, sheckles, offline growth, guild rewards, and night stealing risk without unverified crop values.",
     guideIntro:
-      "Grow a Garden 2 begins with a loop documented on the official Roblox page: buy seeds when the shop restocks, plant them on the brown farm plots, wait for the crops to grow, harvest them, and sell the result for sheckles. Guilds add weekly rewards, gardens continue growing while the player is offline, and the official description warns that stealing begins at night. This guide stays within those verified systems; it does not invent crop values, seed rarities, growth timers, protection mechanics, or codes that the source does not publish.",
+      "Use this Grow a Garden 2 beginner guide to start with the verified farm loop: buy seeds when the shop restocks, plant them on brown farm plots, wait for crops to grow, harvest them, and sell the result for sheckles. The official Roblox page also verifies offline growth, guild weekly rewards, and a night-stealing risk window. This page keeps those beginner decisions practical without inventing crop values, seed rarities, growth timers, protection mechanics, or codes that the source does not publish.",
     guideLastVerified: "2026-07-19",
     guideSourceLabel: "Official Grow a Garden 2 Roblox page and Roblox Games API",
     guideSourceUrl: "https://www.roblox.com/games/97598239454123/Grow-a-Garden-2",
     guideSourceNote:
       "The official source verifies the seed-shop, planting, harvest, sheckles, guild, offline-growth, and night-stealing framework. Exact prices, timers, crop rankings, guild reward values, and protection rules require current in-game verification.",
     guideSections: [
+      {
+        title: "Quick Answers",
+        body:
+          "For beginners, the safest Grow a Garden 2 plan is to complete one verified seed-to-harvest cycle, then use the current shop and night behavior to decide the next step. Do not rely on a fixed crop ranking unless you can verify it in the current game.",
+        bullets: [
+          "Best first step: buy an available seed, plant it on a brown plot, harvest it, and sell for sheckles.",
+          "Seed restocks: check the current shop before spending, because the official source verifies restocks but not a permanent public schedule.",
+          "Offline growth: plant before leaving, then verify the crop state when you return instead of assuming an exact timer.",
+          "Night stealing: harvest important crops before leaving if you have not confirmed the current protection rules."
+        ]
+      },
       {
         title: "Complete the Verified Farm Loop",
         body:

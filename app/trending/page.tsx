@@ -14,7 +14,7 @@ export default function TrendingPage() {
     ["drain-the-lake", "scale-slimy-fish"].includes(game.slug)
   );
   const recentlyUpdated = games.filter((game) =>
-    ["anime-squadron", "mini-war", "iron-soul-dungeon"].includes(game.slug)
+    ["grow-a-garden-2", "anime-squadron", "mini-war", "iron-soul-dungeon"].includes(game.slug)
   );
   const standaloneWatchlist = [
     {
@@ -95,10 +95,10 @@ export default function TrendingPage() {
           {recentlyUpdated.map((game) => (
             <Link
               className="rounded-full bg-gray-100 px-4 py-2 text-sm font-bold hover:bg-mint"
-              href={`/games/${game.slug}/`}
+              href={game.slug === "grow-a-garden-2" ? `/guides/${game.slug}/` : `/games/${game.slug}/`}
               key={game.slug}
             >
-              {game.name} · {game.lastUpdated}
+              {game.name} {game.slug === "grow-a-garden-2" ? "Guide" : "Profile"} · {game.lastUpdated}
             </Link>
           ))}
         </div>

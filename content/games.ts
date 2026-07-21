@@ -283,7 +283,7 @@ export const games: Game[] = [
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-20 check. See the codes page for the latest status."
+          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-21 check. See the codes page for the latest status."
       }
     ],
     activeCodes: [

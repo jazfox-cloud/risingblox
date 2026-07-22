@@ -72,7 +72,7 @@ export default async function GamePage({ params }: PageProps) {
               className="rounded-md bg-white px-5 py-3 font-bold shadow-sm"
               href={`/codes/${game.slug}/`}
             >
-              Codes status
+              {game.activeCodes.length > 0 ? "Verified codes" : "Codes status"}
             </a>
           ) : null}
           {game.externalGuide ? (
@@ -135,7 +135,9 @@ export default async function GamePage({ params }: PageProps) {
           {game.hasCodesPage !== false ? (
             <>
               , or check the{" "}
-              <Link href={`/codes/${game.slug}/`}>{game.name} codes status</Link>
+              <Link href={`/codes/${game.slug}/`}>
+                {game.activeCodes.length > 0 ? `${game.name} verified codes` : `${game.name} codes status`}
+              </Link>
             </>
           ) : null}
           .

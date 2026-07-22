@@ -101,7 +101,7 @@ export default async function GuidePage({ params }: PageProps) {
         </Link>
         {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
           <Link className="rounded-md bg-coral px-4 py-2 text-white" href={`/codes/${game.slug}/`}>
-            Codes status
+            {game.activeCodes.length > 0 ? "Verified codes" : "Codes status"}
           </Link>
         ) : null}
       </div>

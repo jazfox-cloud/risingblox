@@ -16,6 +16,7 @@ export type Game = {
   codesSummary?: string;
   codeCheckMethod?: string[];
   codeRedemptionSteps?: string[];
+  codeSections?: { title: string; body: string; bullets: string[] }[];
   codeFaq?: { question: string; answer: string }[];
   guideTitle?: string;
   guideDescription?: string;
@@ -304,7 +305,43 @@ export const games: Game[] = [
         answer:
           "Open the game and check its settings or codes interface. Enter each code exactly as shown and confirm the reward in game."
       }
-    ])
+    ]),
+    codesSummary:
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox last checked the official source on 2026-07-22 and keeps exact rewards unclaimed until they are verified.",
+    codeCheckMethod: [
+      "Check the official Scale Slimy Fish Roblox page for public code strings and update text.",
+      "Keep 10kccu, weather, and turtle active only while the official source or current redemption evidence supports them.",
+      "Do not copy third-party code lists unless each code can be matched to official text, developer-linked evidence, or an in-game redemption result.",
+      "Leave exact rewards as verification notes until the reward output is confirmed in the current game."
+    ],
+    codeRedemptionSteps: [
+      "Open Scale Slimy Fish on Roblox.",
+      "Find the current in-game codes, rewards, or settings interface.",
+      "Enter one verified code exactly as shown: 10kccu, weather, or turtle.",
+      "Confirm the in-game result before treating a reward claim as verified."
+    ],
+    codeSections: [
+      {
+        title: "How We Verify Scale Slimy Fish Codes",
+        body:
+          "This page is kept indexable because Scale Slimy Fish has official code strings recorded in the RisingBlox source record. The goal is to preserve a clean code status page without padding it with unverified rewards or copied lists.",
+        bullets: [
+          "Primary source: the official Roblox game page and public game data checked on 2026-07-22.",
+          "Current tracked code strings: 10kccu, weather, and turtle.",
+          "Reward details remain cautious until current in-game redemption confirms the exact output."
+        ]
+      },
+      {
+        title: "What to Check Before Claiming a Code Works",
+        body:
+          "A code should stay active only when the current game or a credible official source still supports it. If a redemption fails, the page should be rechecked instead of silently leaving the code active.",
+        bullets: [
+          "Check spelling and capitalization before marking a code failed.",
+          "Confirm whether the game has moved or renamed the code interface after an update.",
+          "Move a code to expired only after current source or redemption evidence supports that status change."
+        ]
+      }
+    ]
   },
   {
     slug: "iron-soul-dungeon",

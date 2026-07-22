@@ -130,6 +130,18 @@ export default async function CodesPage({ params }: PageProps) {
           ))}
         </ul>
 
+        {game.codeSections?.map((section) => (
+          <div key={section.title}>
+            <h2>{section.title}</h2>
+            <p>{section.body}</p>
+            <ul>
+              {section.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
+
         <h2>How to Redeem</h2>
         <ol>
           {(game.codeRedemptionSteps ?? [

@@ -284,7 +284,7 @@ export const games: Game[] = [
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-22 check. See the codes page for the latest status."
+          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-23 check. See the codes page for the latest status."
       }
     ],
     activeCodes: [
@@ -293,7 +293,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Officially listed; verify the current reward in game" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-07-22",
+    codesLastChecked: "2026-07-23",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -307,7 +307,7 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox last checked the official source on 2026-07-22 and keeps exact rewards unclaimed until they are verified.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox last checked the official source on 2026-07-23 and keeps exact rewards unclaimed until they are verified.",
     codeCheckMethod: [
       "Check the official Scale Slimy Fish Roblox page for public code strings and update text.",
       "Keep 10kccu, weather, and turtle active only while the official source or current redemption evidence supports them.",
@@ -326,7 +326,7 @@ export const games: Game[] = [
         body:
           "This page is kept indexable because Scale Slimy Fish has official code strings recorded in the RisingBlox source record. The goal is to preserve a clean code status page without padding it with unverified rewards or copied lists.",
         bullets: [
-          "Primary source: the official Roblox game page and public game data checked on 2026-07-22.",
+          "Primary source: the official Roblox game page and public game data checked on 2026-07-23.",
           "Current tracked code strings: 10kccu, weather, and turtle.",
           "Reward details remain cautious until current in-game redemption confirms the exact output."
         ]

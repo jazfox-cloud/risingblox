@@ -769,7 +769,7 @@ export const games: Game[] = [
     profileDescription:
       "Mini War Roblox profile with the verified country-building loop, economy and army strategy, latest public Roblox snapshot, beginner guide links, and codes status.",
     profileIntro:
-      "Mini War Roblox is a tycoon strategy game where the verified loop is to build a country, grow economic power, train soldiers, unlock advanced units, and capture other players' lands. RisingBlox keeps this profile focused on the official Roblox page, current public data snapshots, beginner guide links, and codes status instead of unverified code claims.",
+      "Mini War Roblox is a tycoon strategy game where the verified loop is to build a country, grow economic power, train soldiers, unlock advanced units, and capture other players' lands. For beginners, the main decision is whether the next bottleneck is economy, army size, or attack timing. RisingBlox keeps this profile focused on the official Roblox page, current public data snapshots, beginner guide links, and codes status instead of unverified code claims.",
     profileSections: [
       {
         title: "Official Gameplay Loop",
@@ -789,6 +789,16 @@ export const games: Game[] = [
           "Economy-first players should focus on a rich and powerful city.",
           "Army-first players should scale military production earlier.",
           "Balanced players need enough income to replace losses after attacks."
+        ]
+      },
+      {
+        title: "Beginner Route: Economy First or Army First?",
+        body:
+          "If the city cannot replace losses after a failed attack, economy is the safer first route. If income is stable but nearby opponents are taking land faster, start moving resources into soldiers, advanced units, and cleaner attack timing.",
+        bullets: [
+          "Choose economy first when factories, industry, or city growth are still too weak to fund repeated attacks.",
+          "Choose army first when income is stable and the map pressure requires faster land capture.",
+          "Switch back to economy after a major push so the next army rebuild does not stall."
         ]
       },
       {
@@ -863,7 +873,7 @@ export const games: Game[] = [
         ]
       }
     ],
-    lastUpdated: "2026-07-18",
+    lastUpdated: "2026-07-23",
     tags: ["strategy", "tycoon", "economy", "army", "roblox-codes"],
     beginnerTips: [
       "Stabilize the economy before relying on auto buy or advanced controls.",
@@ -871,8 +881,18 @@ export const games: Game[] = [
       "Use research buildings to unlock better control options before chasing every combat upgrade."
     ],
     guideIntro:
-      "Mini War is a Roblox tycoon strategy game where beginners need to build a stable economy, research stronger tools, train an army, and time attacks around map pressure. The 2026-07-04 update adds Special Invasion Weather, five research buildings, advanced controls, and auto buy, so new players should learn the economy loop before rushing every combat option.",
+      "Mini War is a Roblox tycoon strategy game where beginners need to build a stable economy, research stronger tools, train an army, and time attacks around map pressure. Start by deciding whether the current blocker is economy, army size, or attack timing; then upgrade the path that fixes that blocker. The 2026-07-04 update adds Special Invasion Weather, five research buildings, advanced controls, and auto buy, so new players should learn the economy loop before rushing every combat option.",
     guideSections: [
+      {
+        title: "Economy First or Army First?",
+        body:
+          "The beginner route depends on the bottleneck. Economy-first is safer when you cannot replace units or keep construction moving. Army-first makes sense when your city can already fund losses and you need to stop nearby players from capturing more land.",
+        bullets: [
+          "Pick economy first when every attack leaves the city unable to rebuild.",
+          "Pick army first when income is stable and map control is the bigger problem.",
+          "Return to factories, industry, and research after a push so the next army cycle is easier."
+        ]
+      },
       {
         title: "Start With a Stable Economy",
         body:

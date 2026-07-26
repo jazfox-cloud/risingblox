@@ -14,6 +14,7 @@ export type Game = {
   expiredCodes: string[];
   codesLastChecked?: string;
   codesSummary?: string;
+  codesDescription?: string;
   codeCheckMethod?: string[];
   codeRedemptionSteps?: string[];
   codeSections?: { title: string; body: string; bullets: string[] }[];
@@ -120,7 +121,7 @@ export const games: Game[] = [
       "Buy the skill-tree upgrade that fixes the current bottleneck before spending across every branch.",
       "Push into deeper water only after the existing route feels consistent."
     ],
-    guideTitle: "Drain the Lake Beginner Guide - Skill Tree and Fast Progress",
+    guideTitle: "Drain the Lake Beginner Guide",
     guideDescription:
       "Drain the Lake beginner guide covering the bucket loop, token spending, skill tree decisions, deeper-water progression, and common early mistakes.",
     guideIntro:
@@ -284,7 +285,7 @@ export const games: Game[] = [
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-25 check. See the codes page for the latest status."
+          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-26 check. See the codes page for the latest status."
       }
     ],
     activeCodes: [
@@ -293,7 +294,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Officially listed; verify the current reward in game" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-07-25",
+    codesLastChecked: "2026-07-26",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -307,7 +308,9 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox last checked the official source on 2026-07-25 and keeps exact rewards unclaimed until they are verified.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox last checked the official source on 2026-07-26 and keeps exact rewards unclaimed until they are verified.",
+    codesDescription:
+      "Scale Slimy Fish Roblox codes verified from the official game description, with source notes, cautious status checks, and redemption guidance.",
     codeCheckMethod: [
       "Check the official Scale Slimy Fish Roblox page for public code strings and update text.",
       "Keep 10kccu, weather, and turtle active only while the official source or current redemption evidence supports them.",
@@ -326,7 +329,7 @@ export const games: Game[] = [
         body:
           "This page is kept indexable because Scale Slimy Fish has official code strings recorded in the RisingBlox source record. The goal is to preserve a clean code status page without padding it with unverified rewards or copied lists.",
         bullets: [
-          "Primary source: the official Roblox game page and public game data checked on 2026-07-25.",
+          "Primary source: the official Roblox game page and public game data checked on 2026-07-26.",
           "Current tracked code strings: 10kccu, weather, and turtle.",
           "Reward details remain cautious until current in-game redemption confirms the exact output."
         ]
@@ -370,7 +373,7 @@ export const games: Game[] = [
       "Choose a skill-tree direction around the blocker you can observe: clear speed, forge progression, or survival.",
       "Treat exact rune, relic, blueprint, and drop-rate claims as unverified unless an official or logged in-game source supports them."
     ],
-    guideTitle: "Iron Soul Dungeon Guide: Level Up Fast, Best Runes, Forge, and Blueprints",
+    guideTitle: "Iron Soul Dungeon Progression Guide",
     guideDescription:
       "Iron Soul Dungeon guide for leveling up fast, forge progression, best rune decisions, starter weapon testing, blueprint caution, and source-backed beginner progression.",
     guideIntro:
@@ -659,7 +662,7 @@ export const games: Game[] = [
       "Plant on the brown farm plots, wait for crops to finish growing, then harvest and sell for sheckles.",
       "Plant before leaving when you want offline growth, and learn the night-stealing risk before leaving valuable crops unattended."
     ],
-    guideTitle: "Grow a Garden 2 Beginner Guide: Seeds, Harvests, Offline Growth, and Night Stealing",
+    guideTitle: "Grow a Garden 2 Beginner Guide",
     guideDescription:
       "Grow a Garden 2 beginner guide for seed restocks, planting, harvests, sheckles, offline growth, guild rewards, and night stealing risk without unverified crop values.",
     guideIntro:
@@ -765,7 +768,7 @@ export const games: Game[] = [
     genre: "Strategy / Battle",
     summary:
       "Mini War is a Roblox tycoon strategy game about building a country, growing the economy, training an army, unlocking advanced units, and capturing other players' lands.",
-    profileTitle: "Mini War Roblox Game Profile - Economy, Army, and Latest Update",
+    profileTitle: "Mini War Roblox Game Profile",
     profileDescription:
       "Mini War Roblox profile with the verified country-building loop, economy and army strategy, latest public Roblox snapshot, beginner guide links, and codes status.",
     profileIntro:
@@ -880,6 +883,8 @@ export const games: Game[] = [
       "Watch Special Invasion Weather before sending a full army push.",
       "Use research buildings to unlock better control options before chasing every combat upgrade."
     ],
+    guideDescription:
+      "Mini War beginner guide for choosing economy or army upgrades, using research and controls, and timing attacks around Special Invasion Weather.",
     guideIntro:
       "Mini War is a Roblox tycoon strategy game where beginners need to build a stable economy, research stronger tools, train an army, and time attacks around map pressure. Start by deciding whether the current blocker is economy, army size, or attack timing; then upgrade the path that fixes that blocker. The 2026-07-04 update adds Special Invasion Weather, five research buildings, advanced controls, and auto buy, so new players should learn the economy loop before rushing every combat option.",
     guideSections: [
@@ -985,7 +990,7 @@ export const games: Game[] = [
     genre: "Incremental / Idle",
     summary:
       "Noob Incremental is a Roblox incremental simulator from Ghoulax Games where players buy Noobs to make Oof, purchase upgrades, roll and level runes, and use Prestige layers to unlock more content.",
-    profileTitle: "Noob Incremental Roblox Game Profile and Progression Overview",
+    profileTitle: "Noob Incremental Roblox Game Profile",
     profileDescription:
       "Noob Incremental Roblox profile with the official Oof loop, upgrades, runes, Prestige layers, current public data, and a source-backed progression guide.",
     profileIntro:
@@ -1024,7 +1029,7 @@ export const games: Game[] = [
     expiredCodes: [],
     codesLastChecked: "2026-07-21",
     ...buildNoCodePolicy("Noob Incremental"),
-    guideTitle: "Noob Incremental Progression Guide: Upgrades, Runes, and Prestige",
+    guideTitle: "Noob Incremental Progression Guide",
     guideDescription:
       "A source-backed Noob Incremental progression guide for the first Oof loop, early upgrade decisions, rune checks, Prestige timing, blockers, and update verification.",
     guideIntro:
@@ -1159,7 +1164,7 @@ export const games: Game[] = [
       "Plan a lineup and test upgrades on units you are actually deploying.",
       "Prepare before boss pressure instead of assuming a rare unit alone solves the route."
     ],
-    guideTitle: "Anime Squadron Beginner Guide: Lane Coverage and Boss Preparation",
+    guideTitle: "Anime Squadron Beginner Guide",
     guideDescription:
       "A source-backed Anime Squadron beginner guide for the opening lineup, lane coverage, upgrade allocation, multiple modes, and boss-wave preparation without an unverified unit tier list.",
     guideIntro:

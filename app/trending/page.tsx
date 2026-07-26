@@ -103,7 +103,7 @@ export default function TrendingPage() {
           ))}
         </div>
       </section>
-      <div className="mt-8 overflow-hidden rounded-lg border border-black/10 bg-white shadow-sm">
+      <div className="mt-8 overflow-x-auto rounded-lg border border-black/10 bg-white shadow-sm">
         <table className="w-full min-w-[760px] text-left text-sm">
           <thead className="bg-gray-50 text-xs uppercase text-gray-500">
             <tr>

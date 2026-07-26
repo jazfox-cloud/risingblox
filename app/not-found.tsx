@@ -5,7 +5,9 @@ export const metadata: Metadata = {
   title: "Page Not Found",
   description: "The requested RisingBlox page does not exist.",
   robots: { index: false, follow: true },
-  alternates: { canonical: null }
+  alternates: { canonical: null },
+  openGraph: null,
+  twitter: null
 };
 
 export default function NotFoundPage() {

@@ -366,16 +366,16 @@ export const games: Game[] = [
         ]
       }
     ],
-    lastUpdated: "2026-07-20",
+    lastUpdated: "2026-07-26",
     tags: ["rpg", "action-rpg", "dungeon", "forge", "weapons", "roblox-codes"],
     beginnerTips: [
       "Start with the verified gather-forge-upgrade loop before attempting harder dungeon areas.",
       "Choose a skill-tree direction around the blocker you can observe: clear speed, forge progression, or survival.",
       "Treat exact rune, relic, blueprint, and drop-rate claims as unverified unless an official or logged in-game source supports them."
     ],
-    guideTitle: "Iron Soul Dungeon Progression Guide",
+    guideTitle: "Iron Soul Dungeon Leveling Guide",
     guideDescription:
-      "Iron Soul Dungeon guide for leveling up fast, forge progression, best rune decisions, starter weapon testing, blueprint caution, and source-backed beginner progression.",
+      "Iron Soul Dungeon leveling guide for leveling up fast, forge progression, starter weapon tests, blueprints, runes, and source-backed beginner steps.",
     guideIntro:
       "Use this Iron Soul Dungeon guide to level up faster without guessing: repeat a reliable monster route, collect crystalized ore and rare materials, return to the forge, test one weapon or skill-tree change, then decide whether the next blocker is damage, survival, runes, or blueprint evidence. This page answers the current beginner searches around level up fast, best runes, starter weapons, forge progression, and blueprint caution without inventing drop rates or hidden tables.",
     guideLastVerified: "2026-07-16",

@@ -17,9 +17,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const game = getGame(slug);
   if (!game || game.hasCodesPage === false) return {};
-  const description = game.codesSummary
+  const description = game.codesDescription ?? (game.codesSummary
     ? `${game.codesSummary} Includes redemption steps, FAQ, and the latest checked status.`
-    : `Checked ${game.name} Roblox codes, active code status, expired codes, and redemption steps.`;
+    : `Checked ${game.name} Roblox codes, active code status, expired codes, and redemption steps.`);
 
   return {
     title: `${game.name} Roblox Codes`,

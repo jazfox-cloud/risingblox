@@ -40,9 +40,11 @@ export default async function GamePage({ params }: PageProps) {
   const game = getGame(slug);
   if (!game) notFound();
   const stats = getDisplayStats(game);
-  const guideLinkLabel = ["iron-soul-dungeon", "noob-incremental"].includes(game.slug)
-    ? `${game.name} progression guide`
-    : `${game.name} beginner guide`;
+  const guideLinkLabel = game.slug === "iron-soul-dungeon"
+    ? `${game.name} leveling guide`
+    : game.slug === "noob-incremental"
+      ? `${game.name} progression guide`
+      : `${game.name} beginner guide`;
 
   return (
     <article className="mx-auto max-w-4xl px-4 py-10">
@@ -142,6 +144,15 @@ export default async function GamePage({ params }: PageProps) {
           ) : null}
           .
         </p>
+        {game.slug === "iron-soul-dungeon" ? (
+          <p>
+            Before changing a build, use the{" "}
+            <Link href="/guides/iron-soul-dungeon-best-runes/">
+              Iron Soul Dungeon runes guide
+            </Link>{" "}
+            to verify current rune text and compare one change at a time.
+          </p>
+        ) : null}
         <h2>Data Notes</h2>
         <p>
           RisingBlox does not treat placeholder numbers as verified stats. Online

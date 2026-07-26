@@ -30,7 +30,7 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "Iron Soul Dungeon Runes Guide - Verification Before You Build",
+  title: "Iron Soul Dungeon Runes Guide",
   description:
     "A conservative Iron Soul Dungeon runes guide explaining what to verify in game, how to compare rune changes, and why RisingBlox does not publish unsupported rune rankings or drop rates.",
   alternates: {

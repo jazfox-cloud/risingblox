@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "update:stats": "node scripts/update-roblox-stats.mjs",
+    "audit:seo": "node scripts/audit-built-seo.mjs",
     "lint": "next lint",
     "typecheck": "tsc --noEmit --incremental false",
     "test": "node --test scripts/update-roblox-stats.test.mjs tests/adsense-readiness.test.mjs"

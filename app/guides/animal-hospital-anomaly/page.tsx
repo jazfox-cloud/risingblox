@@ -42,7 +42,7 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: "Animal Hospital (Anomaly) Roblox Guide - Night Shift Checklist",
+  title: "Animal Hospital (Anomaly) Guide",
   description:
     "Use this Animal Hospital (Anomaly) Roblox guide to handle night-shift patient checks, spot suspicious cases, and follow a safe anomaly checklist without guessing unverified codes or fake rules.",
   alternates: {

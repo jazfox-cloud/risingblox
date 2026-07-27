@@ -1149,28 +1149,29 @@ export const games: Game[] = [
       {
         title: "Developer and Current Status",
         body:
-          "RisingBlox rechecked the official Roblox Games API and game description on 2026-07-16. Roblox listed Komplex Studio as the creator and the public title carried an UPD 1.5 signal.",
+          "RisingBlox rechecked the official Roblox page on 2026-07-27. Roblox listed Komplex Studio as the creator and the public title carried an UPD 1.75 signal.",
         bullets: [
-          "Source: official Anime Squadron Roblox page and Roblox Games API.",
+          "Source: official Anime Squadron Roblox page checked on 2026-07-27.",
           "Creator shown by Roblox: Komplex Studio.",
+          "Public title seen during the check: UPD 1.75.",
           "Exact unit rankings, costs, and mode-specific formulas are not claimed on this profile."
         ]
       }
     ],
-    lastUpdated: "2026-07-16",
+    lastUpdated: "2026-07-27",
     tags: ["anime", "lane-battler", "tower-defense", "strategy", "units"],
     beginnerTips: [
       "Use early runs to observe lane coverage and the timing of nonstop enemy waves.",
       "Plan a lineup and test upgrades on units you are actually deploying.",
       "Prepare before boss pressure instead of assuming a rare unit alone solves the route."
     ],
-    guideTitle: "Anime Squadron Beginner Guide",
+    guideTitle: "Anime Squadron UPD 1.75 Beginner Guide",
     guideDescription:
-      "A source-backed Anime Squadron beginner guide for the opening lineup, lane coverage, upgrade allocation, multiple modes, and boss-wave preparation without an unverified unit tier list.",
+      "Anime Squadron UPD 1.75 beginner guide for lineup planning, lane coverage, unit upgrades, game modes, and boss waves using verified Roblox source details.",
     guideIntro:
-      "Start Anime Squadron by treating it as the strategic lane battler described on the official Roblox page: deploy a lineup, watch how nonstop enemy waves move through the lanes, and spend early upgrades on units you are actually testing before boss pressure arrives. The source confirms summoning, upgrading, leveling and evolving units, multiple modes, and massive bosses, but it does not publish a universal best-unit list, exact resource formula, or mode-specific build. This guide therefore focuses on observable opening decisions—coverage, upgrade concentration, and boss preparation—while the profile remains the source-and-status page and the codes URL remains a separate verification-only status page.",
-    guideLastVerified: "2026-07-16",
-    guideSourceLabel: "Official Anime Squadron Roblox page and Roblox Games API",
+      "Anime Squadron currently carries an UPD 1.75 signal on its official Roblox title. Start by treating it as the strategic lane battler described there: deploy a lineup, watch how nonstop enemy waves move through the lanes, and spend early upgrades on units you are actually testing before boss pressure arrives. The source confirms summoning, upgrading, leveling and evolving units, multiple modes, and massive bosses, but it does not publish a universal best-unit list, exact resource formula, or mode-specific build. This guide therefore focuses on observable opening decisions: coverage, upgrade concentration, and boss preparation.",
+    guideLastVerified: "2026-07-27",
+    guideSourceLabel: "Official Anime Squadron Roblox page",
     guideSourceUrl: "https://www.roblox.com/games/71132543521245/Anime-Squadron",
     guideSourceNote:
       "The official source verifies units, lineup planning, multiple modes, bosses, and waves. It does not verify a current unit tier list, exact costs, or an optimal lineup.",
@@ -1236,9 +1237,9 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "What to Recheck After an Update",
+        title: "UPD 1.75 Source Check",
         body:
-          "The official title carried an UPD 1.5 signal during the 2026-07-16 check. That is a freshness signal, not proof that older unit advice, costs, modes, or boss behavior stayed unchanged.",
+          "The official Roblox title carried an UPD 1.75 signal during the 2026-07-27 check. That confirms a current update label, but it does not prove that copied unit rankings, costs, mode details, or boss behavior are accurate.",
         bullets: [
           "Recheck unit upgrade and evolve text in the current interface.",
           "Recheck which modes are currently available.",

@@ -1,6 +1,6 @@
-import Link from "next/link";
 import { hasIndexableCodes, type Game } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
+import { TrackedContentLink } from "@/components/TrackedContentLink";
 
 export function GameCard({ game }: { game: Game }) {
   const stats = getDisplayStats(game);
@@ -28,36 +28,42 @@ export function GameCard({ game }: { game: Game }) {
         </div>
       </div>
       <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
-        <Link className="rounded-md bg-ink px-3 py-2 text-white" href={`/games/${game.slug}/`}>
+        <TrackedContentLink className="rounded-md bg-ink px-3 py-2 text-white" contentSlug={game.slug} contentType="game" href={`/games/${game.slug}/`} placement="game_card">
           Profile
-        </Link>
+        </TrackedContentLink>
         {stats.sourceUrl ? (
-          <a
+          <TrackedContentLink
             className="rounded-md bg-coral px-3 py-2 text-white"
+            contentSlug={game.slug}
+            contentType="game"
             href={stats.sourceUrl}
+            placement="game_card"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
             Play
-          </a>
+          </TrackedContentLink>
         ) : null}
         {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
-          <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/codes/${game.slug}/`}>
+          <TrackedContentLink className="rounded-md bg-gray-100 px-3 py-2" contentSlug={game.slug} contentType="codes" href={`/codes/${game.slug}/`} placement="game_card">
             Codes
-          </Link>
+          </TrackedContentLink>
         ) : null}
-        <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}/`}>
+        <TrackedContentLink className="rounded-md bg-gray-100 px-3 py-2" contentSlug={game.slug} contentType="guide" href={`/guides/${game.slug}/`} placement="game_card">
           Guide
-        </Link>
+        </TrackedContentLink>
         {game.externalGuide ? (
-          <a
+          <TrackedContentLink
             className="rounded-md bg-limepop px-3 py-2 text-ink"
+            contentSlug={game.slug}
+            contentType="external"
             href={game.externalGuide.url}
+            placement="game_card"
             rel="noopener noreferrer"
             target="_blank"
           >
             {game.externalGuide.label}
-          </a>
+          </TrackedContentLink>
         ) : null}
       </div>
     </article>

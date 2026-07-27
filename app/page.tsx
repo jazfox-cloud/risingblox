@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GameCard } from "@/components/GameCard";
+import { TrackedContentLink } from "@/components/TrackedContentLink";
 import { games, hasIndexableCodes } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 
@@ -107,16 +108,34 @@ export default function Home() {
                   {stats.onlinePlayers} online · {stats.likeRate} likes
                 </p>
                 <div className="mt-4 flex flex-wrap gap-2 text-sm font-bold">
-                  <Link className="rounded-md bg-white px-3 py-2 text-ink" href={`/games/${game.slug}/`}>
+                  <TrackedContentLink
+                    className="rounded-md bg-white px-3 py-2 text-ink"
+                    contentSlug={game.slug}
+                    contentType="game"
+                    href={`/games/${game.slug}/`}
+                    placement="trending_now"
+                  >
                     Profile
-                  </Link>
-                  <Link className="rounded-md bg-white/10 px-3 py-2" href={`/guides/${game.slug}/`}>
+                  </TrackedContentLink>
+                  <TrackedContentLink
+                    className="rounded-md bg-white/10 px-3 py-2"
+                    contentSlug={game.slug}
+                    contentType="guide"
+                    href={`/guides/${game.slug}/`}
+                    placement="trending_now"
+                  >
                     Guide
-                  </Link>
+                  </TrackedContentLink>
                   {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
-                    <Link className="rounded-md bg-coral px-3 py-2" href={`/codes/${game.slug}/`}>
+                    <TrackedContentLink
+                      className="rounded-md bg-coral px-3 py-2"
+                      contentSlug={game.slug}
+                      contentType="codes"
+                      href={`/codes/${game.slug}/`}
+                      placement="trending_now"
+                    >
                       Codes
-                    </Link>
+                    </TrackedContentLink>
                   ) : null}
                 </div>
               </article>
@@ -161,13 +180,16 @@ export default function Home() {
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
                 {item.links.map((link) => (
-                  <Link
+                  <TrackedContentLink
                     className="rounded-md bg-gray-100 px-3 py-2 first:bg-ink first:text-white"
+                    contentSlug={link.href.split("/").filter(Boolean).pop() ?? "animal-hospital-anomaly"}
+                    contentType={link.href.includes("/guides/") ? "guide" : "game"}
                     href={link.href}
                     key={link.href}
+                    placement="standalone_pages"
                   >
                     {link.label}
-                  </Link>
+                  </TrackedContentLink>
                 ))}
               </div>
             </article>

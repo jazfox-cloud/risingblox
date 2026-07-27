@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Script from "next/script";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -38,6 +40,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script id="risingblox-consent-default" strategy="beforeInteractive">
+          {`
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+window.gtag = gtag;
+gtag('consent', 'default', {
+  analytics_storage: 'denied',
+  ad_storage: 'denied',
+  ad_user_data: 'denied',
+  ad_personalization: 'denied',
+  wait_for_update: 500
+});
+`}
+        </Script>
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2134598094429002"
@@ -45,10 +61,11 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <header
-          className="border-b border-black/10 bg-white/80 backdrop-blur"
-          data-ad-exclusion-zone="site-header-navigation"
-        >
+        <AnalyticsProvider>
+          <header
+            className="border-b border-black/10 bg-white/80 backdrop-blur"
+            data-ad-exclusion-zone="site-header-navigation"
+          >
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
             <Link href="/" className="text-xl font-black tracking-tight">
               RisingBlox
@@ -65,12 +82,12 @@ export default function RootLayout({
               ))}
             </nav>
           </div>
-        </header>
-        <main>{children}</main>
-        <footer
-          className="mt-16 border-t border-black/10 bg-white"
-          data-ad-exclusion-zone="site-footer-legal"
-        >
+          </header>
+          <main>{children}</main>
+          <footer
+            className="mt-16 border-t border-black/10 bg-white"
+            data-ad-exclusion-zone="site-footer-legal"
+          >
           <div className="mx-auto max-w-6xl px-4 py-8 text-sm text-gray-600">
             <p>RisingBlox is an independent Roblox trends and guides site. It is not affiliated with, endorsed by, or sponsored by Roblox Corporation.</p>
             <div className="mt-3 flex flex-wrap gap-4">
@@ -83,7 +100,8 @@ export default function RootLayout({
               <Link href="/sources/">Sources</Link>
             </div>
           </div>
-        </footer>
+          </footer>
+        </AnalyticsProvider>
       </body>
     </html>
   );

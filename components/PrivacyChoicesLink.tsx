@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useAnalytics } from "@/components/AnalyticsProvider";
 
 type GoogleFundingChoices = {
   callbackQueue?: Array<Record<string, () => void>>;
@@ -15,6 +16,7 @@ declare global {
 
 export default function PrivacyChoicesLink() {
   const [available, setAvailable] = useState(false);
+  const { reopenChoices } = useAnalytics();
 
   useEffect(() => {
     window.googlefc = window.googlefc ?? {};
@@ -27,16 +29,24 @@ export default function PrivacyChoicesLink() {
     });
   }, []);
 
-  if (!available) return null;
-
   return (
-    <button
-      className="rounded-md border border-black/20 bg-white px-4 py-2 font-bold text-ink"
-      data-ad-exclusion-zone="privacy-choice-control"
-      onClick={() => window.googlefc?.showRevocationMessage?.()}
-      type="button"
-    >
-      Open privacy and cookie settings
-    </button>
+    <div className="flex flex-wrap gap-3" data-ad-exclusion-zone="privacy-choice-control">
+      <button
+        className="rounded-md border border-black/20 bg-white px-4 py-2 font-bold text-ink"
+        onClick={reopenChoices}
+        type="button"
+      >
+        Open analytics choices
+      </button>
+      {available ? (
+        <button
+          className="rounded-md border border-black/20 bg-white px-4 py-2 font-bold text-ink"
+          onClick={() => window.googlefc?.showRevocationMessage?.()}
+          type="button"
+        >
+          Open advertising choices
+        </button>
+      ) : null}
+    </div>
   );
 }

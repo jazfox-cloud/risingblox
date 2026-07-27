@@ -39,10 +39,42 @@ test("privacy and trust surfaces match the staged integration state", () => {
   }
 
   const privacy = read("app/privacy/page.tsx");
+  assert.match(privacy, /Google Analytics 4/);
+  assert.match(privacy, /analytics consent is granted/);
   assert.match(privacy, /has integrated Google AdSense/);
   assert.match(privacy, /Google-certified CMP/);
-  assert.match(privacy, /certified CMP is not yet active/);
+  assert.match(privacy, /certified advertising CMP is not yet active/);
+  assert.match(privacy, /not a certified advertising CMP/);
   assert.match(read("components/PrivacyChoicesLink.tsx"), /showRevocationMessage/);
+});
+
+test("GA4 analytics uses consent mode and the approved production stream", () => {
+  const layout = read("app/layout.tsx");
+  const provider = read("components/AnalyticsProvider.tsx");
+  const trackedLink = read("components/TrackedContentLink.tsx");
+  const allSource = `${layout}\n${provider}\n${trackedLink}`;
+  const measurementIds = allSource.match(/G-[A-Z0-9]+/g) ?? [];
+
+  assert.deepEqual([...new Set(measurementIds)], ["G-BTYFTBCGLV"]);
+  assert.match(layout, /gtag\('consent', 'default'/);
+  for (const key of [
+    "analytics_storage",
+    "ad_storage",
+    "ad_user_data",
+    "ad_personalization"
+  ]) {
+    assert.match(layout, new RegExp(`${key}: 'denied'`));
+    assert.match(provider, new RegExp(`${key}:`));
+  }
+  assert.match(provider, /canonicalHost = "risingblox\.com"/);
+  assert.match(provider, /window\.location\.hostname === canonicalHost/);
+  assert.match(provider, /dataLayer\.push\(arguments\)/);
+  assert.doesNotMatch(provider, /dataLayer\.push\(args\)/);
+  assert.match(provider, /allow_google_signals: false/);
+  assert.match(provider, /allow_ad_personalization_signals: false/);
+  assert.match(trackedLink, /select_content/);
+  assert.match(trackedLink, /outbound_click/);
+  assert.match(trackedLink, /content_slug/);
 });
 
 test("error and interactive areas are marked as future ad-exclusion zones", () => {

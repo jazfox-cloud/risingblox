@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { TrackedContentLink } from "@/components/TrackedContentLink";
 import { games, getGame } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 
@@ -53,39 +54,51 @@ export default async function GamePage({ params }: PageProps) {
       <p className="mt-4 text-lg leading-8 text-gray-700">{game.summary}</p>
       {stats.sourceUrl ? (
         <div className="mt-6 flex flex-wrap gap-3">
-          <a
+          <TrackedContentLink
             className="rounded-md bg-ink px-5 py-3 font-bold text-white"
+            contentSlug={game.slug}
+            contentType="game"
             href={stats.sourceUrl}
+            placement="game_profile_hero"
             rel="nofollow noopener noreferrer"
             target="_blank"
           >
             Play on Roblox
-          </a>
+          </TrackedContentLink>
           {game.slug === "iron-soul-dungeon" ? (
-            <Link
+            <TrackedContentLink
               className="rounded-md bg-mint px-5 py-3 font-bold text-ink shadow-sm"
+              contentSlug={game.slug}
+              contentType="guide"
               href={`/guides/${game.slug}/`}
+              placement="game_profile_hero"
             >
               Progression guide
-            </Link>
+            </TrackedContentLink>
           ) : null}
           {game.hasCodesPage !== false ? (
-            <a
+            <TrackedContentLink
               className="rounded-md bg-white px-5 py-3 font-bold shadow-sm"
+              contentSlug={game.slug}
+              contentType="codes"
               href={`/codes/${game.slug}/`}
+              placement="game_profile_hero"
             >
               {game.activeCodes.length > 0 ? "Verified codes" : "Codes status"}
-            </a>
+            </TrackedContentLink>
           ) : null}
           {game.externalGuide ? (
-            <a
+            <TrackedContentLink
               className="rounded-md bg-coral px-5 py-3 font-bold text-white shadow-sm"
+              contentSlug={game.slug}
+              contentType="external"
               href={game.externalGuide.url}
+              placement="game_profile_hero"
               rel="noopener noreferrer"
               target="_blank"
             >
               {game.externalGuide.label}
-            </a>
+            </TrackedContentLink>
           ) : null}
         </div>
       ) : (

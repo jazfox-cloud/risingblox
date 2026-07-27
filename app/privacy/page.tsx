@@ -5,7 +5,7 @@ import PrivacyChoicesLink from "@/components/PrivacyChoicesLink";
 export const metadata = staticPageMetadata(
   "privacy",
   "Privacy Policy",
-  "RisingBlox privacy policy describing current hosting, contact processing, and Google advertising integration."
+  "RisingBlox privacy policy describing current hosting, Google Analytics consent, contact processing, and Google advertising integration."
 );
 
 export default function PrivacyPage() {
@@ -17,13 +17,18 @@ export default function PrivacyPage() {
           RisingBlox is a static-first content site. We do not require user accounts,
           payments, or comments to read our guides.
         </p>
-        <p><strong>Effective date and last updated:</strong> July 19, 2026.</p>
+        <p><strong>Effective date and last updated:</strong> July 26, 2026.</p>
         <h2>Current data practices</h2>
         <p>
-          RisingBlox does not currently load Google Analytics or another analytics
-          service. The site loads the Google AdSense script for account verification
-          and advertising. The site does not intentionally use localStorage for its own
-          tracking or advertising purposes.
+          RisingBlox uses Google Analytics 4 only after analytics consent is granted
+          on the production site. GA4 helps measure page visits, content usage,
+          aggregate interaction performance, and site improvements. Analytics choices
+          are stored in localStorage as a simple granted or denied setting.
+        </p>
+        <p>
+          The site loads the Google AdSense script for account verification and
+          advertising. Accepting analytics on RisingBlox does not grant advertising
+          consent, ad user data consent, or ad personalization consent.
         </p>
         <p>
           Cloudflare hosts and protects the site and may process network and security
@@ -62,9 +67,10 @@ export default function PrivacyPage() {
         <h2 id="privacy-choices">Privacy choices</h2>
         <div data-ad-exclusion-zone="privacy-choice-control">
           <p>
-            A compatible certified CMP is not yet active. Once configured, its official
-            control will appear below so visitors can reopen their choices. Until then,
-            no inactive or simulated consent control is shown.
+            You can accept, reject, withdraw, or reopen RisingBlox analytics choices
+            below. A compatible Google-certified advertising CMP is not yet active;
+            once configured, its official control will also appear here. The analytics
+            banner is not a certified advertising CMP.
           </p>
           <PrivacyChoicesLink />
         </div>

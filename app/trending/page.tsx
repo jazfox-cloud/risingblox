@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrackedContentLink } from "@/components/TrackedContentLink";
 import { games, hasIndexableCodes } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
 import { staticPageMetadata } from "@/app/static-page-metadata";
@@ -71,16 +72,16 @@ export default function TrendingPage() {
                   {stats.onlinePlayers} online · {stats.likeRate} likes
                 </p>
                 <div className="mt-5 flex flex-wrap gap-2 text-sm font-bold">
-                  <Link className="rounded-md bg-ink px-3 py-2 text-white" href={`/games/${game.slug}/`}>
+                  <TrackedContentLink className="rounded-md bg-ink px-3 py-2 text-white" contentSlug={game.slug} contentType="game" href={`/games/${game.slug}/`} placement="trending_new_this_week">
                     Profile
-                  </Link>
-                  <Link className="rounded-md bg-gray-100 px-3 py-2" href={`/guides/${game.slug}/`}>
+                  </TrackedContentLink>
+                  <TrackedContentLink className="rounded-md bg-gray-100 px-3 py-2" contentSlug={game.slug} contentType="guide" href={`/guides/${game.slug}/`} placement="trending_new_this_week">
                     Guide
-                  </Link>
+                  </TrackedContentLink>
                   {game.hasCodesPage !== false && hasIndexableCodes(game) ? (
-                    <Link className="rounded-md bg-coral px-3 py-2 text-white" href={`/codes/${game.slug}/`}>
+                    <TrackedContentLink className="rounded-md bg-coral px-3 py-2 text-white" contentSlug={game.slug} contentType="codes" href={`/codes/${game.slug}/`} placement="trending_new_this_week">
                       Codes
-                    </Link>
+                    </TrackedContentLink>
                   ) : null}
                 </div>
               </article>
@@ -156,12 +157,12 @@ export default function TrendingPage() {
                 </p>
               </div>
               <div className="flex flex-wrap gap-2 text-sm font-bold">
-                <Link className="rounded-md bg-ink px-3 py-2 text-white" href={item.href}>
+                <TrackedContentLink className="rounded-md bg-ink px-3 py-2 text-white" contentSlug="animal-hospital-anomaly" contentType="game" href={item.href} placement="standalone_trend_checks">
                   Profile
-                </Link>
-                <Link className="rounded-md bg-gray-100 px-3 py-2" href={item.guideHref}>
+                </TrackedContentLink>
+                <TrackedContentLink className="rounded-md bg-gray-100 px-3 py-2" contentSlug="animal-hospital-anomaly" contentType="guide" href={item.guideHref} placement="standalone_trend_checks">
                   Guide
-                </Link>
+                </TrackedContentLink>
               </div>
             </article>
           ))}

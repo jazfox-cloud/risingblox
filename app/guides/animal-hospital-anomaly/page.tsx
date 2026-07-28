@@ -3,14 +3,14 @@ import Link from "next/link";
 import ChecklistTools from "./ChecklistTools";
 
 const baseUrl = "https://risingblox.com";
-const checkedDate = "2026-06-27";
+const checkedDate = "2026-07-28";
 const robloxSnapshot = {
   universeId: "10148749921",
   placeId: "78515283254292",
   creator: "Animal Anomaly",
-  playing: "350,196",
-  visits: "120,672,935",
-  updated: "2026-06-27T01:17:50Z"
+  playing: "401,566",
+  visits: "1,403,090,620",
+  updated: "2026-07-25T19:30:29.499Z"
 };
 
 const faqItems = [

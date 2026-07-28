@@ -2,29 +2,29 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 const baseUrl = "https://risingblox.com";
-const checkedDate = "2026-07-03";
+const checkedDate = "2026-07-28";
 const officialRobloxUrl = "https://www.roblox.com/games/78515283254292/Animal-Hospital";
 const robloxSnapshot = {
   universeId: "10148749921",
   placeId: "78515283254292",
   creator: "Animal Anomaly",
   genre: "Survival",
-  playing: "489,962",
-  visits: "326,079,991",
-  updated: "2026-07-01T16:58:23Z"
+  playing: "401,566",
+  visits: "1,403,090,620",
+  updated: "2026-07-25T19:30:29.499Z"
 };
 
 export const metadata: Metadata = {
-  title: "Animal Hospital (Anomaly) Roblox Game Profile",
+  title: "Animal Hospital (Anomaly) Roblox Game",
   description:
-    "Animal Hospital (Anomaly) Roblox game profile with official source notes, gameplay loop, current Roblox snapshot, guide, and verified codes status.",
+    "Animal Hospital (Anomaly) Roblox game profile with its night-shift gameplay loop, current official snapshot, beginner guide, and verified codes status.",
   alternates: {
     canonical: `${baseUrl}/games/animal-hospital-anomaly/`
   },
   openGraph: {
-    title: "Animal Hospital (Anomaly) Roblox Game Profile",
+    title: "Animal Hospital (Anomaly) Roblox Game",
     description:
-      "Animal Hospital (Anomaly) Roblox game profile with official source notes, gameplay loop, current Roblox snapshot, guide, and verified codes status.",
+      "Animal Hospital (Anomaly) Roblox game profile with its night-shift gameplay loop, current official snapshot, beginner guide, and verified codes status.",
     url: `${baseUrl}/games/animal-hospital-anomaly/`
   }
 };
@@ -39,9 +39,9 @@ export default function AnimalHospitalAnomalyGameProfile() {
         Animal Hospital (Anomaly)
       </h1>
       <p className="mt-4 text-lg leading-8 text-gray-700">
-        Animal Hospital (Anomaly) is a Roblox night-shift survival game from
-        Animal Anomaly. The official page says players are hired to treat
-        patients at night while watching for patients who are acting weird.
+        Animal Hospital (Anomaly) is a Roblox night-shift anomaly game from
+        Animal Anomaly. The official page confirms a compact survival loop:
+        treat patients while watching for cases that are acting weird.
       </p>
       <p className="mt-3 text-sm text-gray-600">Last checked: {checkedDate}</p>
 

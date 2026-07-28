@@ -4,6 +4,20 @@ import path from "node:path";
 const root = process.cwd();
 const outputDir = path.join(root, "out");
 const baseUrl = "https://risingblox.com";
+const defaultOgImage = `${baseUrl}/og/risingblox-og.png`;
+const defaultOgImagePath = path.join(root, "public/og/risingblox-og.png");
+const expectedNoindexCodes = new Set([
+  "/codes/iron-soul-dungeon/",
+  "/codes/grow-a-garden-2/",
+  "/codes/mini-war/",
+  "/codes/noob-incremental/",
+  "/codes/anime-squadron/",
+  "/codes/animal-hospital-anomaly/"
+]);
+const protectedIndexablePages = new Set([
+  "/codes/scale-slimy-fish/",
+  "/guides/grow-a-garden-2/"
+]);
 
 function walk(directory) {
   return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -65,6 +79,21 @@ function linkValue(html, rel) {
     if ((attrs.rel ?? "").toLowerCase().split(/\s+/).includes(rel)) return attrs.href ?? "";
   }
   return "";
+}
+
+function pngSize(file) {
+  const buffer = fs.readFileSync(file);
+  if (
+    buffer.length < 24 ||
+    buffer.toString("ascii", 1, 4) !== "PNG" ||
+    buffer.toString("ascii", 12, 16) !== "IHDR"
+  ) {
+    return null;
+  }
+  return {
+    width: buffer.readUInt32BE(16),
+    height: buffer.readUInt32BE(20)
+  };
 }
 
 function routeForFile(file) {
@@ -142,6 +171,8 @@ const pages = htmlFiles.map((file) => {
       url: metas["og:url"] ?? "",
       type: metas["og:type"] ?? "",
       image: metas["og:image"] ?? "",
+      imageWidth: metas["og:image:width"] ?? "",
+      imageHeight: metas["og:image:height"] ?? "",
       imageAlt: metas["og:image:alt"] ?? ""
     },
     twitter: {
@@ -172,6 +203,60 @@ for (const page of pages) {
       .filter((href) => href && !pagePaths.has(href) && !/\.[a-z0-9]+\/?$/i.test(href))
   )].sort();
 }
+
+function expectedOgType(page) {
+  if (page.url === "/" || !/^\/(?:games|guides|codes)\//.test(page.url)) {
+    return "website";
+  }
+  return "article";
+}
+
+function canonicalPath(page) {
+  try {
+    return new URL(page.canonical).pathname;
+  } catch {
+    return "";
+  }
+}
+
+const formalPages = pages.filter((page) => page.url !== "/404/");
+const sitemapPages = pages.filter((page) => page.inSitemap);
+const unexpectedNoindex = formalPages.filter(
+  (page) => !page.indexable && !expectedNoindexCodes.has(page.url)
+);
+const ogMetadataIssues = sitemapPages.flatMap((page) => {
+  const issues = [];
+  if (page.og.image !== defaultOgImage) issues.push("og:image");
+  if (page.og.imageWidth !== "1200") issues.push("og:image:width");
+  if (page.og.imageHeight !== "630") issues.push("og:image:height");
+  if (!page.og.imageAlt) issues.push("og:image:alt");
+  if (page.twitter.image !== defaultOgImage) issues.push("twitter:image");
+  if (page.twitter.card !== "summary_large_image") issues.push("twitter:card");
+  if (page.og.type !== expectedOgType(page)) issues.push("og:type");
+  return issues.length ? [{ url: page.url, issues }] : [];
+});
+const canonicalMismatches = formalPages.filter(
+  (page) => page.canonical && canonicalPath(page) !== page.url
+);
+const noindexProtectionIssues = [...expectedNoindexCodes].flatMap((url) => {
+  const page = pages.find((item) => item.url === url);
+  const issues = [];
+  if (!page) issues.push("missing");
+  if (page && page.indexable) issues.push("indexable");
+  if (page && !page.follow) issues.push("nofollow");
+  if (page && page.canonical !== `${baseUrl}${url}`) issues.push("canonical");
+  if (page && page.inSitemap) issues.push("sitemap");
+  return issues.length ? [{ url, issues }] : [];
+});
+const protectedIndexableIssues = [...protectedIndexablePages].flatMap((url) => {
+  const page = pages.find((item) => item.url === url);
+  const issues = [];
+  if (!page) issues.push("missing");
+  if (page && !page.indexable) issues.push("noindex");
+  if (page && page.canonical !== `${baseUrl}${url}`) issues.push("canonical");
+  if (page && !page.inSitemap) issues.push("sitemap");
+  return issues.length ? [{ url, issues }] : [];
+});
 for (const page of pages) {
   delete page.links;
 }
@@ -191,11 +276,25 @@ function duplicates(field) {
 const report = {
   generatedAt: new Date().toISOString(),
   pageCount: pages.length,
-  formalPageCount: pages.filter((page) => page.url !== "/404/").length,
-  indexableCount: pages.filter((page) => page.indexable && page.url !== "/404/").length,
-  noindexCount: pages.filter((page) => !page.indexable && page.url !== "/404/").length,
+  formalPageCount: formalPages.length,
+  indexableCount: formalPages.filter((page) => page.indexable).length,
+  noindexCount: formalPages.filter((page) => !page.indexable).length,
   sitemapCount: sitemapUrls.length,
   sitemapUrls,
+  defaultOgImage: {
+    path: path.relative(root, defaultOgImagePath),
+    url: defaultOgImage,
+    size: pngSize(defaultOgImagePath)
+  },
+  ogMetadataIssues,
+  ogImageUrls: [...new Set(sitemapPages.map((page) => page.og.image))],
+  canonicalMismatches: canonicalMismatches.map((page) => ({
+    url: page.url,
+    canonical: page.canonical
+  })),
+  unexpectedNoindex: unexpectedNoindex.map((page) => page.url),
+  noindexProtectionIssues,
+  protectedIndexableIssues,
   titleTooLong: pages.filter((page) => page.titleLength > 60).map((page) => page.url),
   descriptionTooLong: pages.filter((page) => page.descriptionLength > 155).map((page) => page.url),
   weakInbound: pages.filter((page) => page.inboundCount === 1).map((page) => page.url),
@@ -214,3 +313,23 @@ const report = {
 };
 
 process.stdout.write(`${JSON.stringify(report, null, 2)}\n`);
+
+const failures = [
+  sitemapUrls.length === 26 ? null : `Expected 26 sitemap URLs, found ${sitemapUrls.length}`,
+  report.defaultOgImage.size?.width === 1200 && report.defaultOgImage.size?.height === 630
+    ? null
+    : "Default OG image is not 1200x630",
+  ogMetadataIssues.length === 0 ? null : "Sitemap pages have incomplete OG/Twitter metadata",
+  report.ogImageUrls.length === 1 && report.ogImageUrls[0] === defaultOgImage
+    ? null
+    : "Sitemap pages do not share the expected default OG image URL",
+  canonicalMismatches.length === 0 ? null : "Canonical mismatch detected",
+  unexpectedNoindex.length === 0 ? null : "Unexpected noindex page detected",
+  noindexProtectionIssues.length === 0 ? null : "Expected noindex codes protection changed",
+  protectedIndexableIssues.length === 0 ? null : "Protected indexable page changed"
+].filter(Boolean);
+
+if (failures.length) {
+  process.stderr.write(`SEO audit failed:\n${failures.map((item) => `- ${item}`).join("\n")}\n`);
+  process.exitCode = 1;
+}

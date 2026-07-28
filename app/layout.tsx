@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import { AnalyticsProvider } from "@/components/AnalyticsProvider";
+import { defaultOpenGraphImages, defaultTwitterMetadata } from "@/app/metadata";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -20,8 +21,10 @@ export const metadata: Metadata = {
     description: "Rising Roblox games, codes, and practical beginner guides.",
     url: "https://risingblox.com",
     siteName: "RisingBlox",
-    type: "website"
-  }
+    type: "website",
+    images: defaultOpenGraphImages()
+  },
+  twitter: defaultTwitterMetadata()
 };
 
 const navItems = [

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame, hasIndexableCodes } from "@/content/games";
-
-const baseUrl = "https://risingblox.com";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
 function toSectionId(value: string) {
   return value
@@ -32,11 +31,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `${baseUrl}/guides/${game.slug}/`
     },
-    openGraph: {
-      title: game.guideTitle ?? `${game.name} Roblox Beginner Guide`,
+    openGraph: contentOpenGraph(
+      game.guideTitle ?? `${game.name} Roblox Beginner Guide`,
       description,
-      url: `${baseUrl}/guides/${game.slug}/`
-    }
+      `${baseUrl}/guides/${game.slug}/`
+    ),
+    twitter: defaultTwitterMetadata()
   };
 }
 

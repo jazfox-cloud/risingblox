@@ -10,7 +10,7 @@
     "audit:seo": "node scripts/audit-built-seo.mjs",
     "lint": "next lint",
     "typecheck": "tsc --noEmit --incremental false",
-    "test": "node --test scripts/update-roblox-stats.test.mjs tests/adsense-readiness.test.mjs"
+    "test": "node --test scripts/update-roblox-stats.test.mjs tests/adsense-readiness.test.mjs tests/og-metadata.test.mjs"
   },
   "dependencies": {
     "next": "15.5.20",

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
-const baseUrl = "https://risingblox.com";
 const checkedDate = "2026-07-19";
 const officialRobloxUrl = "https://www.roblox.com/games/78515283254292/Animal-Hospital";
 const robloxSnapshot = {
@@ -44,12 +44,12 @@ export const metadata: Metadata = {
     canonical: `${baseUrl}/codes/animal-hospital-anomaly/`
   },
   robots: { index: false, follow: true },
-  openGraph: {
-    title: "Animal Hospital (Anomaly) Codes - Roblox Code Status",
-    description:
-      "Checked Animal Hospital (Anomaly) Roblox codes, active code status, expired codes, source notes, and safe redemption steps. No verified active codes are listed right now.",
-    url: `${baseUrl}/codes/animal-hospital-anomaly/`
-  }
+  openGraph: contentOpenGraph(
+    "Animal Hospital (Anomaly) Codes - Roblox Code Status",
+    "Checked Animal Hospital (Anomaly) Roblox codes, active code status, expired codes, source notes, and safe redemption steps. No verified active codes are listed right now.",
+    `${baseUrl}/codes/animal-hospital-anomaly/`
+  ),
+  twitter: defaultTwitterMetadata()
 };
 
 export default function AnimalHospitalAnomalyCodesPage() {

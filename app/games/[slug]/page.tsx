@@ -4,8 +4,7 @@ import { notFound } from "next/navigation";
 import { TrackedContentLink } from "@/components/TrackedContentLink";
 import { games, getGame } from "@/content/games";
 import { getDisplayStats } from "@/content/stats";
-
-const baseUrl = "https://risingblox.com";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
 export function generateStaticParams() {
   return games.map((game) => ({ slug: game.slug }));
@@ -28,11 +27,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     alternates: {
       canonical: `${baseUrl}/games/${game.slug}/`
     },
-    openGraph: {
-      title,
-      description,
-      url: `${baseUrl}/games/${game.slug}/`
-    }
+    openGraph: contentOpenGraph(title, description, `${baseUrl}/games/${game.slug}/`),
+    twitter: defaultTwitterMetadata()
   };
 }
 

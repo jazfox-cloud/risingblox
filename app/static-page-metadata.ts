@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-
-const baseUrl = "https://risingblox.com";
+import { baseUrl, defaultTwitterMetadata, websiteOpenGraph } from "@/app/metadata";
 
 export function staticPageMetadata(
   path: string,
@@ -13,6 +12,7 @@ export function staticPageMetadata(
     title,
     description,
     alternates: { canonical: url },
-    openGraph: { url }
+    openGraph: websiteOpenGraph(`${title} | RisingBlox`, description, url),
+    twitter: defaultTwitterMetadata()
   };
 }

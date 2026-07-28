@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ChecklistTools from "./ChecklistTools";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
-const baseUrl = "https://risingblox.com";
 const checkedDate = "2026-07-28";
 const robloxSnapshot = {
   universeId: "10148749921",
@@ -48,12 +48,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/guides/animal-hospital-anomaly/`
   },
-  openGraph: {
-    title: "Animal Hospital (Anomaly) Roblox Guide - Night Shift Checklist",
-    description:
-      "Use this Animal Hospital (Anomaly) Roblox guide to handle night-shift patient checks, spot suspicious cases, and follow a safe anomaly checklist without guessing unverified codes or fake rules.",
-    url: `${baseUrl}/guides/animal-hospital-anomaly/`
-  }
+  openGraph: contentOpenGraph(
+    "Animal Hospital (Anomaly) Roblox Guide - Night Shift Checklist",
+    "Use this Animal Hospital (Anomaly) Roblox guide to handle night-shift patient checks, spot suspicious cases, and follow a safe anomaly checklist without guessing unverified codes or fake rules.",
+    `${baseUrl}/guides/animal-hospital-anomaly/`
+  ),
+  twitter: defaultTwitterMetadata()
 };
 
 export default function AnimalHospitalAnomalyGuide() {

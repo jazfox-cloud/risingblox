@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
-const baseUrl = "https://risingblox.com";
 const lastUpdated = "2026-07-16";
 const officialRobloxUrl =
   "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon";
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
   },
-  openGraph: {
-    title: "Iron Soul Dungeon Runes Guide",
-    description:
-      "Verify current rune text, compare one change at a time, and avoid unsupported Iron Soul rune rankings or drop-rate claims.",
-    url: `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
-  }
+  openGraph: contentOpenGraph(
+    "Iron Soul Dungeon Runes Guide",
+    "Verify current rune text, compare one change at a time, and avoid unsupported Iron Soul rune rankings or drop-rate claims.",
+    `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
+  ),
+  twitter: defaultTwitterMetadata()
 };
 
 export default function IronSoulDungeonBestRunesPage() {

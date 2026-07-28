@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame, hasIndexableCodes } from "@/content/games";
-
-const baseUrl = "https://risingblox.com";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
 export function generateStaticParams() {
   return games
@@ -30,11 +29,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     robots: hasIndexableCodes(game)
       ? { index: true, follow: true }
       : { index: false, follow: true },
-    openGraph: {
-      title: `${game.name} Roblox Codes`,
+    openGraph: contentOpenGraph(
+      `${game.name} Roblox Codes`,
       description,
-      url: `${baseUrl}/codes/${game.slug}/`
-    }
+      `${baseUrl}/codes/${game.slug}/`
+    ),
+    twitter: defaultTwitterMetadata()
   };
 }
 

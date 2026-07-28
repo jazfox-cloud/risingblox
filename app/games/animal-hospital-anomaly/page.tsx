@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
-const baseUrl = "https://risingblox.com";
 const checkedDate = "2026-07-28";
 const officialRobloxUrl = "https://www.roblox.com/games/78515283254292/Animal-Hospital";
 const robloxSnapshot = {
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${baseUrl}/games/animal-hospital-anomaly/`
   },
-  openGraph: {
-    title: "Animal Hospital (Anomaly) Roblox Game",
-    description:
-      "Animal Hospital (Anomaly) Roblox game profile with its night-shift gameplay loop, current official snapshot, beginner guide, and verified codes status.",
-    url: `${baseUrl}/games/animal-hospital-anomaly/`
-  }
+  openGraph: contentOpenGraph(
+    "Animal Hospital (Anomaly) Roblox Game",
+    "Animal Hospital (Anomaly) Roblox game profile with its night-shift gameplay loop, current official snapshot, beginner guide, and verified codes status.",
+    `${baseUrl}/games/animal-hospital-anomaly/`
+  ),
+  twitter: defaultTwitterMetadata()
 };
 
 export default function AnimalHospitalAnomalyGameProfile() {

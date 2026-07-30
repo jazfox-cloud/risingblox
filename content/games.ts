@@ -369,11 +369,11 @@ export const games: Game[] = [
       "Choose a skill-tree direction around the blocker you can observe: clear speed, forge progression, or survival.",
       "Treat exact rune, relic, blueprint, and drop-rate claims as unverified unless an official or logged in-game source supports them."
     ],
-    guideTitle: "Iron Soul Dungeon Leveling Guide",
+    guideTitle: "Iron Soul Dungeon Guide: Level Up Fast, Forge, and Starter Weapons",
     guideDescription:
-      "Iron Soul Dungeon leveling guide for leveling up fast, forge progression, starter weapon tests, blueprints, runes, and source-backed beginner steps.",
+      "Iron Soul Dungeon guide for leveling up fast, forge and craft progression, starter weapon tests, beginner routes, and source-backed wiki boundaries.",
     guideIntro:
-      "Use this Iron Soul Dungeon guide to level up faster without guessing: repeat a reliable monster route, collect crystalized ore and rare materials, return to the forge, test one weapon or skill-tree change, then decide whether the next blocker is damage, survival, runes, or blueprint evidence. This page answers the current beginner searches around level up fast, best runes, starter weapons, forge progression, and blueprint caution without inventing drop rates or hidden tables.",
+      "Use this Iron Soul Dungeon guide when you want the practical leveling path, not an invented drop table. The repeatable answer is: farm a reliable monster route, collect crystalized ore and rare materials, return to the forge, test one weapon or skill-tree change, then decide whether the next blocker is damage, survival, rune evidence, or blueprint evidence. This refresh is based on current search demand for level up fast, Iron Soul Dungeon guide, starter weapons, and craft/forge progression while keeping exact XP, drop-rate, and hidden-table claims out until they are verified.",
     guideLastVerified: "2026-07-16",
     guideSourceLabel: "Official Iron Soul: Dungeon Roblox page and Roblox Games API",
     guideSourceUrl: "https://www.roblox.com/games/117533937949084/Iron-Soul-Dungeon",
@@ -383,18 +383,19 @@ export const games: Game[] = [
       {
         title: "Quick Answers",
         body:
-          "Search Console now shows Iron Soul Dungeon searches around leveling fast, best runes, blueprints, and starter weapons. The short answer is to improve one verified part of the loop at a time instead of copying an unsupported build.",
+          "Search Console shows Iron Soul Dungeon searches around leveling fast, general guide intent, craft/forge help, starter weapons, runes, and blueprints. The safe quick answer is to improve one verified part of the loop at a time instead of copying an unsupported build.",
         bullets: [
-          "Level up fast: reduce failed runs by farming a reliable monster route, then upgrade before pushing harder dungeons.",
+          "Level up fast: reduce failed runs by farming a reliable monster route, then upgrade through the forge or skill tree before pushing harder dungeons.",
           "Best runes: choose rune effects from current in-game text that solve the visible blocker, such as damage, survival, or farming consistency.",
           "Blueprints: treat exact blueprint tables as unverified unless they come from current in-game evidence, official text, or logged source notes.",
-          "Starter weapons: test a forged weapon on the same route before spending more materials."
+          "Starter weapons: test any early forged weapon on the same route before spending more materials.",
+          "Craft guide intent: treat forge steps as observable tests unless current in-game text verifies exact costs."
         ]
       },
       {
-        title: "First Steps",
+        title: "Beginner Route",
         body:
-          "Use the official progression framework before optimizing anything: fight creatures, collect crystalized ore and rare materials, return to a forge, and test the next weapon or skill-tree improvement on content you already understand.",
+          "Use the official progression framework before optimizing anything: fight creatures, collect crystalized ore and rare materials, return to a forge, and test the next weapon or skill-tree improvement on content you already understand. This is the route behind the level up fast answer on this page.",
         bullets: [
           "Learn one repeatable monster route instead of rushing every unlocked area.",
           "Bank materials at an ancient forge and make one meaningful weapon test.",
@@ -422,13 +423,14 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Forge Progression",
+        title: "Forge and Craft Progression",
         body:
-          "The public description says the crafting loop is gather, forge, upgrade and that each new weapon changes combat. Treat forge progression as a sequence of observable tests rather than an unsupported rarity tier list.",
+          "The public description says the crafting loop is gather, forge, upgrade and that each new weapon changes combat. Treat forge and craft progression as a sequence of observable tests rather than an unsupported rarity tier list or unverified blueprint table.",
         bullets: [
           "Craft weapons that help with the content you are currently failing.",
           "Do not spend every material on side upgrades before testing a weapon change.",
-          "Use BloxDungeon when you need source logs beyond this beginner progression loop."
+          "Use BloxDungeon when you need source logs beyond this beginner progression loop.",
+          "Do not publish exact crafting costs on this page unless current in-game text or a developer source verifies them."
         ]
       },
       {
@@ -472,9 +474,9 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "Testing a Forge Upgrade",
+        title: "Starter Weapon and Forge Tests",
         body:
-          "The official page confirms that forged weapons change how you fight, but it does not name one universal best starter weapon. Test the weapon you can verify in the current forge against a familiar route before spending more materials.",
+          "The official page confirms that forged weapons change how you fight, but it does not name one universal best starter weapon. For starter weapon searches, the source-backed answer is to test the weapon you can verify in the current forge against a familiar route before spending more materials.",
         bullets: [
           "Use the same enemy route before and after the forge change.",
           "Keep the change when it improves the blocker you were trying to solve.",
@@ -534,9 +536,9 @@ export const games: Game[] = [
           "The current official Roblox description does not document rune names, effects, or rankings. Use the focused runes page as a verification checklist and rely on current in-game text before choosing a build."
       },
       {
-        question: "How should I test a forged weapon?",
+        question: "What is the best starter weapon in Iron Soul Dungeon?",
         answer:
-          "Test the forged weapon on a route you already know. Keep the change when it improves the specific clear-speed or survival blocker you were trying to solve."
+          "The official source does not name a universal best starter weapon. Test the early forged weapon you can verify on a route you already know, then keep it when it improves the clear-speed or survival blocker you were trying to solve."
       },
       {
         question: "What should I verify after an Iron Soul update?",

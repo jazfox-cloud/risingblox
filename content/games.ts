@@ -268,11 +268,11 @@ export const games: Game[] = [
       {
         title: "Use Official Codes Carefully",
         body:
-          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-10 check. Rewards can change, so the codes page records the source without inventing an exact reward.",
+          "The 2026-07-30 check did not verify any active Scale Slimy Fish codes from the official Roblox description. Keep the codes page source-first and avoid inventing an exact reward.",
         bullets: [
-          "Enter the code exactly as written.",
           "Check the official page again after major updates.",
-          "Treat a failed redemption as a status change that needs rechecking."
+          "Treat a failed redemption as a status change that needs rechecking.",
+          "Do not publish a code unless the current source or in-game redemption proves it."
         ]
       }
     ],
@@ -285,16 +285,12 @@ export const games: Game[] = [
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "The official Roblox description listed 10kccu, weather, and turtle during the 2026-07-26 check. See the codes page for the latest status."
+          "No verified active Scale Slimy Fish codes were confirmed in the 2026-07-30 check. See the codes page for the latest source-backed status."
       }
     ],
-    activeCodes: [
-      { code: "10kccu", reward: "Officially listed; verify the current reward in game" },
-      { code: "weather", reward: "Officially listed; verify the current reward in game" },
-      { code: "turtle", reward: "Officially listed; verify the current reward in game" }
-    ],
+    activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-26",
+    codesLastChecked: "2026-07-30",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -308,19 +304,19 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox last checked the official source on 2026-07-26 and keeps exact rewards unclaimed until they are verified.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-07-30 and found no verified active codes.",
     codesDescription:
-      "Scale Slimy Fish Roblox codes verified from the official game description, with source notes, cautious status checks, and redemption guidance.",
+      "Scale Slimy Fish Roblox code status with source notes, cautious checks, and redemption guidance.",
     codeCheckMethod: [
       "Check the official Scale Slimy Fish Roblox page for public code strings and update text.",
-      "Keep 10kccu, weather, and turtle active only while the official source or current redemption evidence supports them.",
+      "Keep no active codes unless the official source or current redemption evidence supports them.",
       "Do not copy third-party code lists unless each code can be matched to official text, developer-linked evidence, or an in-game redemption result.",
       "Leave exact rewards as verification notes until the reward output is confirmed in the current game."
     ],
     codeRedemptionSteps: [
       "Open Scale Slimy Fish on Roblox.",
       "Find the current in-game codes, rewards, or settings interface.",
-      "Enter one verified code exactly as shown: 10kccu, weather, or turtle.",
+      "Enter only a code that is currently verified by the source or in-game evidence.",
       "Confirm the in-game result before treating a reward claim as verified."
     ],
     codeSections: [
@@ -565,7 +561,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-21",
+    codesLastChecked: "2026-07-30",
     codesSummary:
       "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
@@ -759,7 +755,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-21",
+    codesLastChecked: "2026-07-30",
     ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
@@ -968,7 +964,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-21",
+    codesLastChecked: "2026-07-30",
     ...buildNoCodePolicy("Mini War"),
     codeFaq: [
       ...buildNoCodePolicy("Mini War").codeFaq,
@@ -1027,7 +1023,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-21",
+    codesLastChecked: "2026-07-30",
     ...buildNoCodePolicy("Noob Incremental"),
     guideTitle: "Noob Incremental Progression Guide",
     guideDescription:
@@ -1291,7 +1287,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-07-21",
+    codesLastChecked: "2026-07-30",
     ...buildNoCodePolicy("Anime Squadron"),
     codeRedemptionSteps: [
       "No official Anime Squadron redemption interface or active code was verified in the sources checked for this page.",

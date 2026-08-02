@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { games, getGame, hasIndexableCodes } from "@/content/games";
@@ -80,6 +81,18 @@ export default async function GuidePage({ params }: PageProps) {
           "Start with the highest-impact basics before spending currency or boosts."}
       </p>
       <p className="mt-3 text-sm text-gray-600">Last updated: {game.lastUpdated}</p>
+      {game.guideHeroImage ? (
+        <div className="mt-6 overflow-hidden rounded-xl border border-black/10 bg-white shadow-sm">
+          <Image
+            alt={game.guideHeroImage.alt}
+            className="h-auto w-full"
+            height={630}
+            priority={game.slug === "scale-slimy-fish"}
+            src={game.guideHeroImage.src}
+            width={1200}
+          />
+        </div>
+      ) : null}
       {game.guideLastVerified ? (
         <aside className="mt-5 rounded-md border border-black/10 bg-white p-4 text-sm leading-6 text-gray-600 shadow-sm">
           <p className="font-black text-ink">Last verified: {game.guideLastVerified}</p>

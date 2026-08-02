@@ -28,6 +28,10 @@ export type Game = {
   guideSourceLabel?: string;
   guideSourceUrl?: string;
   guideSourceNote?: string;
+  guideHeroImage?: {
+    src: string;
+    alt: string;
+  };
   externalGuide?: {
     label: string;
     url: string;
@@ -241,14 +245,18 @@ export const games: Game[] = [
     ],
     guideTitle: "Scale Slimy Fish Beginner Guide - Rod and Knife Upgrades",
     guideDescription:
-      "Scale Slimy Fish beginner guide for the catch-to-cash loop, rod and knife upgrade choices, official codes, and early progression mistakes.",
+      "Scale Slimy Fish beginner guide for the catch-to-cash loop, rod and knife upgrade choices, verified official codes, and early progression mistakes.",
     guideIntro:
-      "Scale Slimy Fish beginners should balance the two official tool paths: rods control what they can catch, while knives control how quickly they can scrape scales and return to earning cash.",
+      "Scale Slimy Fish is a Roblox catch-and-process game where beginners should balance the two official tool paths: rods control what they can catch, while knives control how quickly they can scrape scales and return to earning cash. The official description also currently lists three verified code strings, so this guide keeps the code section source-first and avoids claiming rewards that the source does not publish.",
+    guideHeroImage: {
+      src: "/og/scale-slimy-fish-banner.png",
+      alt: "Scale Slimy Fish editorial banner showing a Roblox-style fishing scene with a slimy fish, rod, knife, and code cards"
+    },
     guideSections: [
       {
         title: "Learn the Full Loop First",
         body:
-          "Complete the catch, scrape, feed, and cash sequence before spending heavily. That first loop shows whether catching or processing is limiting progress.",
+          "Complete the catch, scrape, feed, and cash sequence before spending heavily. That first loop shows whether catching or processing is limiting progress, and it keeps the article grounded in the actual gameplay loop instead of abstract upgrade theory.",
         bullets: [
           "Catch a manageable fish with the starter rod.",
           "Scrape its scales before trying to expand too quickly.",
@@ -258,7 +266,7 @@ export const games: Game[] = [
       {
         title: "Rod or Knife First?",
         body:
-          "The official description connects better rods with bigger fish and sharper knives with faster scaling. The right first upgrade depends on which step blocks the next profitable loop.",
+          "The official description connects better rods with bigger fish and sharper knives with faster scaling. The right first upgrade depends on which step blocks the next profitable loop, so the decision should come from the bottleneck you can actually see in game.",
         bullets: [
           "Choose the rod when catches are too limited.",
           "Choose the knife when scaling time holds up every sale.",
@@ -268,11 +276,11 @@ export const games: Game[] = [
       {
         title: "Use Official Codes Carefully",
         body:
-          "The 2026-07-30 check did not verify any active Scale Slimy Fish codes from the official Roblox description. Keep the codes page source-first and avoid inventing an exact reward.",
+          "The 2026-08-02 check verified three active code strings from the official Roblox description: 10kccu, weather, and turtle. Keep the codes page source-first and avoid inventing an exact reward until the game or a stronger official source confirms it.",
         bullets: [
           "Check the official page again after major updates.",
           "Treat a failed redemption as a status change that needs rechecking.",
-          "Do not publish a code unless the current source or in-game redemption proves it."
+          "Do not publish a reward unless the current source or in-game redemption proves it."
         ]
       }
     ],
@@ -280,12 +288,12 @@ export const games: Game[] = [
       {
         question: "Should I upgrade the rod or knife first?",
         answer:
-          "Upgrade the rod if catching is limiting progress, or the knife if scraping scales is slowing every cash cycle."
+          "Upgrade the rod if catching is limiting progress, or the knife if scraping scales is slowing every cash cycle. The correct move is the one that removes the current bottleneck fastest."
       },
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "The official Roblox description currently lists 10kccu, weather, and turtle. See the codes page for the latest source-backed status."
+          "The official Roblox description currently lists 10kccu, weather, and turtle. See the codes page for the latest source-backed status and the most recent check date."
       }
     ],
     activeCodes: [

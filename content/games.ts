@@ -285,12 +285,16 @@ export const games: Game[] = [
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "No verified active Scale Slimy Fish codes were confirmed in the 2026-07-30 check. See the codes page for the latest source-backed status."
+          "The official Roblox description currently lists 10kccu, weather, and turtle. See the codes page for the latest source-backed status."
       }
     ],
-    activeCodes: [],
+    activeCodes: [
+      { code: "10kccu", reward: "Reward not stated in the official description" },
+      { code: "weather", reward: "Reward not stated in the official description" },
+      { code: "turtle", reward: "Reward not stated in the official description" }
+    ],
     expiredCodes: [],
-    codesLastChecked: "2026-07-30",
+    codesLastChecked: "2026-08-02",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",

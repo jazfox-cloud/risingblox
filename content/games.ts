@@ -276,7 +276,7 @@ export const games: Game[] = [
       {
         title: "Use Official Codes Carefully",
         body:
-          "The 2026-08-02 check verified three active code strings from the official Roblox description: 10kccu, weather, and turtle. Keep the codes page source-first and avoid inventing an exact reward until the game or a stronger official source confirms it.",
+          "The 2026-08-06 check verified three active code strings from the official Roblox description: 10kccu, weather, and turtle. Keep the codes page source-first and avoid inventing an exact reward until the game or a stronger official source confirms it.",
         bullets: [
           "Check the official page again after major updates.",
           "Treat a failed redemption as a status change that needs rechecking.",
@@ -302,7 +302,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Reward not stated in the official description" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-08-02",
+    codesLastChecked: "2026-08-06",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -316,7 +316,7 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-07-30 and found no verified active codes.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-06 and found verified active codes.",
     codesDescription:
       "Scale Slimy Fish Roblox code status with source notes, cautious checks, and redemption guidance.",
     codeCheckMethod: [
@@ -337,7 +337,7 @@ export const games: Game[] = [
         body:
           "This page is kept indexable because Scale Slimy Fish has official code strings recorded in the RisingBlox source record. The goal is to preserve a clean code status page without padding it with unverified rewards or copied lists.",
         bullets: [
-          "Primary source: the official Roblox game page and public game data checked on 2026-07-26.",
+          "Primary source: the official Roblox game page and public game data checked on 2026-08-06.",
           "Current tracked code strings: 10kccu, weather, and turtle.",
           "Reward details remain cautious until current in-game redemption confirms the exact output."
         ]

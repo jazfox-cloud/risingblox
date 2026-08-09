@@ -118,7 +118,13 @@ This pattern remains the benchmark for future candidates, but Iron Soul itself d
 
 ## Deployment and observation
 
-The approved change is limited to one existing Anime Squadron page cluster. After commit/push, the existing GitHub-backed Cloudflare Pages pipeline was used; no separate Wrangler deployment, sitemap/canonical/robots change, or GSC write was made.
+The approved change is limited to one existing Anime Squadron page cluster. The existing GitHub-backed Cloudflare Pages pipeline was used; no separate Wrangler deployment, sitemap/canonical/robots change, or GSC write was made.
+
+- Commit: `761654b` (`docs: salvage existing Roblox winner`)
+- Push: `main` pushed to `origin`
+- Cloudflare Pages production deployment: `107351c8-16bc-4426-b636-2ee571c2e253`
+- Preview URL: `https://107351c8.risingblox.pages.dev/guides/anime-squadron/`
+- Production verification: `https://risingblox.com/guides/anime-squadron/` returned HTTP 200 with cache-busting query; title contains `UPD 2.0`, old `UPD 1.75` is absent, canonical is `https://risingblox.com/guides/anime-squadron/`, and no accidental noindex was present.
 
 Observe for 14 days after the production deployment:
 

@@ -16,6 +16,15 @@ export const metadata: Metadata = {
   },
   description:
     "Track rising Roblox games, beginner guides, opportunity scores, and fresh code pages for fast-moving Roblox trends.",
+  icons: {
+    shortcut: "/favicon.ico?v=3",
+    icon: [
+      { url: "/brand/favicon-32.png?v=3", type: "image/png", sizes: "32x32" },
+      { url: "/brand/favicon-16.png?v=3", type: "image/png", sizes: "16x16" },
+      { url: "/favicon.ico?v=3", type: "image/x-icon" }
+    ],
+    apple: "/brand/favicon-32.png?v=3"
+  },
   openGraph: {
     title: "RisingBlox",
     description: "Rising Roblox games, codes, and practical beginner guides.",

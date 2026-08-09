@@ -6,6 +6,9 @@ export async function onRequest(context) {
     url.hostname === "risingblox.pages.dev"
   ) {
     url.hostname = "risingblox.com";
+    if (url.pathname !== "/" && !url.pathname.endsWith("/")) {
+      url.pathname += "/";
+    }
     return Response.redirect(url.toString(), 301);
   }
 

@@ -1147,28 +1147,28 @@ export const games: Game[] = [
       {
         title: "Developer and Current Status",
         body:
-          "RisingBlox rechecked the official Roblox page on 2026-07-27. Roblox listed Komplex Studio as the creator and the public title carried an UPD 1.75 signal.",
+          "RisingBlox rechecked the official Roblox page on 2026-08-08. Roblox listed Komplex Studio as the creator and the public title carried an UPD 2.0 signal.",
         bullets: [
-          "Source: official Anime Squadron Roblox page checked on 2026-07-27.",
+          "Source: official Anime Squadron Roblox page checked on 2026-08-08.",
           "Creator shown by Roblox: Komplex Studio.",
-          "Public title seen during the check: UPD 1.75.",
+          "Public title seen during the check: UPD 2.0.",
           "Exact unit rankings, costs, and mode-specific formulas are not claimed on this profile."
         ]
       }
     ],
-    lastUpdated: "2026-07-27",
+    lastUpdated: "2026-08-08",
     tags: ["anime", "lane-battler", "tower-defense", "strategy", "units"],
     beginnerTips: [
       "Use early runs to observe lane coverage and the timing of nonstop enemy waves.",
       "Plan a lineup and test upgrades on units you are actually deploying.",
       "Prepare before boss pressure instead of assuming a rare unit alone solves the route."
     ],
-    guideTitle: "Anime Squadron UPD 1.75 Beginner Guide",
+    guideTitle: "Anime Squadron UPD 2.0 Beginner Guide",
     guideDescription:
-      "Anime Squadron UPD 1.75 beginner guide for lineup planning, lane coverage, unit upgrades, game modes, and boss waves using verified Roblox source details.",
+      "Anime Squadron UPD 2.0 beginner guide for lineup planning, lane coverage, unit upgrades, game modes, and boss waves using verified Roblox source details.",
     guideIntro:
-      "Anime Squadron currently carries an UPD 1.75 signal on its official Roblox title. Start by treating it as the strategic lane battler described there: deploy a lineup, watch how nonstop enemy waves move through the lanes, and spend early upgrades on units you are actually testing before boss pressure arrives. The source confirms summoning, upgrading, leveling and evolving units, multiple modes, and massive bosses, but it does not publish a universal best-unit list, exact resource formula, or mode-specific build. This guide therefore focuses on observable opening decisions: coverage, upgrade concentration, and boss preparation.",
-    guideLastVerified: "2026-07-27",
+      "Anime Squadron currently carries an UPD 2.0 signal on its official Roblox title. Start by treating it as the strategic lane battler described there: deploy a lineup, watch how nonstop enemy waves move through the lanes, and spend early upgrades on units you are actually testing before boss pressure arrives. The source confirms summoning, upgrading, leveling and evolving units, multiple modes, and massive bosses, but it does not publish a universal best-unit list, exact resource formula, or mode-specific build. This guide therefore focuses on observable opening decisions: coverage, upgrade concentration, and boss preparation.",
+    guideLastVerified: "2026-08-08",
     guideSourceLabel: "Official Anime Squadron Roblox page",
     guideSourceUrl: "https://www.roblox.com/games/71132543521245/Anime-Squadron",
     guideSourceNote:
@@ -1235,9 +1235,9 @@ export const games: Game[] = [
         ]
       },
       {
-        title: "UPD 1.75 Source Check",
+        title: "UPD 2.0 Source Check",
         body:
-          "The official Roblox title carried an UPD 1.75 signal during the 2026-07-27 check. That confirms a current update label, but it does not prove that copied unit rankings, costs, mode details, or boss behavior are accurate.",
+          "The official Roblox title carried an UPD 2.0 signal during the 2026-08-08 check. That confirms a current update label, but it does not prove that copied unit rankings, costs, mode details, or boss behavior are accurate.",
         bullets: [
           "Recheck unit upgrade and evolve text in the current interface.",
           "Recheck which modes are currently available.",

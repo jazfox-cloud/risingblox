@@ -288,9 +288,13 @@ export const games: Game[] = [
           "No verified active Scale Slimy Fish codes were confirmed in the 2026-07-30 check. See the codes page for the latest source-backed status."
       }
     ],
-    activeCodes: [],
+    activeCodes: [
+      { code: "10kccu", reward: "未核实" },
+      { code: "weather", reward: "未核实" },
+      { code: "turtle", reward: "未核实" }
+    ],
     expiredCodes: [],
-    codesLastChecked: "2026-07-30",
+    codesLastChecked: "2026-08-10",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -304,7 +308,7 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-07-30 and found no verified active codes.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-10 and found active codes in the public description text.",
     codesDescription:
       "Scale Slimy Fish Roblox code status with source notes, cautious checks, and redemption guidance.",
     codeCheckMethod: [
@@ -325,7 +329,7 @@ export const games: Game[] = [
         body:
           "This page is kept indexable because Scale Slimy Fish has official code strings recorded in the RisingBlox source record. The goal is to preserve a clean code status page without padding it with unverified rewards or copied lists.",
         bullets: [
-          "Primary source: the official Roblox game page and public game data checked on 2026-07-26.",
+          "Primary source: the official Roblox game page and public game data checked on 2026-08-10.",
           "Current tracked code strings: 10kccu, weather, and turtle.",
           "Reward details remain cautious until current in-game redemption confirms the exact output."
         ]

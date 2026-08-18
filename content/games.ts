@@ -294,7 +294,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "未核实" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-08-15",
+    codesLastChecked: "2026-08-18",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -308,7 +308,7 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-15 and found active codes in the public description text.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-18 and found active codes in the public description text.",
     codesDescription:
       "Scale Slimy Fish Roblox code status with source notes, cautious checks, and redemption guidance.",
     codeCheckMethod: [

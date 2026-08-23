@@ -268,7 +268,7 @@ export const games: Game[] = [
       {
         title: "Use Official Codes Carefully",
         body:
-          "The 2026-08-18 official-source check verified three active Scale Slimy Fish code strings. Their exact rewards remain unverified, so keep reward claims cautious until they are confirmed in game.",
+          "The 2026-08-23 official-source check verified three active Scale Slimy Fish code strings. Their exact rewards remain unverified, so keep reward claims cautious until they are confirmed in game.",
         bullets: [
           "Use only code strings supported by the current official Roblox description.",
           "Treat a failed redemption as a status change that needs rechecking.",
@@ -285,7 +285,7 @@ export const games: Game[] = [
       {
         question: "What are the official Scale Slimy Fish codes?",
         answer:
-          "The 2026-08-18 official-source check verified 10kccu, weather, and turtle as active code strings. See the codes page for the latest source-backed status and cautious reward notes."
+          "The 2026-08-23 official-source check verified 10kccu, weather, and turtle as active code strings. See the codes page for the latest source-backed status and cautious reward notes."
       }
     ],
     activeCodes: [
@@ -294,7 +294,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Exact reward not independently verified" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-08-18",
+    codesLastChecked: "2026-08-23",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -308,7 +308,7 @@ export const games: Game[] = [
       }
     ]),
     codesSummary:
-      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-18 and verified three active code strings in the public description; exact rewards remain unverified.",
+      "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-23 and verified three active code strings in the public description; exact rewards remain unverified.",
     codesDescription:
       "Scale Slimy Fish Roblox code status with source notes, cautious checks, and redemption guidance.",
     codeCheckMethod: [
@@ -329,7 +329,7 @@ export const games: Game[] = [
         body:
           "This page is kept indexable because the official Scale Slimy Fish Roblox description includes public code strings. The goal is to preserve a clean code status page without padding it with unverified rewards or copied lists.",
         bullets: [
-          "Primary source: the official Roblox game page and public description checked on 2026-08-18.",
+          "Primary source: the official Roblox game page and public description checked on 2026-08-23.",
           "Current tracked code strings: 10kccu, weather, and turtle.",
           "Reward details remain cautious until current in-game redemption confirms the exact output."
         ]

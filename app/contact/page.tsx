@@ -4,7 +4,7 @@ import EmailLink from "@/components/EmailLink";
 export const metadata = staticPageMetadata(
   "contact",
   "Contact",
-  "Contact RisingBlox about corrections, sources, privacy, or site feedback."
+  "Contact RisingBlox for page corrections, source suggestions, privacy requests, accessibility issues, and feedback about Roblox guide coverage."
 );
 
 export default function ContactPage() {

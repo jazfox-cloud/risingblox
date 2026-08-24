@@ -4,7 +4,7 @@ import EmailLink from "@/components/EmailLink";
 export const metadata = staticPageMetadata(
   "terms",
   "Terms of Use",
-  "Terms governing use of RisingBlox guides and game information."
+  "Read the RisingBlox terms for using independent Roblox guides, code checks, public game-data snapshots, external links, and source-bounded advice."
 );
 
 export default function TermsPage() {

@@ -4,7 +4,7 @@ import EmailLink from "@/components/EmailLink";
 export const metadata = staticPageMetadata(
   "sources",
   "Sources and Verification",
-  "How RisingBlox verifies Roblox game facts, code status, dates, and corrections."
+  "See how RisingBlox verifies Roblox game facts, code status, public data snapshots, page dates, uncertainty, and correction requests."
 );
 
 export default function SourcesPage() {

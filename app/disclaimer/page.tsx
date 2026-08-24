@@ -4,7 +4,7 @@ import EmailLink from "@/components/EmailLink";
 export const metadata = staticPageMetadata(
   "disclaimer",
   "Disclaimer",
-  "RisingBlox editorial, verification, affiliation, and trademark disclaimer."
+  "Review the RisingBlox disclaimer on independent Roblox coverage, changing game details, source boundaries, trademarks, and correction requests."
 );
 
 export default function DisclaimerPage() {

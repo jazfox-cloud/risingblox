@@ -32,13 +32,13 @@ const faqItems = [
 export const metadata: Metadata = {
   title: "Iron Soul Dungeon Runes Guide",
   description:
-    "A conservative Iron Soul Dungeon runes guide explaining what to verify in game, how to compare rune changes, and why RisingBlox does not publish unsupported rune rankings or drop rates.",
+    "Iron Soul Dungeon runes guide for checking current rune text, comparing one change at a time, and avoiding unsupported rankings or drop rates.",
   alternates: {
     canonical: `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
   },
   openGraph: contentOpenGraph(
     "Iron Soul Dungeon Runes Guide",
-    "Verify current rune text, compare one change at a time, and avoid unsupported Iron Soul rune rankings or drop-rate claims.",
+    "Iron Soul Dungeon runes guide for checking current rune text, comparing one change at a time, and avoiding unsupported rankings or drop rates.",
     `${baseUrl}/guides/iron-soul-dungeon-best-runes/`
   ),
   twitter: defaultTwitterMetadata()

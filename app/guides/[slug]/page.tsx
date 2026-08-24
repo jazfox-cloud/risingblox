@@ -26,7 +26,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     : `Beginner guide, early strategy, FAQ, and verified codes status for ${game.name} on Roblox.`);
 
   return {
-    title: game.guideTitle ?? `${game.name} Roblox Beginner Guide`,
+    title: game.slug === "iron-soul-dungeon" && game.guideTitle
+      ? { absolute: game.guideTitle }
+      : game.guideTitle ?? `${game.name} Roblox Beginner Guide`,
     description,
     alternates: {
       canonical: `${baseUrl}/guides/${game.slug}/`

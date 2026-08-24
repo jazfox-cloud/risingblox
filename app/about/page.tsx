@@ -3,7 +3,7 @@ import { staticPageMetadata } from "@/app/static-page-metadata";
 export const metadata = staticPageMetadata(
   "about",
   "About",
-  "About RisingBlox and its independent Roblox trends coverage."
+  "Learn how RisingBlox checks Roblox game profiles, beginner guides, code pages, source evidence, corrections, and independence from Roblox."
 );
 
 export default function AboutPage() {

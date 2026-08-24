@@ -310,7 +310,7 @@ export const games: Game[] = [
     codesSummary:
       "Scale Slimy Fish codes are listed only when the official Roblox description, a developer-linked source, or current in-game redemption evidence supports them. RisingBlox checked the official source on 2026-08-23 and verified three active code strings in the public description; exact rewards remain unverified.",
     codesDescription:
-      "Scale Slimy Fish Roblox code status with source notes, cautious checks, and redemption guidance.",
+      "Scale Slimy Fish Roblox codes with verified active strings, source notes, cautious reward labels, redemption steps, and last-checked status.",
     codeCheckMethod: [
       "Check the official Scale Slimy Fish Roblox page for public code strings and update text.",
       "Keep no active codes unless the official source or current redemption evidence supports them.",
@@ -666,7 +666,7 @@ export const games: Game[] = [
     ],
     guideTitle: "Grow a Garden 2 Beginner Guide",
     guideDescription:
-      "Grow a Garden 2 beginner guide for seed restocks, planting, harvests, sheckles, offline growth, guild rewards, and night stealing risk without unverified crop values.",
+      "Grow a Garden 2 beginner guide for seed restocks, planting, harvests, sheckles, offline growth, guild rewards, and night risk.",
     guideIntro:
       "Use this Grow a Garden 2 beginner guide to start with the verified farm loop: buy seeds when the shop restocks, plant them on brown farm plots, wait for crops to grow, harvest them, and sell the result for sheckles. The official Roblox page also verifies offline growth, guild weekly rewards, and a night-stealing risk window. This page keeps those beginner decisions practical without inventing crop values, seed rarities, growth timers, protection mechanics, or codes that the source does not publish.",
     guideLastVerified: "2026-07-19",
@@ -772,7 +772,7 @@ export const games: Game[] = [
       "Mini War is a Roblox tycoon strategy game about building a country, growing the economy, training an army, unlocking advanced units, and capturing other players' lands.",
     profileTitle: "Mini War Roblox Game Profile",
     profileDescription:
-      "Mini War Roblox profile with the verified country-building loop, economy and army strategy, latest public Roblox snapshot, beginner guide links, and codes status.",
+      "Mini War Roblox profile covering country building, economy and army choices, public Roblox snapshots, beginner guide links, and codes status.",
     profileIntro:
       "Mini War Roblox is a tycoon strategy game where the verified loop is to build a country, grow economic power, train soldiers, unlock advanced units, and capture other players' lands. For beginners, the main decision is whether the next bottleneck is economy, army size, or attack timing. RisingBlox keeps this profile focused on the official Roblox page, current public data snapshots, beginner guide links, and codes status instead of unverified code claims.",
     profileSections: [
@@ -1033,7 +1033,7 @@ export const games: Game[] = [
     ...buildNoCodePolicy("Noob Incremental"),
     guideTitle: "Noob Incremental Progression Guide",
     guideDescription:
-      "A source-backed Noob Incremental progression guide for the first Oof loop, early upgrade decisions, rune checks, Prestige timing, blockers, and update verification.",
+      "Noob Incremental progression guide for the first Oof loop, upgrades, rune checks, Prestige timing, blockers, and source limits.",
     guideIntro:
       "Begin with the sequence stated on the official Noob Incremental Roblox page: buy Noobs to produce Oof, compare the upgrades currently available, roll and level runes when that feature opens, and use Prestige when it unlocks the next layer of content. The source confirms hundreds of upgrades, dozens of stats, multiple Prestige layers, and runes, but it does not publish one best upgrade order, an exact reset threshold, or permanent rune rankings. This guide therefore explains how to make the next visible progression decision without inventing costs or formulas. It uses the existing stable guide URL as the single Noob Incremental progression page; no duplicate wiki, tier list, or mechanic page is being added.",
     guideLastVerified: "2026-07-16",
@@ -1136,7 +1136,7 @@ export const games: Game[] = [
       "Anime Squadron is an official Roblox lane battler published by Komplex Studio. The public game description confirms summoning, upgrading, leveling and evolving units, planning a lineup, multiple game modes, team play, ranked progression, bosses, and nonstop enemy waves. This profile records the game identity, developer, source, and current public status; practical opening decisions belong in the beginner guide.",
     profileTitle: "Anime Squadron Roblox Game Profile and Official Status",
     profileDescription:
-      "Anime Squadron Roblox profile with the official lane-battler description, Komplex Studio creator information, current update status, public data, beginner guide, and codes status links.",
+      "Anime Squadron Roblox profile with official lane-battler details, Komplex Studio status, public data, beginner guide, and codes links.",
     profileSections: [
       {
         title: "Official Gameplay Scope",

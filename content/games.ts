@@ -294,7 +294,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Exact reward not independently verified" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-09-01",
+    codesLastChecked: "2026-09-02",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",
@@ -567,7 +567,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-01",
+    codesLastChecked: "2026-09-02",
     codesSummary:
       "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
@@ -761,7 +761,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-01",
+    codesLastChecked: "2026-09-02",
     ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
@@ -970,7 +970,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-01",
+    codesLastChecked: "2026-09-02",
     ...buildNoCodePolicy("Mini War"),
     codeFaq: [
       ...buildNoCodePolicy("Mini War").codeFaq,

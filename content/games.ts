@@ -294,7 +294,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Exact reward not independently verified" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-09-03",
+    codesLastChecked: "2026-09-04",
     ...buildNoCodePolicy("Scale Slimy Fish", [
       {
         question: "Why does RisingBlox not list exact rewards?",

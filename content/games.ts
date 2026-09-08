@@ -567,7 +567,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-02",
+    codesLastChecked: "2026-09-08",
     codesSummary:
       "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
@@ -761,7 +761,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-02",
+    codesLastChecked: "2026-09-08",
     ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
@@ -970,7 +970,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-02",
+    codesLastChecked: "2026-09-08",
     ...buildNoCodePolicy("Mini War"),
     codeFaq: [
       ...buildNoCodePolicy("Mini War").codeFaq,
@@ -1029,7 +1029,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-01",
+    codesLastChecked: "2026-09-08",
     ...buildNoCodePolicy("Noob Incremental"),
     guideTitle: "Noob Incremental Progression Guide",
     guideDescription:
@@ -1293,7 +1293,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-08-28",
+    codesLastChecked: "2026-09-08",
     ...buildNoCodePolicy("Anime Squadron"),
     codeRedemptionSteps: [
       "No official Anime Squadron redemption interface or active code was verified in the sources checked for this page.",

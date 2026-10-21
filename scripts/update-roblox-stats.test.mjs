@@ -142,7 +142,7 @@ test("rejects missing required numeric fields", () => {
   );
 });
 
-test("rejects cumulative metric decreases", () => {
+test("rejects cumulative visit decreases", () => {
   assert.throws(
     () =>
       validateResponses(
@@ -152,6 +152,62 @@ test("rejects cumulative metric decreases", () => {
       ),
     expectCode("VALIDATION_ERROR")
   );
+});
+
+for (const [field, previousValue, nextValue] of [
+  ["upVotes", 720012, 719837],
+  ["downVotes", 2, 0]
+]) {
+  test(`persists a decrease in ${field}`, async () => {
+    const directory = await mkdtemp(join(tmpdir(), "risingblox-stats-"));
+    const statsPath = join(directory, "stats.json");
+    const entry = { ...baseEntry, [field]: previousValue };
+    await writeFile(statsPath, JSON.stringify({ test: entry }));
+
+    try {
+      const result = await runStatsRefresh({
+        statsPath,
+        fetchImpl: async (url) => response(200, {
+          data: [url.includes("/votes") ? {
+            id: 123,
+            upVotes: entry.upVotes,
+            downVotes: entry.downVotes,
+            [field]: nextValue
+          } : {
+            ...gameRow,
+            playing: entry.onlinePlayers,
+            visits: entry.visits,
+            updated: entry.updatedAt
+          }]
+        }),
+        now: new Date("2026-10-20T12:39:54Z"),
+        logger: silentLogger
+      });
+      assert.deepEqual(result, { checkedGames: 1, changedGames: 1, changed: true });
+      const saved = JSON.parse(await readFile(statsPath, "utf8")).test;
+      assert.equal(saved[field], nextValue);
+      assert.equal(saved.visits, 100);
+      assert.equal(saved.fetchedAt, "2026-10-20T12:39:54.000Z");
+    } finally {
+      await rm(directory, { recursive: true, force: true });
+    }
+  });
+}
+
+test("rejects invalid vote counts", () => {
+  for (const field of ["upVotes", "downVotes"]) {
+    for (const value of [-1, 1.5, "2", null, undefined]) {
+      assert.throws(
+        () => validateResponses(
+          { data: [gameRow] },
+          { data: [{ ...voteRow, [field]: value }] },
+          [["test", baseEntry]]
+        ),
+        expectCode("VALIDATION_ERROR"),
+        `${field}=${value}`
+      );
+    }
+  }
 });
 
 test("a partial request failure never calls the writer", async () => {

@@ -191,18 +191,11 @@ export function validateResponses(gameData, voteData, entries) {
       );
     }
 
-    for (const [field, nextValue] of [
-      ["visits", game.visits],
-      ["upVotes", votes.upVotes],
-      ["downVotes", votes.downVotes]
-    ]) {
-      const previousValue = entry[field];
-      if (Number.isSafeInteger(previousValue) && nextValue < previousValue) {
-        throw new StatsRefreshError(
-          "VALIDATION_ERROR",
-          `${slug}.${field} decreased from ${previousValue} to ${nextValue}`
-        );
-      }
+    if (Number.isSafeInteger(entry.visits) && game.visits < entry.visits) {
+      throw new StatsRefreshError(
+        "VALIDATION_ERROR",
+        `${slug}.visits decreased from ${entry.visits} to ${game.visits}`
+      );
     }
   }
 

@@ -20,8 +20,9 @@ It refreshes the configured universe IDs from the Roblox public game APIs:
 Every request has a 15-second timeout. DNS, network, timeout, rate-limit, and selected
 Roblox server failures are retried up to three times. All game and vote responses are
 validated before the file is replaced atomically. Missing records, invalid numeric
-fields, and decreases in cumulative visits or votes fail the refresh and preserve the
-last successful snapshot. Online player counts are real-time and may decrease.
+fields, and decreases in cumulative visits fail the refresh and preserve the
+last successful snapshot. Online player counts and vote counts may decrease.
+Upvotes and downvotes must still be non-negative integers.
 
 The script only changes the file when source-backed values change. A check that returns
 the same values exits successfully with `No Roblox stats changes detected` and does not

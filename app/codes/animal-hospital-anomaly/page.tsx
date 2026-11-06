@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { baseUrl, contentOpenGraph, defaultTwitterMetadata } from "@/app/metadata";
 
-const checkedDate = "2026-07-19";
+const checkedDate = "2026-11-06";
 const officialRobloxUrl = "https://www.roblox.com/games/78515283254292/Animal-Hospital";
 const robloxSnapshot = {
   universeId: "10148749921",

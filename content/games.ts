@@ -294,7 +294,7 @@ export const games: Game[] = [
       { code: "turtle", reward: "Exact reward not independently verified" }
     ],
     expiredCodes: [],
-    codesLastChecked: "2026-11-03",
+    codesLastChecked: "2026-11-06",
     codeFaq: [
       {
         question: "What are the official Scale Slimy Fish codes?",
@@ -572,7 +572,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-08",
+    codesLastChecked: "2026-11-06",
     codesSummary:
       "RisingBlox only lists Iron Soul: Dungeon codes after official Roblox text, developer-linked announcements, or in-game redemption evidence confirm them. For the daily check log and deeper source notes, use BloxDungeon.",
     codeCheckMethod: [
@@ -766,7 +766,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-08",
+    codesLastChecked: "2026-11-06",
     ...buildNoCodePolicy("Grow a Garden 2")
   },
   {
@@ -975,7 +975,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-08",
+    codesLastChecked: "2026-11-06",
     ...buildNoCodePolicy("Mini War"),
     codeFaq: [
       ...buildNoCodePolicy("Mini War").codeFaq,
@@ -1034,7 +1034,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-08",
+    codesLastChecked: "2026-11-06",
     ...buildNoCodePolicy("Noob Incremental"),
     guideTitle: "Noob Incremental Progression Guide",
     guideDescription:
@@ -1298,7 +1298,7 @@ export const games: Game[] = [
     ],
     activeCodes: [],
     expiredCodes: [],
-    codesLastChecked: "2026-09-08",
+    codesLastChecked: "2026-11-06",
     ...buildNoCodePolicy("Anime Squadron"),
     codeRedemptionSteps: [
       "No official Anime Squadron redemption interface or active code was verified in the sources checked for this page.",
